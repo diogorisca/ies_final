@@ -33,7 +33,7 @@
         <div id="page" class="container">
             <div class="tbox1">
                 <h3>Introdução</h3>
-                <p>texto texto texto</p>
+                <p>textinho teste</p>
                 <a href="#" class="button">Saber mais</a>
             </div>
 
