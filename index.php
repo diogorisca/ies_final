@@ -25,7 +25,7 @@
                     <li><a href="#" accesskey="2" title="perfil">Perfil</a></li>
                     <li><a href="#" accesskey="3" title="guia_candidatura">Guia de Candidatura</a></li>
                     <li><a href="#" accesskey="4" title="registo">Registo</a></li>
-                    <li><a href="log.php" accesskey="5" title="login">Login</a></li>
+                    <li><a href="login/log.php" accesskey="5" title="login">Login</a></li>
                 </ul>
             </div>
         </div>
