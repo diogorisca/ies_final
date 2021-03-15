@@ -61,7 +61,7 @@
 
     <h2>Login Form</h2>
 
-    <form action="log-process.php" method="post">
+    <form action="log_process.php" method="post">
 
         <div class="container">
             <label for="user"><b>Username</b></label>
