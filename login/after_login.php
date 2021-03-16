@@ -10,9 +10,9 @@
         <meta name="keywords" content="" />
         <meta name="description" content="" />
         <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet" />
-        <link href="styles/default.css" rel="stylesheet" />
-        <link href="styles/fonts.css" rel="stylesheet" />
-        <link href="styles/slideshow.css" rel="stylesheet" />
+        <link href="../styles/default.css" rel="stylesheet" />
+        <link href="../styles/fonts.css" rel="stylesheet" />
+        <link href="../styles/slideshow.css" rel="stylesheet" />
         <script src="../scripts/slideshow.js"></script>
     </head>
 
@@ -24,7 +24,7 @@
                     <li><a href="#" accesskey="1" title="inicio">Início</a></li>
                     <li><a href="#" accesskey="2" title="perfil">Perfil</a></li>
                     <li><a href="#" accesskey="3" title="guia_candidatura">Guia de Candidatura</a>
-                    <li><a href="index.php" accesskey="3" title="logout">Terminar Sessao</a></li>
+                    <li><a href="../index.php" accesskey="4" title="logout">Terminar Sessao</a></li>
                 </ul>
             </div>
         </div>
@@ -49,13 +49,13 @@
 
                         <!-- imagens do slider -->
                         <div class="primeiro slide">
-                            <img src="assets/ulp.jpg" alt="">
+                            <img src="../assets/ulp.jpg" alt="">
                         </div>
                         <div class="slide">
-                            <img src="assets/feup.jpg" alt="">
+                            <img src="../assets/feup.jpg" alt="">
                         </div>
                         <div class="slide">
-                            <img src="assets/ulisboa.jpg" alt="">
+                            <img src="../assets/ulisboa.jpg" alt="">
                         </div>
 
                         <!-- navegação automática -->
