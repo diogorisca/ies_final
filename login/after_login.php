@@ -13,7 +13,7 @@
         <link href="styles/default.css" rel="stylesheet" />
         <link href="styles/fonts.css" rel="stylesheet" />
         <link href="styles/slideshow.css" rel="stylesheet" />
-        <script src="scripts/slideshow.js"></script>
+        <script src="../scripts/slideshow.js"></script>
     </head>
 
     <body>
