@@ -37,7 +37,7 @@
 	}
 	
 	a {
-	    color: #d31e0b;
+	    color: rgb(0, 81, 255);
 	}
 	
 	a:hover {
@@ -53,7 +53,7 @@
 	.header {
 	    margin-bottom: 4em;
 	    padding-left: 2em;
-	    border-left: 6px solid #d31e0b;
+	    border-left: 6px solid rgb(0, 81, 255);
 	}
 	
 	.header h2 {
@@ -118,7 +118,7 @@
 	ul.style2 li:before {
 	    display: inline-block;
 	    padding: 4px;
-	    background: #DB3256;
+	    background: rgb(0, 81, 255);
 	}
 	
 	ul.style2 a {
@@ -174,7 +174,7 @@
 	}
 	
 	ul.contact li a.icon-dribbble:before {
-	    background: #C4376B;
+	    background: rgb(0, 81, 255);
 	}
 	
 	ul.contact li a.icon-tumblr:before {
@@ -182,7 +182,7 @@
 	}
 	
 	ul.contact li a.icon-rss:before {
-	    background: #F2600B;
+	    background: rgb(0, 81, 255);
 	}
 	/* Button Style */
 	
@@ -190,8 +190,8 @@
 	    display: inline-block;
 	    margin-top: 2em;
 	    padding: 1em 2em 1em 2em;
-	    background: #d31e0b;
-	    border-bottom: 4px solid #9e1506;
+	    background: rgb(0, 81, 255);
+	    border-bottom: 4px solid rgb(1, 60, 189);
 	    letter-spacing: 0.20em;
 	    text-decoration: none;
 	    text-transform: uppercase;
@@ -270,7 +270,7 @@
 	/* Logo */
 	
 	#logo h1 a {
-	    color: #d31e0b;
+	    color: rgb(0, 81, 255);
 	}
 	
 	#logo span {
@@ -289,8 +289,8 @@
 	#menu-wrapper {
 	    overflow: hidden;
 	    height: 60px;
-	    background: #d31e0b;
-	    border-bottom: 4px solid #9e1506;
+	    background: rgb(0, 81, 255);
+	    border-bottom: 4px solid rgb(0, 64, 201);
 	}
 	
 	#menu ul {
