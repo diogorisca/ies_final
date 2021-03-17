@@ -19,11 +19,17 @@
     <body>
 
         <div id="menu-wrapper">
-            <div id="menu" class="container">
+            <div id="menu" class="topnav">
                 <ul>
-                    <li><a href="#" accesskey="1" title="inicio">Início</a></li>
+                    <li><a class="active" href="#" accesskey="1" title="inicio">Início</a></li>
                     <li><a href="perfil/perfil.php" accesskey="2" title="perfil">Perfil</a></li>
-                    <li><a href="#" accesskey="3" title="guia_candidatura">Guia de Candidatura</a></li>
+                    <div class="subnav">
+                        <button class="subnavbtn">Guia de Candidatura <i class="drop_options"></i></button>
+                        <div class="subnav-content">
+                            <a href="#">Índice de Cursos</a>
+                            <a href="#">Simular Candidatura</a>
+                        </div>
+                    </div>
                     <li><a href="registo/registo.php" accesskey="4" title="registo">Registo</a></li>
                     <li><a href="login/log.php" accesskey="5" title="login">Login</a></li>
                 </ul>
