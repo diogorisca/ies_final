@@ -1,30 +1,34 @@
 <!DOCTYPE html>
-<html>
 
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="../styles/logstyles.css" rel="stylesheet" />
-</head>
+<html lang="en" dir="ltr">
 
-<body>
+<main>
 
-    <h2>Login Form</h2>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>IES</title>
+        <link href="../styles/logstyles.css" rel="stylesheet" />
+    </head>
 
-    <form action="log_process.php" method="post">
+    <body>
 
-        <div class="container">
-            <label for="user"><b>Username</b></label>
-            <input type="text" placeholder="Enter Username" name="user" required>
+        <h2>Login Form</h2>
 
-            <label for="pass"><b>Password</b></label>
-            <input type="password" placeholder="Enter Password" name="pass" required>
+        <form action="log_process.php" method="post">
 
-            <button type="submit">Login</button>
-            <button type="recover">Recover Password</button>
-        </div>
+            <div class="container">
+                <label for="user"><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" name="user" required>
 
-    </form>
+                <label for="pass"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="pass" required>
 
-</body>
+                <button type="submit">Login</button>
+                <button type="recover">Recover Password</button>
+            </div>
 
-</html>
+        </form>
+
+    </body>
+
+</main>

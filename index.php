@@ -34,7 +34,7 @@
             <div class="tbox1">
                 <h3>Introdução</h3>
                 <p>texto texto texto</p>
-                <a href="#" class="button">Saber mais</a>
+                <a href="sabermais.php" class="button">Saber mais</a>
             </div>
 
             <div class="tbox2">
@@ -50,13 +50,13 @@
 
                         <!-- imagens do slider -->
                         <div class="primeiro slide">
-                            <img src="assets/ulp.jpg" alt="">
+                            <img src="assets/ulp.jpg" alt="Universidade Lusófona do Porto">
                         </div>
                         <div class="slide">
-                            <img src="assets/feup.jpg" alt="">
+                            <img src="assets/feup.jpg" alt="Faculdade de Engenharia da Universidade do Porto">
                         </div>
                         <div class="slide">
-                            <img src="assets/ulisboa.jpg" alt="">
+                            <img src="assets/ulisboa.jpg" alt="Universidade de Lisboa">
                         </div>
 
                         <!-- navegação automática -->
