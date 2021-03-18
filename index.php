@@ -30,8 +30,7 @@
                             <a href="#">Simular Candidatura</a>
                         </div>
                     </div>
-                    <li><a href="registo/registo.php" accesskey="4" title="registo">Registo</a></li>
-                    <li><a href="login/log.php" accesskey="5" title="login">Login</a></li>
+                    <li><a href="login/log.php" accesskey="4" title="login">Login</a></li>
                 </ul>
             </div>
         </div>
