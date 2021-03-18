@@ -21,7 +21,7 @@
         <div id="menu-wrapper">
             <div id="menu" class="topnav">
                 <ul>
-                    <li><a class="active" href="#" accesskey="1" title="inicio">Início</a></li>
+                    <li><a class="active" href="index.php" accesskey="1" title="inicio">Início</a></li>
                     <li><a href="perfil/perfil.php" accesskey="2" title="perfil">Perfil</a></li>
                     <div class="subnav">
                         <button class="subnavbtn">Guia de Candidatura <i class="drop_options"></i></button>
