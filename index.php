@@ -40,7 +40,7 @@
             <div class="tbox1">
                 <h3>Introdução</h3>
                 <p>texto texto texto</p>
-                <a href="sabermais.php" class="button">Saber mais</a>
+                <a href="php/sabermais.php" class="button">Saber mais</a>
             </div>
 
             <div class="tbox2">

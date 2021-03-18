@@ -13,10 +13,10 @@ if ($resultadocheck > 0) {
 
     if ($linha['email'] == $username && $linha['pass'] == $password) {
         if ($linha['tipo'] == 1) {
-            header("location: ../index_afterlogin.php");
+            header("location: ../php/index_afterlogin.php");
         }
         if ($linha['tipo'] == 2) {
-            header("location: ../index_afterlogin.php");
+            header("location: ../php/index_afterlogin.php");
         }
     }
 } else {
