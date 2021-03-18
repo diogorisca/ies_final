@@ -23,13 +23,25 @@
                 <ul>
                     <li><a class="active" href="index.php" accesskey="1" title="inicio">Início</a></li>
                     <li><a href="perfil/perfil.php" accesskey="2" title="perfil">Perfil</a></li>
-                    <div class="subnav">
-                        <button class="subnavbtn">Guia de Candidatura <i class="drop_options"></i></button>
-                        <div class="subnav-content">
-                            <a href="#">Índice de Cursos</a>
-                            <a href="#">Simular Candidatura</a>
+                    <li class="dropdown">
+                        <a href="#" accesskey="3" title="">Guia de Candidatura</a>
+                        <div class="dropdown-content">
+                            <ul>
+                                <li class="side-dropdown">
+                                    <a href="#">Índice de Cursos</a>
+                                    <div class="side-hide-dropdown">
+                                        <ul>
+                                            <li><a href="#">Área</a></li>
+                                            <li><a href="#">Curso</a></li>
+                                            <li><a href="#">Distrito</a></li>
+                                            <li><a href="#">Instituição</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li><a href="#">Simular Candidatura</a></li>
+                            </ul>
                         </div>
-                    </div>
+                    </li>
                     <li><a href="login/log.php" accesskey="4" title="login">Login</a></li>
                 </ul>
             </div>
