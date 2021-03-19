@@ -104,27 +104,6 @@ body {
     color: #FFF;
 }
 
-
-/* Button Style */
-
-.button {
-    display: inline-block;
-    margin-top: 2em;
-    padding: 1em 2em 1em 2em;
-    background: #001a72;
-    letter-spacing: 0.20em;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-weight: 400;
-    font-size: 0.90em;
-    color: #FFF;
-    transition-duration: 0.5s;
-}
-
-.button:hover {
-    color: #3cdbc0;
-}
-
 h1,
 h2,
 h3 {
