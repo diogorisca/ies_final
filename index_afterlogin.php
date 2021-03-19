@@ -7,8 +7,6 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title>IES</title>
-        <meta name="keywords" content="" />
-        <meta name="description" content="" />
         <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet" />
         <link href="styles/indexstyles.css" rel="stylesheet" />
         <link href="styles/fonts.css" rel="stylesheet" />
@@ -18,22 +16,43 @@
 
     <body>
 
+        <!-- Ínicio do menu -->
+
         <div id="menu-wrapper">
-            <div id="menu" class="container">
+            <div id="menu" class="topnav">
                 <ul>
-                    <li><a href="#" accesskey="1" title="inicio">Início</a></li>
-                    <li><a href="#" accesskey="2" title="perfil">Perfil</a></li>
-                    <li><a href="#" accesskey="3" title="guia_candidatura">Guia de Candidatura</a>
-                    <li><a href="index.php" accesskey="4" title="logout">Terminar Sessao</a></li>
+                    <li><a class="active" href="index.php" accesskey="1">Início</a></li>
+                    <li><a href="perfil/perfil.php" accesskey="2">Perfil</a></li>
+                    <li class="dropdown">
+                        <a accesskey="3">Guia de Candidatura</a>
+                        <div class="dropdown-content">
+                            <ul>
+                                <li class="side-dropdown">
+                                    <a href="#">Índice de Cursos</a>
+                                    <div class="side-hide-dropdown">
+                                        <ul>
+                                            <li><a href="#">Área</a></li>
+                                            <li><a href="#">Curso</a></li>
+                                            <li><a href="#">Distrito</a></li>
+                                            <li><a href="#">Instituição</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li><a href="simular_candidatura.php">Simular Candidatura</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="index.php" accesskey="4">Terminar Sessão</a></li>
                 </ul>
             </div>
         </div>
+
+        <!-- Fim do menu -->
 
         <div id="page" class="container">
             <div class="tbox1">
                 <h3>Introdução</h3>
                 <p>texto texto texto</p>
-                <a href="#" class="button">Saber mais</a>
             </div>
 
             <div class="tbox2">
@@ -49,13 +68,13 @@
 
                         <!-- imagens do slider -->
                         <div class="primeiro slide">
-                            <img src="assets/ulp.jpg" alt="">
+                            <img src="assets/ulp.jpg" alt="Universidade Lusófona do Porto">
                         </div>
                         <div class="slide">
-                            <img src="assets/feup.jpg" alt="">
+                            <img src="assets/feup.jpg" alt="Faculdade de Engenharia da Universidade do Porto">
                         </div>
                         <div class="slide">
-                            <img src="assets/ulisboa.jpg" alt="">
+                            <img src="assets/ulisboa.jpg" alt="Universidade de Lisboa">
                         </div>
 
                         <!-- navegação automática -->
@@ -75,8 +94,6 @@
                     </div>
 
                 </div>
-
-
 
             </div>
 
