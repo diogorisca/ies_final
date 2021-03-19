@@ -10,17 +10,17 @@
         <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet" />
         <link href="../styles/indexstyles.css" rel="stylesheet" />
         <link href="../styles/fonts.css" rel="stylesheet" />
+        <link href="../styles/logstyles.css" rel="stylesheet" />
     </head>
 
     <body>
-
         <!-- Ínicio do menu -->
 
         <div id="menu-wrapper">
             <div id="menu" class="topnav">
                 <ul>
                     <li><a href="../index.php" accesskey="1">Início</a></li>
-                    <li><a class="active" href="perfil.php" accesskey="2">Perfil</a></li>
+                    <li><a href="perfil.php" accesskey="2">Perfil</a></li>
                     <li class="dropdown">
                         <a accesskey="3">Guia de Candidatura</a>
                         <div class="dropdown-content">
@@ -36,16 +36,32 @@
                                         </ul>
                                     </div>
                                 </li>
-                                <li><a href="../simular_candidatura.php">Simular Candidatura</a></li>
+                                <li><a href="simular_candidatura.php">Simular Candidatura</a></li>
                             </ul>
                         </div>
                     </li>
-                    <li><a href="../login/log.php" accesskey="4">Login</a></li>
+                    <li><a class="active" href="login.php" accesskey="4">Login</a></li>
                 </ul>
             </div>
         </div>
 
         <!-- Fim do menu -->
+        <h2>Login Form</h2>
+
+        <form action="../login/log_process.php" method="post">
+
+            <div class="container">
+                <label for="user"><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" name="user" required>
+
+                <label for="pass"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="pass" required>
+
+                <button type="submit">Login</button>
+                <button type="recover">Recover Password</button>
+            </div>
+
+        </form>
 
     </body>
 

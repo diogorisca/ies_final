@@ -21,8 +21,8 @@
         <div id="menu-wrapper">
             <div id="menu" class="topnav">
                 <ul>
-                    <li><a class="active" href="index.php" accesskey="1">Início</a></li>
-                    <li><a href="perfil/perfil.php" accesskey="2">Perfil</a></li>
+                    <li><a class="active" href="index_afterlogin.php" accesskey="1">Início</a></li>
+                    <li><a href="perfil.php" accesskey="2">Perfil</a></li>
                     <li class="dropdown">
                         <a accesskey="3">Guia de Candidatura</a>
                         <div class="dropdown-content">
@@ -42,7 +42,7 @@
                             </ul>
                         </div>
                     </li>
-                    <li><a href="index.php" accesskey="4">Terminar Sessão</a></li>
+                    <li><a href="../index.php" accesskey="4">Terminar Sessão</a></li>
                 </ul>
             </div>
         </div>

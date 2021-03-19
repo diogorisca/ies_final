@@ -13,16 +13,16 @@ if ($resultadocheck > 0) {
 
     if ($linha['email'] == $username && $linha['pass'] == $password) {
         if ($linha['tipo'] == 1) {
-            header("location: ../php/index_afterlogin.php");
+            header("location: ../menu/index_afterlogin.php");
         }
         if ($linha['tipo'] == 2) {
-            header("location: ../php/index_afterlogin.php");
+            header("location: ../menu/index_afterlogin.php");
         }
     }
 } else {
 
     echo  '<div class="alert alert-danger">
-                <a href="log.php" class="close" data-dismiss="alert" aria-label="close">Voltar</a>
+                <a href="../menu/login.php" class="close" data-dismiss="alert" aria-label="close">Voltar</a>
                 <p><strong>Alerta!</strong></p>
                 Email or password wrong! Please try again!.
             </div>';

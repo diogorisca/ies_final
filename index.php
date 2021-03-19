@@ -22,7 +22,7 @@
             <div id="menu" class="topnav">
                 <ul>
                     <li><a class="active" href="index.php" accesskey="1">Início</a></li>
-                    <li><a href="perfil/perfil.php" accesskey="2">Perfil</a></li>
+                    <li><a href="menu/perfil.php" accesskey="2">Perfil</a></li>
                     <li class="dropdown">
                         <a accesskey="3">Guia de Candidatura</a>
                         <div class="dropdown-content">
@@ -38,11 +38,11 @@
                                         </ul>
                                     </div>
                                 </li>
-                                <li><a href="simular_candidatura.php">Simular Candidatura</a></li>
+                                <li><a href="menu/simular_candidatura.php">Simular Candidatura</a></li>
                             </ul>
                         </div>
                     </li>
-                    <li><a href="login/log.php" accesskey="4">Login</a></li>
+                    <li><a href="menu/login.php" accesskey="4">Login</a></li>
                 </ul>
             </div>
         </div>
