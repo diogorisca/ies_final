@@ -48,22 +48,28 @@
 
         <!-- Fim do menu -->
 
-        <h2 class="titulo">Login</h2>
+        <h2 class="titulo">Dados Principais</h2>
+        <div class="container">
 
-        <form action="../login/log_process.php" method="post">
+            <input type="text" placeholder="Nome Completo" name="user" required>
+            <p></p>
 
-            <div class="container">
-                
-                <input type="text" placeholder="Email" name="user" required><p></p>
+            <input type="text" placeholder="Email" name="user" required>
+            <p></p>
 
-                
-                <input type="password" placeholder="Palavra-passe" name="pass" required><p></p>
-                <button type="submit">Login</button>
-                <button type="recover">Recuperar palavra-passe</button>
-                <h5>Ainda não tem conta? <a href="registo.php">Clique aqui!</a></h5>
-            </div>
+            <input type="password" placeholder="Palavra-passe" name="pass" required>
+            <p></p>
 
-        </form>
+            <h2 class="titulo2">Dados Académicos</h2>
+
+            <input type="text" placeholder="Média de Acesso" name="user" required>
+            <p></p>
+
+            <input type="text" placeholder="Provas de Ingresso" name="user" required>
+            <p></p>
+
+            <button type="submit">Registar</button>
+        </div>
 
     </body>
 
