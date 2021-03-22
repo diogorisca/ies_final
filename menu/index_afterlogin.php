@@ -8,10 +8,10 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title>IES</title>
         <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet" />
-        <link href="styles/indexstyles.css" rel="stylesheet" />
-        <link href="styles/fonts.css" rel="stylesheet" />
-        <link href="styles/slideshow.css" rel="stylesheet" />
-        <script src="scripts/slideshow.js"></script>
+        <link href="../styles/indexstyles.css" rel="stylesheet" />
+        <link href="../styles/fonts.css" rel="stylesheet" />
+        <link href="../styles/slideshow.css" rel="stylesheet" />
+        <script src="../scripts/slideshow.js"></script>
     </head>
 
     <body>
