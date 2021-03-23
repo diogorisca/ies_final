@@ -54,6 +54,18 @@
             <input type="text" placeholder="Nome Completo" name="user" required>
             <p></p>
 
+            <input type="text" placeholder="Número Cartão de Cidadão" name="user" required>
+            <p></p>
+
+            <input type="text" placeholder="Data Nascimento" name="user" required>
+            <p></p>
+
+            <input type="text" placeholder="Contacto" name="user" required>
+            <p></p>
+
+            <input type="text" placeholder="Morada" name="user" required>
+            <p></p>
+
             <input type="text" placeholder="Email" name="user" required>
             <p></p>
 
