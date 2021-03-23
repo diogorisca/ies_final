@@ -19,11 +19,4 @@ if ($resultadocheck > 0) {
             header("location: ../menu/index_afterlogin.php");
         }
     }
-} else {
-
-    echo  '<div class="alert alert-danger">
-                <a href="../menu/login.php" class="close" data-dismiss="alert" aria-label="close">Voltar</a>
-                <p><strong>Alerta!</strong></p>
-                Email or password wrong! Please try again!.
-            </div>';
-}
+} 
