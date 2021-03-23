@@ -55,8 +55,6 @@
             <div class="container">
                 
                 <input type="text" placeholder="Email" name="user" required><p></p>
-
-                
                 <input type="password" placeholder="Palavra-passe" name="pass" required><p></p>
                 <button type="submit">Login</button>
                 <button type="recover">Recuperar palavra-passe</button>

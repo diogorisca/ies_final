@@ -49,40 +49,41 @@
         <!-- Fim do menu -->
 
         <h2 class="titulo">Dados Principais</h2>
-        <div class="container">
+        <form action="../login/registo_process.php" method="post">
+            <div class="container">
 
-            <input type="text" placeholder="Nome Completo" name="user" required>
-            <p></p>
+                <input type="text" placeholder="Nome Completo" name="user" required>
+                <p></p>
 
-            <input type="text" placeholder="Número Cartão de Cidadão" name="user" required>
-            <p></p>
+                <input type="text" placeholder="Número Cartão de Cidadão" name="cc" required>
+                <p></p>
 
-            <input type="text" placeholder="Data Nascimento" name="user" required>
-            <p></p>
+                <input type="text" placeholder="Data Nascimento" name="date" required>
+                <p></p>
 
-            <input type="text" placeholder="Contacto" name="user" required>
-            <p></p>
+                <input type="text" placeholder="Contacto" name="contacto" required>
+                <p></p>
 
-            <input type="text" placeholder="Morada" name="user" required>
-            <p></p>
+                <input type="text" placeholder="Morada" name="morada" required>
+                <p></p>
 
-            <input type="text" placeholder="Email" name="user" required>
-            <p></p>
+                <input type="text" placeholder="Email" name="email" required>
+                <p></p>
 
-            <input type="password" placeholder="Palavra-passe" name="pass" required>
-            <p></p>
+                <input type="password" placeholder="Palavra-passe" name="pass" required>
+                <p></p>
 
-            <h2 class="titulo2">Dados Académicos</h2>
+                <h2 class="titulo2">Dados Académicos</h2>
 
-            <input type="text" placeholder="Média de Acesso" name="user" required>
-            <p></p>
+                <input type="text" placeholder="Média de Acesso" name="media" required>
+                <p></p>
 
-            <input type="text" placeholder="Provas de Ingresso" name="user" required>
-            <p></p>
+                <input type="text" placeholder="Provas de Ingresso" name="prova" required>
+                <p></p>
 
-            <button type="submit">Registar</button>
-        </div>
-
+                <button type="submit">Registar</button>
+            </div>
+        </form>
     </body>
 
 </main>
