@@ -77,7 +77,7 @@
 
                 <h2 class="titulo2">Dados Académicos</h2>
 
-                <input type="text" placeholder="Média de Acesso" name="media" required>
+                <input type="number" class="media" placeholder="Média de Acesso" name="media" required>
                 <p></p>
 
                 <div class="multiselect">
@@ -131,26 +131,26 @@
                     </div>
                 </div>
 
-                <input type="number" id="text1" placeholder="Nota de Alemão">
-                <input type="number" id="text2" placeholder="Nota de Biologia e Geologia">
-                <input type="number" id="text3" placeholder="Nota de Desenho A">
-                <input type="number" id="text4" placeholder="Nota de Economia A">
-                <input type="number" id="text5" placeholder="Nota de Espanhol">
-                <input type="number" id="text6" placeholder="Nota de Filosofia">
-                <input type="number" id="text7" placeholder="Nota de Física e Química A">
-                <input type="number" id="text8" placeholder="Nota de Francês">
-                <input type="number" id="text9" placeholder="Nota de Geografia A">
-                <input type="number" id="text10" placeholder="Nota de Geometria Descritiva A">
-                <input type="number" id="text11" placeholder="Nota de História">
-                <input type="number" id="text12" placeholder="Nota de História da Cultura e das Artes">
-                <input type="number" id="text13" placeholder="Nota de Inglês">
-                <input type="number" id="text14" placeholder="Nota de Latim A">
-                <input type="number" id="text15" placeholder="Nota de Literatura Portuguesa">
-                <input type="number" id="text16" placeholder="Nota de Matemática A">
-                <input type="number" id="text17" placeholder="Nota de Matemática B">
-                <input type="number" id="text18" placeholder="Nota de Matemática Aplicada às Ciências Sociais">
-                <input type="number" id="text19" placeholder="Nota de Português">
-                <input type="number" id="text20" placeholder="Nota de Mandarim">
+                <input type="number" class="notas" id="text1" placeholder="Nota de Alemão">
+                <input type="number" class="notas" id="text2" placeholder="Nota de Biologia e Geologia">
+                <input type="number" class="notas" id="text3" placeholder="Nota de Desenho A">
+                <input type="number" class="notas" id="text4" placeholder="Nota de Economia A">
+                <input type="number" class="notas" id="text5" placeholder="Nota de Espanhol">
+                <input type="number" class="notas" id="text6" placeholder="Nota de Filosofia">
+                <input type="number" class="notas" id="text7" placeholder="Nota de Física e Química A">
+                <input type="number" class="notas" id="text8" placeholder="Nota de Francês">
+                <input type="number" class="notas" id="text9" placeholder="Nota de Geografia A">
+                <input type="number" class="notas" id="text10" placeholder="Nota de Geometria Descritiva A">
+                <input type="number" class="notas" id="text11" placeholder="Nota de História">
+                <input type="number" class="notas" id="text12" placeholder="Nota de História da Cultura e das Artes">
+                <input type="number" class="notas" id="text13" placeholder="Nota de Inglês">
+                <input type="number" class="notas" id="text14" placeholder="Nota de Latim A">
+                <input type="number" class="notas" id="text15" placeholder="Nota de Literatura Portuguesa">
+                <input type="number" class="notas" id="text16" placeholder="Nota de Matemática A">
+                <input type="number" class="notas" id="text17" placeholder="Nota de Matemática B">
+                <input type="number" class="notas" id="text18" placeholder="Nota de Matemática Aplicada às Ciências Sociais">
+                <input type="number" class="notas" id="text19" placeholder="Nota de Português">
+                <input type="number" class="notas" id="text20" placeholder="Nota de Mandarim">
 
                 <p></p>
 
