@@ -18,5 +18,3 @@ $sql = "INSERT INTO utilizador (nome, cartao_cidadao, data_nascimento, email, co
 $resultado = mysqli_query($ligacao, $sql);
 
     header("location: ../menu/login.php");
-
-?>
