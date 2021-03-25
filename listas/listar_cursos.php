@@ -20,3 +20,20 @@ $sql = "SELECT nome FROM curso WHERE faculdade = '$faculdade'";
 
 }
 */
+
+
+<?php
+
+include '../database/dbconnection.php';
+
+$sql = "SELECT DISTINCT nome FROM `curso` order by substring_index(nome, ' ', -1)";;
+$resultado = $ligacao->query($sql);
+
+if ($resultado->num_rows > 0) {
+    while ($linha = $resultado->fetch_assoc()) {
+        $nome = $linha["nome"];
+        echo $nome;
+    }
+}
+
+?>

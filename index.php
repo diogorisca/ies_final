@@ -32,9 +32,9 @@
                                     <div class="side-hide-dropdown">
                                         <ul>
                                             <li><a href="#">Área</a></li>
-                                            <li><a href="#">Curso</a></li>
+                                            <li><a href="listas/listar_cursos.php">Curso</a></li>
                                             <li><a href="#">Distrito</a></li>
-                                            <li><a href="#">Instituição</a></li>
+                                            <li><a href="listas/listar_ies.php">Instituição</a></li>
                                         </ul>
                                     </div>
                                 </li>
