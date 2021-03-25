@@ -11,11 +11,12 @@ function showCheckboxes() {
     }
 }
 
+/*
 function notaAlemao() {
     // Get the checkbox
-    var checkBox = document.getElementById("myCheck1");
+    var checkBox = document.getElementById("myCheck5");
     // Get the output text
-    var text = document.getElementById("text1");
+    var text = document.getElementById("text5");
 
     // If the checkbox is checked, display the output text
     if (checkBox.checked == true) {
@@ -24,10 +25,11 @@ function notaAlemao() {
         text.style.display = "none";
     }
 }
+*/
 
 function notaBG() {
-    var checkBox = document.getElementById("myCheck2");
-    var text = document.getElementById("text2");
+    var checkBox = document.getElementById("myCheck1");
+    var text = document.getElementById("text1");
 
     if (checkBox.checked == true) {
         text.style.display = "inline-block";
@@ -36,40 +38,8 @@ function notaBG() {
     }
 }
 
+/*
 function notaDesenho() {
-    var checkBox = document.getElementById("myCheck3");
-    var text = document.getElementById("text3");
-
-    if (checkBox.checked == true) {
-        text.style.display = "inline-block";
-    } else {
-        text.style.display = "none";
-    }
-}
-
-function notaEconomia() {
-    var checkBox = document.getElementById("myCheck4");
-    var text = document.getElementById("text4");
-
-    if (checkBox.checked == true) {
-        text.style.display = "inline-block";
-    } else {
-        text.style.display = "none";
-    }
-}
-
-function notaEspanhol() {
-    var checkBox = document.getElementById("myCheck5");
-    var text = document.getElementById("text5");
-
-    if (checkBox.checked == true) {
-        text.style.display = "inline-block";
-    } else {
-        text.style.display = "none";
-    }
-}
-
-function notaFilosofia() {
     var checkBox = document.getElementById("myCheck6");
     var text = document.getElementById("text6");
 
@@ -80,7 +50,7 @@ function notaFilosofia() {
     }
 }
 
-function notaFQ() {
+function notaEconomia() {
     var checkBox = document.getElementById("myCheck7");
     var text = document.getElementById("text7");
 
@@ -91,7 +61,7 @@ function notaFQ() {
     }
 }
 
-function notaFrances() {
+function notaEspanhol() {
     var checkBox = document.getElementById("myCheck8");
     var text = document.getElementById("text8");
 
@@ -102,7 +72,7 @@ function notaFrances() {
     }
 }
 
-function notaGeografia() {
+function notaFilosofia() {
     var checkBox = document.getElementById("myCheck9");
     var text = document.getElementById("text9");
 
@@ -112,8 +82,20 @@ function notaGeografia() {
         text.style.display = "none";
     }
 }
+*/
 
-function notaGeometria() {
+function notaFQ() {
+    var checkBox = document.getElementById("myCheck2");
+    var text = document.getElementById("text2");
+
+    if (checkBox.checked == true) {
+        text.style.display = "inline-block";
+    } else {
+        text.style.display = "none";
+    }
+}
+/*
+function notaFrances() {
     var checkBox = document.getElementById("myCheck10");
     var text = document.getElementById("text10");
 
@@ -124,7 +106,7 @@ function notaGeometria() {
     }
 }
 
-function notaHistoria() {
+function notaGeografia() {
     var checkBox = document.getElementById("myCheck11");
     var text = document.getElementById("text11");
 
@@ -135,7 +117,7 @@ function notaHistoria() {
     }
 }
 
-function notaHistoriaCultura() {
+function notaGeometria() {
     var checkBox = document.getElementById("myCheck12");
     var text = document.getElementById("text12");
 
@@ -146,7 +128,7 @@ function notaHistoriaCultura() {
     }
 }
 
-function notaIngles() {
+function notaHistoria() {
     var checkBox = document.getElementById("myCheck13");
     var text = document.getElementById("text13");
 
@@ -157,7 +139,7 @@ function notaIngles() {
     }
 }
 
-function notaLatim() {
+function notaHistoriaCultura() {
     var checkBox = document.getElementById("myCheck14");
     var text = document.getElementById("text14");
 
@@ -168,7 +150,7 @@ function notaLatim() {
     }
 }
 
-function notaLP() {
+function notaIngles() {
     var checkBox = document.getElementById("myCheck15");
     var text = document.getElementById("text15");
 
@@ -179,7 +161,7 @@ function notaLP() {
     }
 }
 
-function notaMatA() {
+function notaLatim() {
     var checkBox = document.getElementById("myCheck16");
     var text = document.getElementById("text16");
 
@@ -190,7 +172,7 @@ function notaMatA() {
     }
 }
 
-function notaMatB() {
+function notaLP() {
     var checkBox = document.getElementById("myCheck17");
     var text = document.getElementById("text17");
 
@@ -200,8 +182,19 @@ function notaMatB() {
         text.style.display = "none";
     }
 }
+*/
+function notaMatA() {
+    var checkBox = document.getElementById("myCheck3");
+    var text = document.getElementById("text3");
 
-function notaMatAplicada() {
+    if (checkBox.checked == true) {
+        text.style.display = "inline-block";
+    } else {
+        text.style.display = "none";
+    }
+}
+/*
+function notaMatB() {
     var checkBox = document.getElementById("myCheck18");
     var text = document.getElementById("text18");
 
@@ -212,7 +205,7 @@ function notaMatAplicada() {
     }
 }
 
-function notaPT() {
+function notaMatAplicada() {
     var checkBox = document.getElementById("myCheck19");
     var text = document.getElementById("text19");
 
@@ -222,7 +215,18 @@ function notaPT() {
         text.style.display = "none";
     }
 }
+*/
+function notaPT() {
+    var checkBox = document.getElementById("myCheck4");
+    var text = document.getElementById("text4");
 
+    if (checkBox.checked == true) {
+        text.style.display = "inline-block";
+    } else {
+        text.style.display = "none";
+    }
+}
+/*
 function notaMandarim() {
     var checkBox = document.getElementById("myCheck20");
     var text = document.getElementById("text20");
@@ -232,4 +236,6 @@ function notaMandarim() {
     } else {
         text.style.display = "none";
     }
+
 }
+*/
