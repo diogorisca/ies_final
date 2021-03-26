@@ -96,6 +96,8 @@
                             <input type="checkbox" id="myCheck3" onclick="notaMatA()" />Matemática A</label>
                         <label for="quatro">
                             <input type="checkbox" id="myCheck4" onclick="notaPT()" />Português</label>
+                        <label for="doze">
+                            <input type="checkbox" id="myCheck12" onclick="notaGeometria()" />Geometria Descritiva A</label>
                         <!-- <label for="cinco">
                             <input type="checkbox" id="myCheck5" onclick="return false;" />Alemão</label>
                         <label for="seis">
@@ -109,10 +111,8 @@
                         <label for="dez">
                             <input type="checkbox" id="myCheck10" onclick="return false;" />Francês</label>
                         <label for="onze">
-                            <input type="checkbox" id="myCheck11" onclick="return false;" />Geografia A</label> -->
-                        <label for="doze">
-                            <input type="checkbox" id="myCheck12" onclick="notaGeometria()" />Geometria Descritiva A</label>
-                        <!-- <label for="treze">
+                            <input type="checkbox" id="myCheck11" onclick="return false;" />Geografia A</label>
+                        <label for="treze">
                             <input type="checkbox" id="myCheck13" onclick="return false;" />História</label>
                         <label for="catorze">
                             <input type="checkbox" id="myCheck14" onclick="return false;" />História da Cultura e das Artes</label>
@@ -135,20 +135,20 @@
                 <input type="number" class="notas" id="text2" placeholder="Nota de Física e Química A" name="notaB">
                 <input type="number" class="notas" id="text3" placeholder="Nota de Matemática A" name="notaC">
                 <input type="number" class="notas" id="text4" placeholder="Nota de Português" name="notaD">
+                <input type="number" class="notas" id="text12" placeholder="Nota de Geometria Descritiva A" name="notaE">
                 <!-- <input type="number" class="notas" id="text5" placeholder="Nota de Alemão">
                 <input type="number" class="notas" id="text6" placeholder="Nota de Desenho A">
                 <input type="number" class="notas" id="text7" placeholder="Nota de Economia A">
                 <input type="number" class="notas" id="text8" placeholder="Nota de Espanhol">
                 <input type="number" class="notas" id="text9" placeholder="Nota de Filosofia">
                 <input type="number" class="notas" id="text10" placeholder="Nota de Francês">
-                <input type="number" class="notas" id="text11" placeholder="Nota de Geografia A"> -->
-                <input type="number" class="notas" id="text12" placeholder="Nota de Geometria Descritiva A" name="notaE">
-                <!-- <input type="number" class="notas" id="text13" placeholder="Nota de História">
+                <input type="number" class="notas" id="text11" placeholder="Nota de Geografia A">
+                <input type="number" class="notas" id="text13" placeholder="Nota de História">
                 <input type="number" class="notas" id="text14" placeholder="Nota de História da Cultura e das Artes">
                 <input type="number" class="notas" id="text15" placeholder="Nota de Inglês">
                 <input type="number" class="notas" id="text16" placeholder="Nota de Latim A">
                 <input type="number" class="notas" id="text17" placeholder="Nota de Literatura Portuguesa">
-                <input type="number" class="notas" id="text18" placeholder="Nota de Matemática B">
+                <input type="number" class="notas" id="text18" placeholder=FNota de Matemática B">
                 <input type="number" class="notas" id="text19" placeholder="Nota de Matemática Aplicada às Ciências Sociais">
                 <input type="number" class="notas" id="text20" placeholder="Nota de Mandarim"> -->
 

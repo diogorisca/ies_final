@@ -34,17 +34,6 @@ function notaFQ() {
     }
 }
 
-function notaGeometria() {
-    var checkBox = document.getElementById("myCheck12");
-    var text = document.getElementById("text12");
-
-    if (checkBox.checked == true) {
-        text.style.display = "inline-block";
-    } else {
-        text.style.display = "none";
-    }
-}
-
 function notaMatA() {
     var checkBox = document.getElementById("myCheck3");
     var text = document.getElementById("text3");
@@ -67,6 +56,16 @@ function notaPT() {
     }
 }
 
+function notaGeometria() {
+    var checkBox = document.getElementById("myCheck12");
+    var text = document.getElementById("text12");
+
+    if (checkBox.checked == true) {
+        text.style.display = "inline-block";
+    } else {
+        text.style.display = "none";
+    }
+}
 
 /*
 function notaAlemao() {

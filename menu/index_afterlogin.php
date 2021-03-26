@@ -68,13 +68,13 @@
 
                         <!-- imagens do slider -->
                         <div class="primeiro slide">
-                            <img src="assets/ulp.jpg" alt="Universidade Lusófona do Porto">
+                            <img src="../assets/ulp.jpg" alt="Universidade Lusófona do Porto">
                         </div>
                         <div class="slide">
-                            <img src="assets/feup.jpg" alt="Faculdade de Engenharia da Universidade do Porto">
+                            <img src="../assets/feup.jpg" alt="Faculdade de Engenharia da Universidade do Porto">
                         </div>
                         <div class="slide">
-                            <img src="assets/ulisboa.jpg" alt="Universidade de Lisboa">
+                            <img src="../assets/ulisboa.jpg" alt="Universidade de Lisboa">
                         </div>
 
                         <!-- navegação automática -->
