@@ -4,7 +4,7 @@ include '../database/dbconnection.php';
 
 $tipo = 1;
 $user = $_POST['user'];
-$cc = $_POST['pass'];
+$cc = $_POST['cc'];
 $date = $_POST['date'];
 $contacto = $_POST['contacto'];
 $morada = $_POST['morada'];
