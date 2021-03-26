@@ -1,7 +1,9 @@
 body {
     margin: 0px;
     padding: 0px;
-    background: #FFF;
+    background-image: url('../assets/fundo.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 12pt;
     font-weight: 300;
@@ -21,6 +23,48 @@ body {
 .topnav a:hover,
 .topnav a.active {
     color: #3cdbc0!important;
+}
+
+.titulo-inicial {
+    color: #3cdbc0;
+    text-align: left;
+    font-family: IBM Plex Sans;
+    font-size: 50px!important;
+    font-weight: bold!important;
+}
+
+.inform {
+    text-align: left;
+    font-size: 25px;
+}
+
+.texto-inform {
+    text-align: left;
+    padding-left: 20px;
+    font-size: 16px;
+}
+
+
+/* 2-column */
+
+.tbox1,
+.tbox2,
+.tbox3 {
+    width: 588px;
+}
+
+.tbox1 {
+    float: left;
+    padding-top: 100px;
+}
+
+.tbox2 {
+    float: right;
+}
+
+.tbox3 {
+    padding-top: 500px;
+    float: inline-end;
 }
 
 
@@ -191,22 +235,6 @@ ul.style2 a {
 ul.style2 li:first-child {
     border-top: 0;
     padding-top: 0;
-}
-
-
-/* 2-column */
-
-.tbox1,
-.tbox2 {
-    width: 588px;
-}
-
-.tbox1 {
-    float: left;
-}
-
-.tbox2 {
-    float: right;
 }
 
 
