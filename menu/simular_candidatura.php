@@ -22,25 +22,33 @@
                     <li><a href="../index.php" accesskey="1">Início</a></li>
                     <li><a href="perfil.php" accesskey="2">Perfil</a></li>
                     <li class="dropdown">
-                        <a class="active" accesskey="3">Guia de Candidatura</a>
+                        <a accesskey="3">Guia de Candidatura</a>
                         <div class="dropdown-content">
                             <ul>
                                 <li class="side-dropdown">
                                     <a href="#">Índice de Cursos</a>
                                     <div class="side-hide-dropdown">
                                         <ul>
-                                            <li><a href="#">Área</a></li>
-                                            <li><a href="#">Curso</a></li>
-                                            <li><a href="#">Distrito</a></li>
+                                            <li><a href="../listas/listar_IES_engenharia">Área</a></li>
+                                            <li><a href="../listas/listar_cursos.php">Curso</a></li>
+                                            <li><a href="../listas/listar_distrito.php">Distrito</a></li>
                                             <li><a href="../listas/listar_ies.php">Instituição</a></li>
                                         </ul>
                                     </div>
                                 </li>
-                                <li><a href="simular_candidatura.php">Simular Candidatura</a></li>
+                                <li><a class="active" href="simular_candidatura.php">Simular Candidatura</a></li>
                             </ul>
                         </div>
                     </li>
-                    <li><a href="login.php" accesskey="4">Login</a></li>
+
+                    <?php
+                    if (isset($_SESSION['user']) and $_SESSION['user'] != '') {
+                        echo '<li><a href="simular_candidatura.php"><span>Terminar Sessão</span></a></li>';
+                    } else {
+                        echo '<li><a href="login.php" accesskey="4">Login</a></li>';
+                    }
+                    ?>
+
                 </ul>
             </div>
         </div>

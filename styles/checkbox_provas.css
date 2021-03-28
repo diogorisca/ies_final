@@ -24,11 +24,13 @@
 
 #checkboxes {
     display: none;
-    border: 1px #dadada solid;
+    border: 1px solid #ccc;
+    background-color: white;
 }
 
 #checkboxes label {
     display: block;
+    text-align: left;
 }
 
 #checkboxes label:hover {

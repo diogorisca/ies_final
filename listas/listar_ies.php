@@ -24,7 +24,7 @@
                     <li><a href="../index.php" accesskey="1">Início</a></li>
                     <li><a href="../menu/perfil.php" accesskey="2">Perfil</a></li>
                     <li class="dropdown">
-                        <a accesskey="3" class="active">Guia de Candidatura</a>
+                        <a class="active" accesskey="3">Guia de Candidatura</a>
                         <div class="dropdown-content">
                             <ul>
                                 <li class="side-dropdown">
@@ -45,7 +45,7 @@
 
                     <?php
                     if (isset($_SESSION['user']) and $_SESSION['user'] != '') {
-                        echo '<li><a href="../index.php"><span>Terminar Sessão</span></a></li>';
+                        echo '<li><a href="listar_ies.php"><span>Terminar Sessão</span></a></li>';
                     } else {
                         echo '<li><a href="../menu/login.php" accesskey="4">Login</a></li>';
                     }
@@ -90,7 +90,9 @@
                                 <tbody id="tabela">
                                     <tr>
                                         <!-- Imprime as instituições na tabela -->
-                                        <td><?php echo $linha["nome"] ?></td>
+                                        <td>
+                                            <?php echo $linha["nome"]; ?>
+                                        </td>
                                     </tr>
                                 </tbody>
 

@@ -1,39 +1,115 @@
-/*
+<!DOCTYPE html>
 
-Quando carregar em cursos passa variavel a 1 e da display de todos os cursos
+<html lang="en" dir="ltr">
 
-if x=1{
+<main>
 
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>IES</title>
+        <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet" />
+        <link href="../styles/indexstyles.css" rel="stylesheet" />
+        <link href="../styles/listas.css" rel="stylesheet" />
+        <link href="../styles/fonts.css" rel="stylesheet" />
+        <script src="../scripts/procurar.js"></script>
+    </head>
 
-$sql = "SELECT DISTINCT nome FROM `curso` order by substring_index(nome, ' ', -1)";
-$resultado = mysqli_query($ligacao, $sql);
+    <body>
 
-}
+        <!-- Ínicio do menu -->
 
+        <div id="menu-wrapper">
+            <div id="menu" class="topnav">
+                <ul>
+                    <li><a href="../index.php" accesskey="1">Início</a></li>
+                    <li><a href="../menu/perfil.php" accesskey="2">Perfil</a></li>
+                    <li class="dropdown">
+                        <a class="active" accesskey="3">Guia de Candidatura</a>
+                        <div class="dropdown-content">
+                            <ul>
+                                <li class="side-dropdown">
+                                    <a href="#">Índice de Cursos</a>
+                                    <div class="side-hide-dropdown">
+                                        <ul>
+                                            <li><a href="listar_IES_engenharia">Área</a></li>
+                                            <li><a href="listar_cursos.php">Curso</a></li>
+                                            <li><a href="listar_distrito.php">Distrito</a></li>
+                                            <li><a href="listar_ies.php">Instituição</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li><a href="../menu/simular_candidatura.php">Simular Candidatura</a></li>
+                            </ul>
+                        </div>
+                    </li>
 
-Quando carrega numa faculdade especifica passa variavel a 2 e da display dos cursos da faculdade em questao
+                    <?php
+                    if (isset($_SESSION['user']) and $_SESSION['user'] != '') {
+                        echo '<li><a href="listar_curso.php"><span>Terminar Sessão</span></a></li>';
+                    } else {
+                        echo '<li><a href="../menu/login.php" accesskey="4">Login</a></li>';
+                    }
+                    ?>
 
-$faculdade = $_POST['faculdade']
-if x=2{
+                </ul>
+            </div>
+        </div>
 
-$sql = "SELECT nome FROM curso WHERE faculdade = '$faculdade'";
+        <!-- Fim do menu -->
 
-}
-*/
+        <section class="container-lista">
+            <div class="grid-item">
+                <div class="tabela">
+                    <h1 class="titulo">Cursos</h1>
+                    <input type="text" id="ies_input" placeholder="Procurar...">
 
+                    <?php
+                        include '../database/dbconnection.php';
+                        $sql = "SELECT DISTINCT nome FROM curso ORDER BY nome ASC";
+                        $resultado = $ligacao->query($sql);
+                    ?>
 
-<?php
+                    <input type="button" class="botao-adicionar" value="Adicionar curso" onclick="location='#'" />
 
-include '../database/dbconnection.php';
+                    <?php
+                        if ($resultado->num_rows > 0) { //verificar se existem linhas
+                    ?>
 
-$sql = "SELECT DISTINCT nome FROM `curso` order by substring_index(nome, ' ', -1)";;
-$resultado = $ligacao->query($sql);
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th class="texto">Curso</th>
+                                </tr>
+                            </thead>
 
-if ($resultado->num_rows > 0) {
-    while ($linha = $resultado->fetch_assoc()) {
-        $nome = $linha["nome"];
-        echo $nome;
-    }
-}
+                            <?php
+                                while ($linha = $resultado->fetch_assoc()) { //Enquanto houver linhas na pesquisa...
+                            ?>
 
-?>
+                                <tbody id="tabela">
+                                    <tr>
+                                        <!-- Imprime as instituições na tabela -->
+                                        <td>
+                                            <?php
+                                                $nome = $linha["nome"];
+                                                echo $nome;
+                                            ?>
+                                        </td>
+                                    </tr>
+                                </tbody>
+
+                            <?php
+                                }
+                            ?>
+
+                        </table>
+
+                    <?php
+                        }
+                    ?>
+
+                </div>
+            </div>
+        </section>
+    </body>
+</main>

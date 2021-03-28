@@ -29,9 +29,9 @@
                                     <a href="#">Índice de Cursos</a>
                                     <div class="side-hide-dropdown">
                                         <ul>
-                                            <li><a href="#">Área</a></li>
-                                            <li><a href="#">Curso</a></li>
-                                            <li><a href="#">Distrito</a></li>
+                                            <li><a href="../listas/listar_IES_engenharia">Área</a></li>
+                                            <li><a href="../listas/listar_cursos.php">Curso</a></li>
+                                            <li><a href="../listas/listar_distrito.php">Distrito</a></li>
                                             <li><a href="../listas/listar_ies.php">Instituição</a></li>
                                         </ul>
                                     </div>
@@ -40,7 +40,15 @@
                             </ul>
                         </div>
                     </li>
-                    <li><a href="login.php" accesskey="4">Login</a></li>
+
+                    <?php
+                    if (isset($_SESSION['user']) and $_SESSION['user'] != '') {
+                        echo '<li><a href="perfil.php"><span>Terminar Sessão</span></a></li>';
+                    } else {
+                        echo '<li><a href="login.php" accesskey="4">Login</a></li>';
+                    }
+                    ?>
+
                 </ul>
             </div>
         </div>
