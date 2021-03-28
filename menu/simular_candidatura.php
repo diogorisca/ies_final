@@ -17,7 +17,6 @@ O nome do utilizador dever� estar evidenciado.
         <title>IES</title>
         <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet" />
         <link href="../styles/indexstyles.css" rel="stylesheet" />
-        <link href="../styles/fonts.css" rel="stylesheet" />
     </head>
 
     <body>
