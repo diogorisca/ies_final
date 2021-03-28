@@ -63,15 +63,15 @@
                     <input type="text" id="ies_input" placeholder="Procurar...">
 
                     <?php
-                    include '../database/dbconnection.php';
-                    $sql = "SELECT DISTINCT distrito FROM ies ORDER BY distrito ASC";
-                    $resultado = $ligacao->query($sql);
+                        include '../database/dbconnection.php';
+                        $sql = "SELECT DISTINCT distrito FROM ies ORDER BY distrito ASC";
+                        $resultado = $ligacao->query($sql);
                     ?>
 
                     <input type="button" class="botao-adicionar" value="Adicionar distrito" onclick="location='#'" />
 
                     <?php
-                    if ($resultado->num_rows > 0) { //verificar se existem linhas
+                        if ($resultado->num_rows > 0) { //verificar se existem linhas
                     ?>
 
                         <table class="table">
@@ -82,7 +82,7 @@
                             </thead>
 
                             <?php
-                            while ($linha = $resultado->fetch_assoc()) { //Enquanto houver linhas na pesquisa...
+                                while ($linha = $resultado->fetch_assoc()) { //Enquanto houver linhas na pesquisa...
                             ?>
 
                                 <tbody id="tabela">
@@ -90,20 +90,20 @@
                                         <!-- Imprime as instituições na tabela -->
                                         <td>
                                             <?php
-                                            $distrito = $linha["distrito"];
-                                            echo $distrito;
+                                                $distrito = $linha["distrito"];
+                                                echo $distrito;
                                             ?>
                                         </td>
                                     </tr>
                                 </tbody>
 
                             <?php
-                            }
+                                }
                             ?>
                         </table>
 
                     <?php
-                    }
+                        }
                     ?>
 
                 </div>

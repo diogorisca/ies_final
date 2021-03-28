@@ -43,11 +43,12 @@
                     </li>
 
                     <?php
-                    if (isset($_SESSION['user']) and $_SESSION['user'] != '') {
-                        echo '<li><a href="index.php"><span>Terminar Sessão</span></a></li>';
-                    } else {
-                        echo '<li><a href="menu/login.php" accesskey="4">Login</a></li>';
-                    }
+                        if (isset($_SESSION['user']) and $_SESSION['user'] != '') {
+                            echo '<li><a href="index.php"><span>Terminar Sessão</span></a></li>';
+                        } 
+                        else {
+                            echo '<li><a href="menu/login.php" accesskey="4">Login</a></li>';
+                        }
                     ?>
 
                 </ul>

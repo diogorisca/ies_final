@@ -63,16 +63,16 @@
                     <input type="text" id="ies_input" placeholder="Procurar...">
 
                     <?php
-                    include '../database/dbconnection.php';
+                        include '../database/dbconnection.php';
 
-                    $sql = "SELECT nome FROM ies ORDER BY nome ASC";
-                    $resultado = $ligacao->query($sql);
+                        $sql = "SELECT nome FROM ies ORDER BY nome ASC";
+                        $resultado = $ligacao->query($sql);
                     ?>
 
                     <input type="button" class="botao-adicionar" value="Adicionar instituição" onclick="location='#'" />
 
                     <?php
-                    if ($resultado->num_rows > 0) { //verificar se existem linhas
+                        if ($resultado->num_rows > 0) { //verificar se existem linhas
                     ?>
 
                         <table class="table">
@@ -83,14 +83,16 @@
                             </thead>
 
                             <?php
-                            while ($linha = $resultado->fetch_assoc()) { //Enquanto houver linhas na pesquisa...
+                                while ($linha = $resultado->fetch_assoc()) { //Enquanto houver linhas na pesquisa...
                             ?>
 
                                 <tbody id="tabela">
                                     <tr>
                                         <!-- Imprime as instituições na tabela -->
                                         <td>
-                                            <?php echo $linha["nome"]; ?>
+                                            <?php 
+                                                echo $linha["nome"]; 
+                                            ?>
                                         </td>
                                     </tr>
                                 </tbody>
@@ -101,7 +103,7 @@
                         </table>
 
                     <?php
-                    }
+                        }
                     ?>
 
                 </div>
