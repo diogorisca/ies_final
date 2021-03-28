@@ -1,3 +1,12 @@
+/*
+
+Esta pagina devera dar display das tabelas de simulaçoes em que o utilizador logado se encontra.
+
+O nome do utilizador deverá estar evidenciado.
+
+*/
+
+
 <!DOCTYPE html>
 
 <html lang="en" dir="ltr">
