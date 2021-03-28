@@ -50,8 +50,6 @@
 
         <!-- Fim do menu -->
 
-        <!-- Fim do menu -->
-
         <h2 class="titulo">Dados Principais</h2>
         <form action="../login/registo_process.php" method="post">
             <div class="container">
@@ -62,16 +60,16 @@
                 <input type="text" placeholder="Número Cartão de Cidadão" name="cc" required>
                 <p></p>
 
-                <input type="text" placeholder="Data Nascimento" name="date" required>
+                <input type="date" placeholder="Data Nascimento" name="date" required>
                 <p></p>
 
-                <input type="text" placeholder="Contacto" name="contacto" maxlength="9" required>
+                <input type="tel" pattern="[0-9]{9}" placeholder="Contacto" name="contacto" required>
                 <p></p>
 
                 <input type="text" placeholder="Morada" name="morada" required>
                 <p></p>
 
-                <input type="text" placeholder="Email" name="email" required>
+                <input type="email" placeholder="Email" name="email" required>
                 <p></p>
 
                 <input type="password" placeholder="Palavra-passe" name="pass" required>
