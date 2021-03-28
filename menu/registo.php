@@ -57,7 +57,7 @@
                 <input type="text" placeholder="Nome Completo" name="user" required>
                 <p></p>
 
-                <input type="text" placeholder="Número Cartão de Cidadão" name="cc" required>
+                <input type="number" pattern="[0-9]{8}" placeholder="Número Cartão de Cidadão" name="cc" required>
                 <p></p>
 
                 <input type="date" placeholder="Data Nascimento" name="date" required>
