@@ -1,11 +1,10 @@
-/*
+<!--
 
-Esta pagina devera dar display das tabelas de simulaÁoes em que o utilizador logado se encontra.
+Esta pagina devera dar display das tabelas de simulaÔøΩoes em que o utilizador logado se encontra.
 
-O nome do utilizador dever· estar evidenciado.
+O nome do utilizador deverÔøΩ estar evidenciado.
 
-*/
-
+-->
 
 <!DOCTYPE html>
 
@@ -31,7 +30,7 @@ O nome do utilizador dever· estar evidenciado.
                     <li><a href="../index.php" accesskey="1">In√≠cio</a></li>
                     <li><a href="perfil.php" accesskey="2">Perfil</a></li>
                     <li class="dropdown">
-                        <a accesskey="3">Guia de Candidatura</a>
+                        <a class="active" accesskey="3">Guia de Candidatura</a>
                         <div class="dropdown-content">
                             <ul>
                                 <li class="side-dropdown">
@@ -45,14 +44,14 @@ O nome do utilizador dever· estar evidenciado.
                                         </ul>
                                     </div>
                                 </li>
-                                <li><a class="active" href="simular_candidatura.php">Simular Candidatura</a></li>
+                                <li><a href="simular_candidatura.php">Simular Candidatura</a></li>
                             </ul>
                         </div>
                     </li>
 
                     <?php
                     if (isset($_SESSION['user']) and $_SESSION['user'] != '') {
-                        echo '<li><a href="simular_candidatura.php"><span>Terminar Sess√£o</span></a></li>';
+                        echo '<li><a href="perfil.php"><span>Terminar Sess√£o</span></a></li>';
                     } else {
                         echo '<li><a href="login.php" accesskey="4">Login</a></li>';
                     }
