@@ -37,7 +37,7 @@ O nome do utilizador dever� estar evidenciado.
                                     <a href="#">Índice de Cursos</a>
                                     <div class="side-hide-dropdown">
                                         <ul>
-                                            <li><a href="../listas/listar_IES_engenharia">Área</a></li>
+                                            <li><a href="#">Área</a></li>
                                             <li><a href="../listas/listar_cursos.php">Curso</a></li>
                                             <li><a href="../listas/listar_distrito.php">Distrito</a></li>
                                             <li><a href="../listas/listar_ies.php">Instituição</a></li>

@@ -77,7 +77,10 @@
     table td {
         background-color: white;
         color: black;
-        text-align: center;
+        text-align: left;
+        padding-bottom: 5px;
+        padding-top: 5px;
+        padding-left: 10px;
         font-size: 18px;
     }
     
