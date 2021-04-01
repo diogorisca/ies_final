@@ -37,6 +37,14 @@
         color: #3cdbc0;
     }
     
+    a {
+        text-decoration: none;
+    }
+    
+    a:hover {
+        color: #3cdbc0;
+    }
+    
     .titulo {
         font-size: 40px;
         color: #001a72;

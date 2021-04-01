@@ -65,7 +65,7 @@
                     <?php
                         include '../database/dbconnection.php';
 
-                        $sql = "SELECT nome FROM ies ORDER BY nome ASC";
+                        $sql = "SELECT id, nome FROM ies ORDER BY nome ASC";
                         $resultado = $ligacao->query($sql);
                     ?>
 
@@ -86,13 +86,15 @@
                                 while ($linha = $resultado->fetch_assoc()) { //Enquanto houver linhas na pesquisa...
                             ?>
 
-                                <tbody id="tabela">
+                                <tbody id="tabela" >
                                     <tr>
                                         <!-- Imprime as instituições na tabela -->
                                         <td>
-                                            <?php 
-                                                echo $linha["nome"]; 
-                                            ?>
+                                            <a href="listar_info_ies.php?iesid=<?php echo $linha["id"]; ?>">
+                                                <?php 
+                                                    echo $linha["nome"];
+                                                ?>
+                                            </a>
                                         </td>
                                     </tr>
                                 </tbody>
