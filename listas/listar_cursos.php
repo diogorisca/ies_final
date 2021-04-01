@@ -64,7 +64,7 @@
 
                     <?php
                         include '../database/dbconnection.php';
-                        $sql = "SELECT DISTINCT nome FROM curso ORDER BY nome ASC";
+                        $sql = "SELECT DISTINCT id, nome FROM curso ORDER BY nome ASC";
                         $resultado = $ligacao->query($sql);
                     ?>
 
@@ -89,10 +89,12 @@
                                     <tr>
                                         <!-- Imprime as instituições na tabela -->
                                         <td>
-                                            <?php
-                                                $nome = $linha["nome"];
-                                                echo $nome;
-                                            ?>
+                                            <a href="listar_info_curso.php?cursoid=<?php echo $linha["id"]; ?>">
+                                                <?php
+                                                    $nome = $linha["nome"];
+                                                    echo $nome;
+                                                ?>
+                                            </a>
                                         </td>
                                     </tr>
                                 </tbody>

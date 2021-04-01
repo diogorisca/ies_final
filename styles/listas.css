@@ -92,6 +92,10 @@
         font-size: 18px;
     }
     
+    table tr td a {
+        display: block;
+    }
+    
     table th,
     td {
         border: none;
@@ -101,7 +105,11 @@
         border-radius: 10px 10px 0 0;
     }
     
-    table tr:hover td {
+    table tr td:hover {
         background-color: #001a72;
+        color: #3cdbc0;
+    }
+    
+    table tr td:hover a {
         color: #3cdbc0;
     }

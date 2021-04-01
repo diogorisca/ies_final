@@ -59,13 +59,9 @@
             include '../database/dbconnection.php';
 
             $iesid = $_GET['iesid'];
-            $sql = "SELECT nome, morada, contacto_email, contacto_telefone, descricao, pagina_oficial, distrito FROM ies WHERE id = '$iesid'";
+            $sql = "SELECT * FROM ies WHERE id = '$iesid'";
             $resultado = mysqli_query($ligacao, $sql);
             $linha = $resultado->fetch_assoc();
-
-            $sql2 = "SELECT morada FROM ies WHERE id = '$iesid'";
-            $resultado2 = $ligacao->query($sql2);
-            $linha2 = $resultado2->fetch_assoc();
 
             echo $linha["nome"];
             echo $linha["morada"];
@@ -76,7 +72,7 @@
             echo $linha["distrito"];
         ?>
 
-        <iframe class="mapa" src="https://www.google.com/maps/embed/v1/place?q=<?php echo $linha2["morada"]; ?>&key=AIzaSyCde12RAX3KGlMl0X7E29Hu8weTOT9s_I0">
+        <iframe src="https://www.google.com/maps/embed/v1/place?q=<?php echo $linha["morada"];?>&key=AIzaSyCde12RAX3KGlMl0X7E29Hu8weTOT9s_I0">
 
     </body>
 
