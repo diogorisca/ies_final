@@ -64,8 +64,9 @@
 
                     <?php
                         include '../database/dbconnection.php';
-                        $sql = "SELECT DISTINCT id, nome FROM curso ORDER BY nome ASC";
+                        $sql = "SELECT DISTINCT nome FROM curso ORDER BY nome ASC";
                         $resultado = $ligacao->query($sql);
+
                     ?>
 
                     <input type="button" class="botao-adicionar" value="Adicionar curso" onclick="location='#'" />
@@ -89,7 +90,7 @@
                                     <tr>
                                         <!-- Imprime as instituições na tabela -->
                                         <td>
-                                            <a href="listar_info_curso.php?cursoid=<?php echo $linha["id"]; ?>">
+                                            <a href="listar_cursos_selecionados.php?nome=<?php echo $linha["nome"]; ?>">
                                                 <?php
                                                     $nome = $linha["nome"];
                                                     echo $nome;

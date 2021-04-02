@@ -1,81 +1,20 @@
-<!DOCTYPE html>
-
-<html lang="en" dir="ltr">
-
-<main>
-
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <title>IES</title>
-        <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet" />
-        <link href="../styles/indexstyles.css" rel="stylesheet" />
-        <link href="../styles/info.css" rel="stylesheet" />
-    </head>
-
-    <body>
-
-        <!-- √çnicio do menu -->
-
-        <div id="menu-wrapper">
-            <div id="menu" class="topnav">
-                <ul>
-                    <li><a href="../index.php" accesskey="1">In√≠cio</a></li>
-                    <li><a href="../menu/perfil.php" accesskey="2">Perfil</a></li>
-                    <li class="dropdown">
-                        <a class="active" accesskey="3">Guia de Candidatura</a>
-                        <div class="dropdown-content">
-                            <ul>
-                                <li class="side-dropdown">
-                                    <a href="#">√çndice de Cursos</a>
-                                    <div class="side-hide-dropdown">
-                                        <ul>
-                                            <li><a href="#">√Årea</a></li>
-                                            <li><a href="listar_cursos.php">Curso</a></li>
-                                            <li><a href="listar_distrito.php">Distrito</a></li>
-                                            <li><a href="listar_ies.php">Institui√ß√£o</a></li>
-                                        </ul>
-                                    </div>
-                                </li>
-                                <li><a href="../menu/simular_candidatura.php">Simular Candidatura</a></li>
-                            </ul>
-                        </div>
-                    </li>
-
-                    <?php
-                    if (isset($_SESSION['user']) and $_SESSION['user'] != '') {
-                        echo '<li><a href="listar_ies.php"><span>Terminar Sess√£o</span></a></li>';
-                    } else {
-                        echo '<li><a href="../menu/login.php" accesskey="4">Login</a></li>';
-                    }
-                    ?>
-
-                </ul>
-            </div>
-        </div>
-
-        <!-- Fim do menu -->
-
-        <?php
-
-            include '../database/dbconnection.php';
-
-            $cursoid = $_GET['cursoid'];
-            $sql = "SELECT * FROM curso WHERE id = '$cursoid'";
+            $sql = "SELECT * FROM curso WHERE nome = '$nome', faculdade = '$faculdade'";
             $resultado = mysqli_query($ligacao, $sql);
-            $linha = $resultado->fetch_assoc();
 
-            echo $linha["nome"];
-            echo $linha["faculdade"];
+            echo $linha["provaIngresso"];
+            echo $linha["notaCandidatura"];
+            echo $linha["provaIngresso"];
+            echo $linha["media"];
+            echo $linha["vagas"];
+            echo $linha["ObservaÁıes"];
+            echo $linha["Grau"];
+            echo $linha["DuraÁ„o"];
+            echo $linha["ECTS"];
+            echo $linha["¡rea"];
+            echo $linha["plano_estudos"];
 
-        ?>
 
-    </body>
-
-</main>
-
-
-
-<!--
+            <!--
 
 Varios campos especificos vao precisar de queries especificas, para criar simulaÔøΩÔøΩo podemos dar display de tudo
 
