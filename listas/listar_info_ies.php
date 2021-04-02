@@ -151,3 +151,9 @@
     </body>
 
 </main>
+
+/*
+
+SELECT nome FROM curso WHERE faculdade = '$faculdade'
+
+*/
