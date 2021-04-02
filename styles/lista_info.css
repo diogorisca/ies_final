@@ -31,6 +31,11 @@
     margin: 40px 0 0;
 }
 
+.u-section-2 .u-text-1 {
+    width: 680px;
+    margin: 52px auto 0;
+}
+
 .u-section-2 .u-form-1 {
     height: 338px;
     width: 570px;
@@ -47,6 +52,14 @@
     padding: 30px 60px;
 }
 
+.u-section-2 .u-text-3 {
+    margin: 20px 0 0;
+}
+
 .u-section-2 .u-container-layout-2 {
     padding: 30px 60px;
+}
+
+.u-section-2 .u-text-5 {
+    margin: 20px 0 0;
 }
