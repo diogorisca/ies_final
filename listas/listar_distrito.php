@@ -60,7 +60,7 @@
             <div class="grid-item">
                 <div class="tabela">
                     <h1 class="titulo">Distritos</h1>
-                    <input type="text" id="ies_input" placeholder="Procurar...">
+                    <input type="text" id="ies_input" onkeyup="filtrar()" placeholder="Procurar...">
 
                     <?php
                         include '../database/dbconnection.php';
@@ -74,7 +74,7 @@
                         if ($resultado->num_rows > 0) { //verificar se existem linhas
                     ?>
 
-                        <table class="table">
+                        <table id="table" class="table">
                             <thead>
                                 <tr>
                                     <th class="texto">Distrito</th>

@@ -9,8 +9,9 @@
         <title>IES</title>
         <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet" />
         <link href="../styles/indexstyles.css" rel="stylesheet" />
-        <link rel="stylesheet" href="../styles/nicepage.css" media="screen">
-        <link rel="stylesheet" href="../styles/lista_info.css" media="screen">
+        <link href="../styles/informacao.css" rel="stylesheet" media="screen">
+        <link href="../styles/info.css" rel="stylesheet" media="screen">
+        <link href="../styles/listas.css" rel="stylesheet" />
     </head>
 
     <body>
@@ -63,6 +64,10 @@
         $sql = "SELECT * FROM ies WHERE id = '$iesid'";
         $resultado = mysqli_query($ligacao, $sql);
         $linha = $resultado->fetch_assoc();
+
+        $sql2 = "SELECT nome FROM curso WHERE ies_id = '$iesid' ORDER BY nome ASC";
+        $resultado2 = mysqli_query($ligacao, $sql2);
+        $linha2 = $resultado2->fetch_assoc();
         ?>
 
         <section class="u-clearfix u-section-1" id="carousel_2636">
@@ -78,7 +83,7 @@
                                     </div>
                                     <div class="u-container-style u-layout-cell u-left-cell u-size-30 u-layout-cell-2">
                                         <div class="u-container-layout u-valign-top u-container-layout-2">
-                                            <p class="u-text u-text-1"><b><?php echo $linha["pagina_oficial"]; ?></b>
+                                            <p class="u-text u-text-1"><a href="<?php echo $linha["pagina_oficial"]; ?>" target="_blank"><b><?php echo $linha["pagina_oficial"]; ?></b></a>
                                             </p>
                                         </div>
                                     </div>
@@ -100,6 +105,41 @@
             </div>
         </section>
         <section class="u-align-center u-clearfix u-grey-5 u-section-2" id="sec-ac6a">
+            <br><br>
+            <?php
+            if ($resultado2->num_rows > 0) {
+            ?>
+                <table class="tabela-cursos">
+                    <thead>
+                        <tr>
+                            <th class="texto">Cursos</th>
+                        </tr>
+                    </thead>
+                    <?php
+                    while ($linha2 = $resultado2->fetch_assoc()) {
+                    ?>
+                        <tbody id="tabela">
+                            <tr>
+                                <!-- Imprime as instituições na tabela -->
+                                <td>
+                                    <?php
+                                    echo $linha2["nome"];
+                                    ?>
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+
+                    <?php
+                    }
+                    ?>
+                </table>
+
+            <?php
+            }
+            ?>
+
+
             <div class="u-clearfix u-sheet u-sheet-1">
                 <h2 class="u-text u-text-1">Contacte a Instituição</h2>
                 <div class="u-form u-form-1">
@@ -140,7 +180,7 @@
                             <div class="u-align-left u-container-style u-layout-cell u-right-cell u-size-30 u-layout-cell-2">
                                 <div class="u-container-layout u-container-layout-2">
                                     <h4 class="u-text u-text-4">Contactos</h4>
-                                    <p class="u-text u-text-5"><strong>Por email: </strong><?php echo $linha["contacto_email"]; ?><br><strong>Por telefone: </strong><?php echo $linha["contacto_telefone"]; ?></p>
+                                    <p class="u-text u-text-5"><strong>Por email: </strong><a href = "mailto: <?php echo $linha["contacto_email"]; ?>"><?php echo $linha["contacto_email"]; ?></a><br><strong>Por telefone: </strong><?php echo $linha["contacto_telefone"]; ?></p>
                                 </div>
                             </div>
                         </div>
@@ -151,9 +191,3 @@
     </body>
 
 </main>
-
-/*
-
-SELECT nome FROM curso WHERE faculdade = '$faculdade'
-
-*/

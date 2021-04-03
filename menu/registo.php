@@ -56,7 +56,7 @@
                 <input type="text" placeholder="Nome Completo" name="user" required>
                 <p></p>
 
-                <input type="number" pattern="[0-9]{8}" placeholder="Número Cartão de Cidadão" name="cc" required>
+                <input type="number" class="number-block" pattern="[0-9]{8}" placeholder="Número Cartão de Cidadão" name="cc" required>
                 <p></p>
 
                 <input type="date" placeholder="Data Nascimento" name="date" required>
@@ -76,7 +76,7 @@
 
                 <h2 class="titulo2">Dados Académicos</h2>
 
-                <input type="number" class="media" placeholder="Média de Acesso" name="media" required>
+                <input type="number" class="number-block" placeholder="Média de Acesso" name="media" required>
                 <p></p>
 
                 <div class="multiselect">

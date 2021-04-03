@@ -9,7 +9,8 @@
         <title>IES</title>
         <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet" />
         <link href="../styles/indexstyles.css" rel="stylesheet" />
-        <link href="../styles/info.css" rel="stylesheet" />
+        <link href="../styles/listas.css" rel="stylesheet" />
+        <script src="../scripts/procurar.js"></script>
     </head>
 
     <body>
@@ -53,32 +54,65 @@
             </div>
         </div>
 
-        <!-- Fim do menu -->
-
         <?php
+        include '../database/dbconnection.php';
 
-            include '../database/dbconnection.php';
-
-            $nome = $_GET['nome'];
-            $sql = "SELECT id, nome, faculdade FROM curso WHERE nome = '$nome'";
-            $resultado = mysqli_query($ligacao, $sql);
-
-        if ($resultado->num_rows > 0) {
-
-            while ($linha = $resultado->fetch_assoc()) {
-            echo $linha["nome"];
-            echo $linha["faculdade"];
-            }
-        }
+        $nome = $_GET['nome'];
+        $sql = "SELECT id, nome, faculdade FROM curso WHERE nome = '$nome' ORDER BY faculdade ASC";
+        $resultado = mysqli_query($ligacao, $sql);
+        $linha = $resultado -> fetch_assoc();
         ?>
+
+        <!-- Fim do menu -->
+        <section class="container-lista">
+            <div class="grid-item">
+                <div class="tabela">
+                    <h1 class="titulo">Instituições com o curso de <?php echo $linha["nome"]; ?></h1>
+                    <input type="text" id="ies_input" onkeyup="filtrar()" placeholder="Procurar...">
+                    <input type="button" class="botao-adicionar" value="Adicionar curso" onclick="location='#'" />
+
+                    <?php
+                    if ($resultado->num_rows > 0) { //verificar se existem linhas
+                    ?>
+
+                        <table id="table" class="table">
+                            <thead>
+                                <tr>
+                                    <th class="texto">Instituição</th>
+                                </tr>
+                            </thead>
+
+                            <?php
+                            while ($linha = $resultado->fetch_assoc()) { //Enquanto houver linhas na pesquisa...
+                            ?>
+
+                                <tbody id="tabela">
+                                    <tr>
+                                        <!-- Imprime as instituições na tabela -->
+                                        <td>
+                                            <a href="listar_info_curso.php?idcurso=<?php echo $linha['id']; ?>&amp;faculdade=<?php echo $linha['faculdade']; ?>">
+                                                <?php
+                                                    echo $linha["faculdade"];
+                                                ?>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+
+                            <?php
+                            }
+                            ?>
+
+                        </table>
+
+                    <?php
+                    }
+                    ?>
+
+                </div>
+            </div>
+        </section>
 
     </body>
 
 </main>
-
-
-
-/*
-aqui vais passar o nome e a faculdade para a proxima pagina (listar_info_curso) de forma a com uma query
-dar retrieve de toda a informa�ao desse curso
-*/

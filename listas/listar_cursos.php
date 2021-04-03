@@ -60,13 +60,12 @@
             <div class="grid-item">
                 <div class="tabela">
                     <h1 class="titulo">Cursos</h1>
-                    <input type="text" id="ies_input" placeholder="Procurar...">
+                    <input type="text" id="ies_input" onkeyup="filtrar()" placeholder="Procurar...">
 
                     <?php
                         include '../database/dbconnection.php';
                         $sql = "SELECT DISTINCT nome FROM curso ORDER BY nome ASC";
                         $resultado = $ligacao->query($sql);
-
                     ?>
 
                     <input type="button" class="botao-adicionar" value="Adicionar curso" onclick="location='#'" />
@@ -75,7 +74,7 @@
                         if ($resultado->num_rows > 0) { //verificar se existem linhas
                     ?>
 
-                        <table class="table">
+                        <table id="table" class="table">
                             <thead>
                                 <tr>
                                     <th class="texto">Curso</th>
@@ -91,9 +90,8 @@
                                         <!-- Imprime as instituições na tabela -->
                                         <td>
                                             <a href="listar_cursos_selecionados.php?nome=<?php echo $linha["nome"]; ?>">
-                                                <?php
-                                                    $nome = $linha["nome"];
-                                                    echo $nome;
+                                                <?php     
+                                                    echo $linha["nome"];
                                                 ?>
                                             </a>
                                         </td>

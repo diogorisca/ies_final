@@ -65,6 +65,12 @@
         padding-bottom: 20px;
     }
     
+    .tabela-cursos {
+        width: 35%!important;
+        border-radius: 17px!important;
+        display: inline-table!important;
+    }
+    
     table {
         width: 100%;
         padding: 20px;
