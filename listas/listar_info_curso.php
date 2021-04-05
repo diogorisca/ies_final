@@ -21,20 +21,20 @@
         <div id="menu-wrapper">
             <div id="menu" class="topnav">
                 <ul>
-                    <li><a href="../index.php" accesskey="1">InÃ­cio</a></li>
+                    <li><a href="../index.php" accesskey="1">Iní­cio</a></li>
                     <li><a href="../menu/perfil.php" accesskey="2">Perfil</a></li>
                     <li class="dropdown">
                         <a class="active" accesskey="3">Guia de Candidatura</a>
                         <div class="dropdown-content">
                             <ul>
                                 <li class="side-dropdown">
-                                    <a href="#">Ãndice de Cursos</a>
+                                    <a href="#">Índice de Cursos</a>
                                     <div class="side-hide-dropdown">
                                         <ul>
-                                            <li><a href="#">Ãrea</a></li>
+                                            <li><a href="#">Área</a></li>
                                             <li><a href="listar_cursos.php">Curso</a></li>
                                             <li><a href="listar_distrito.php">Distrito</a></li>
-                                            <li><a href="listar_ies.php">InstituiÃ§Ã£o</a></li>
+                                            <li><a href="listar_ies.php">Instituição</a></li>
                                         </ul>
                                     </div>
                                 </li>
@@ -65,7 +65,7 @@
         $resultado = mysqli_query($ligacao, $sql);
         $linha = $resultado->fetch_assoc();
 
-        /* echo $linha["ObservaÃ§Ãµes"];
+        /* echo $linha["Observações"];
         echo $linha["plano_estudos"]; */
 
         ?>
@@ -83,7 +83,7 @@
                                     </div>
                                     <div class="u-container-style u-layout-cell u-left-cell u-size-30 u-layout-cell-2">
                                         <div class="u-container-layout u-valign-top u-container-layout-2">
-                                            <p class="u-text u-text-1"><b>Lugar onde vai estar o echo das observaÃ§Ãµes</b></p>
+                                            <p class="u-text u-text-1"><b>Lugar onde vai estar o echo das observações</b></p>
                                         </div>
                                     </div>
                                 </div>
@@ -100,20 +100,21 @@
                                                 <br>
                                                 <strong>Nota de Candidatura: </strong><?php echo $linha["notaCandidatura"]; ?>%
                                                 <br><br>
-                                                <strong>MÃ©dia de Candidatura: </strong><?php echo $linha["media"]; ?>
+                                                <strong>Média de Candidatura: </strong><?php echo $linha["media"]; ?>
                                                 <br><br>
                                                 <strong>Vagas: </strong><?php echo $linha["vagas"]; ?>
                                                 <br><br>
                                                 <strong>Grau: </strong><?php echo $linha["Grau"]; ?>
                                                 <br><br>
-                                                <strong>DuraÃ§Ã£o: </strong><?php echo $linha["Duração"]; ?>
+                                                <strong>Duração: </strong><?php echo $linha["Duração"]; ?>
                                                 <br><br>
                                                 <strong>ECTS: </strong><?php echo $linha["ECTS"]; ?>
                                                 <br><br>
-                                                <strong>Ãrea: </strong><?php echo $linha["Área"]; ?>
+                                                <strong>Área: </strong><?php echo $linha["Área"]; ?>
                                             </p>
-                                            <input type="button" class="botao-adicionar" value="Simular Candidatura" 
-                                            onclick="location='../simulacao/algoritmo_simular.php?idcurso=<?php echo $linha["id"]; ?>'" />
+                                            <br>
+                                            <a href="../simulacao/algoritmo_simular.php?idcurso=<?php echo $linha['id']; ?>&amp;
+                                            idutilizador=<?php /*echo da variavel do id utilizador */ ?>" class="botao-adicionar">Simular Candidatura</a>
                                         </div>
                                     </div>
                                 </div>
