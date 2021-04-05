@@ -5,7 +5,7 @@
 <main>
 
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="Content-Type" content="text/html" charset="utf-8" />
         <title>IES</title>
         <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet" />
         <link href="../styles/indexstyles.css" rel="stylesheet" />
@@ -67,7 +67,6 @@
 
         $sql2 = "SELECT nome FROM curso WHERE ies_id = '$iesid' ORDER BY nome ASC";
         $resultado2 = mysqli_query($ligacao, $sql2);
-        $linha2 = $resultado2->fetch_assoc();
         ?>
 
         <section class="u-clearfix u-section-1" id="carousel_2636">
@@ -118,17 +117,15 @@
                     <?php
                     while ($linha2 = $resultado2->fetch_assoc()) {
                     ?>
-                        <tbody id="tabela">
-                            <tr>
-                                <!-- Imprime as instituições na tabela -->
-                                <td>
-                                    <?php
-                                    echo $linha2["nome"];
-                                    ?>
-                                    </a>
-                                </td>
-                            </tr>
-                        </tbody>
+                        <tr>
+                            <!-- Imprime as instituições na tabela -->
+                            <td>
+                                <?php
+                                echo $linha2["nome"];
+                                ?>
+                                </a>
+                            </td>
+                        </tr>
 
                     <?php
                     }
@@ -180,7 +177,7 @@
                             <div class="u-align-left u-container-style u-layout-cell u-right-cell u-size-30 u-layout-cell-2">
                                 <div class="u-container-layout u-container-layout-2">
                                     <h4 class="u-text u-text-4">Contactos</h4>
-                                    <p class="u-text u-text-5"><strong>Por email: </strong><a href = "mailto: <?php echo $linha["contacto_email"]; ?>"><?php echo $linha["contacto_email"]; ?></a><br><strong>Por telefone: </strong><?php echo $linha["contacto_telefone"]; ?></p>
+                                    <p class="u-text u-text-5"><strong>Por email: </strong><a href="mailto: <?php echo $linha["contacto_email"]; ?>"><?php echo $linha["contacto_email"]; ?></a><br><strong>Por telefone: </strong><?php echo $linha["contacto_telefone"]; ?></p>
                                 </div>
                             </div>
                         </div>

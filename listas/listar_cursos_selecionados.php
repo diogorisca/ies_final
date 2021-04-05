@@ -59,15 +59,18 @@
 
         $nome = $_GET['nome'];
         $sql = "SELECT id, nome, faculdade FROM curso WHERE nome = '$nome' ORDER BY faculdade ASC";
+        $resultadox = mysqli_query($ligacao, $sql);
         $resultado = mysqli_query($ligacao, $sql);
-        $linha = $resultado -> fetch_assoc();
+        $linhax = $resultadox->fetch_assoc()
+
+
         ?>
 
         <!-- Fim do menu -->
         <section class="container-lista">
             <div class="grid-item">
                 <div class="tabela">
-                    <h1 class="titulo">Instituições com o curso de <?php echo $linha["nome"]; ?></h1>
+                    <h1 class="titulo">Instituições com o curso de <?php echo $linhax["nome"]; ?></h1>
                     <input type="text" id="ies_input" onkeyup="filtrar()" placeholder="Procurar...">
                     <input type="button" class="botao-adicionar" value="Adicionar curso" onclick="location='#'" />
 

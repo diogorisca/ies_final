@@ -107,11 +107,11 @@
                                                 <br><br>
                                                 <strong>Grau: </strong><?php echo $linha["Grau"]; ?>
                                                 <br><br>
-                                                <strong>Duração: </strong><?php echo $linha["Duração"]; ?>
+                                                <strong>Duração: </strong><?php echo $linha["Dura��o"]; ?>
                                                 <br><br>
                                                 <strong>ECTS: </strong><?php echo $linha["ECTS"]; ?>
                                                 <br><br>
-                                                <strong>Área: </strong><?php echo $linha["Área"]; ?>
+                                                <strong>Área: </strong><?php echo $linha["�rea"]; ?>
                                             </p>
                                         </div>
                                     </div>
