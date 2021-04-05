@@ -16,25 +16,25 @@
 
     <body>
 
-        <!-- Ínicio do menu -->
+        <!-- Ãnicio do menu -->
 
         <div id="menu-wrapper">
             <div id="menu" class="topnav">
                 <ul>
-                    <li><a href="../index.php" accesskey="1">Início</a></li>
+                    <li><a href="../index.php" accesskey="1">InÃ­cio</a></li>
                     <li><a href="../menu/perfil.php" accesskey="2">Perfil</a></li>
                     <li class="dropdown">
                         <a class="active" accesskey="3">Guia de Candidatura</a>
                         <div class="dropdown-content">
                             <ul>
                                 <li class="side-dropdown">
-                                    <a href="#">Índice de Cursos</a>
+                                    <a href="#">Ãndice de Cursos</a>
                                     <div class="side-hide-dropdown">
                                         <ul>
-                                            <li><a href="#">Área</a></li>
+                                            <li><a href="#">Ãrea</a></li>
                                             <li><a href="listar_cursos.php">Curso</a></li>
                                             <li><a href="listar_distrito.php">Distrito</a></li>
-                                            <li><a href="listar_ies.php">Instituição</a></li>
+                                            <li><a href="listar_ies.php">InstituiÃ§Ã£o</a></li>
                                         </ul>
                                     </div>
                                 </li>
@@ -45,7 +45,7 @@
 
                     <?php
                     if (isset($_SESSION['user']) and $_SESSION['user'] != '') {
-                        echo '<li><a href="listar_ies.php"><span>Terminar Sessão</span></a></li>';
+                        echo '<li><a href="listar_ies.php"><span>Terminar SessÃ£o</span></a></li>';
                     } else {
                         echo '<li><a href="../menu/login.php" accesskey="4">Login</a></li>';
                     }
@@ -61,12 +61,11 @@
         include '../database/dbconnection.php';
 
         $idcurso = $_GET['idcurso'];
-        $faculdade = $_GET['faculdade'];
         $sql = "SELECT * FROM curso WHERE id = '$idcurso'";
         $resultado = mysqli_query($ligacao, $sql);
         $linha = $resultado->fetch_assoc();
 
-        /* echo $linha["Observações"];
+        /* echo $linha["ObservaÃ§Ãµes"];
         echo $linha["plano_estudos"]; */
 
         ?>
@@ -84,7 +83,7 @@
                                     </div>
                                     <div class="u-container-style u-layout-cell u-left-cell u-size-30 u-layout-cell-2">
                                         <div class="u-container-layout u-valign-top u-container-layout-2">
-                                            <p class="u-text u-text-1"><b>Lugar onde vai estar o echo das observações</b></p>
+                                            <p class="u-text u-text-1"><b>Lugar onde vai estar o echo das observaÃ§Ãµes</b></p>
                                         </div>
                                     </div>
                                 </div>
@@ -101,17 +100,17 @@
                                                 <br>
                                                 <strong>Nota de Candidatura: </strong><?php echo $linha["notaCandidatura"]; ?>%
                                                 <br><br>
-                                                <strong>Média de Candidatura: </strong><?php echo $linha["media"]; ?>
+                                                <strong>MÃ©dia de Candidatura: </strong><?php echo $linha["media"]; ?>
                                                 <br><br>
                                                 <strong>Vagas: </strong><?php echo $linha["vagas"]; ?>
                                                 <br><br>
                                                 <strong>Grau: </strong><?php echo $linha["Grau"]; ?>
                                                 <br><br>
-                                                <strong>Duração: </strong><?php echo $linha["Dura��o"]; ?>
+                                                <strong>DuraÃ§Ã£o: </strong><?php echo $linha["Duração"]; ?>
                                                 <br><br>
                                                 <strong>ECTS: </strong><?php echo $linha["ECTS"]; ?>
                                                 <br><br>
-                                                <strong>Área: </strong><?php echo $linha["�rea"]; ?>
+                                                <strong>Ãrea: </strong><?php echo $linha["Área"]; ?>
                                             </p>
                                         </div>
                                     </div>
@@ -127,9 +126,9 @@
 
 <!--            
 
-Varios campos especificos vao precisar de queries especificas, para criar simulação podemos dar display de tudo
+Varios campos especificos vao precisar de queries especificas, para criar simulaÃ§Ã£o podemos dar display de tudo
 
-Nesta pagina devera existir um botao que diga simular candidatura, assim que o utilizador o prima, chama a função
-simulaçao e da display de uma tabela com a ordem de suposta entrada para o curso.
+Nesta pagina devera existir um botao que diga simular candidatura, assim que o utilizador o prima, chama a funÃ§Ã£o
+simulaÃ§ao e da display de uma tabela com a ordem de suposta entrada para o curso.
 
 -->

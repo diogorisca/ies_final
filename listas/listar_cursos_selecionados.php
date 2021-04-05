@@ -15,25 +15,25 @@
 
     <body>
 
-        <!-- Ínicio do menu -->
+        <!-- Ãnicio do menu -->
 
         <div id="menu-wrapper">
             <div id="menu" class="topnav">
                 <ul>
-                    <li><a href="../index.php" accesskey="1">Início</a></li>
+                    <li><a href="../index.php" accesskey="1">InÃ­cio</a></li>
                     <li><a href="../menu/perfil.php" accesskey="2">Perfil</a></li>
                     <li class="dropdown">
                         <a class="active" accesskey="3">Guia de Candidatura</a>
                         <div class="dropdown-content">
                             <ul>
                                 <li class="side-dropdown">
-                                    <a href="#">Índice de Cursos</a>
+                                    <a href="#">Ãndice de Cursos</a>
                                     <div class="side-hide-dropdown">
                                         <ul>
-                                            <li><a href="#">Área</a></li>
+                                            <li><a href="#">Ãrea</a></li>
                                             <li><a href="listar_cursos.php">Curso</a></li>
                                             <li><a href="listar_distrito.php">Distrito</a></li>
-                                            <li><a href="listar_ies.php">Instituição</a></li>
+                                            <li><a href="listar_ies.php">InstituiÃ§Ã£o</a></li>
                                         </ul>
                                     </div>
                                 </li>
@@ -44,7 +44,7 @@
 
                     <?php
                     if (isset($_SESSION['user']) and $_SESSION['user'] != '') {
-                        echo '<li><a href="listar_ies.php"><span>Terminar Sessão</span></a></li>';
+                        echo '<li><a href="listar_ies.php"><span>Terminar SessÃ£o</span></a></li>';
                     } else {
                         echo '<li><a href="../menu/login.php" accesskey="4">Login</a></li>';
                     }
@@ -70,7 +70,7 @@
         <section class="container-lista">
             <div class="grid-item">
                 <div class="tabela">
-                    <h1 class="titulo">Instituições com o curso de <?php echo $linhax["nome"]; ?></h1>
+                    <h1 class="titulo">InstituiÃ§Ãµes com o curso de <?php echo $linhax["nome"]; ?></h1>
                     <input type="text" id="ies_input" onkeyup="filtrar()" placeholder="Procurar...">
                     <input type="button" class="botao-adicionar" value="Adicionar curso" onclick="location='#'" />
 
@@ -81,7 +81,7 @@
                         <table id="table" class="table">
                             <thead>
                                 <tr>
-                                    <th class="texto">Instituição</th>
+                                    <th class="texto">InstituiÃ§Ã£o</th>
                                 </tr>
                             </thead>
 
@@ -91,7 +91,7 @@
 
                                 <tbody id="tabela">
                                     <tr>
-                                        <!-- Imprime as instituições na tabela -->
+                                        <!-- Imprime as instituiÃ§Ãµes na tabela -->
                                         <td>
                                             <a href="listar_info_curso.php?idcurso=<?php echo $linha['id']; ?>&amp;faculdade=<?php echo $linha['faculdade']; ?>">
                                                 <?php

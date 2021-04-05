@@ -16,25 +16,25 @@
 
     <body>
 
-        <!-- Ínicio do menu -->
+        <!-- Ãnicio do menu -->
 
         <div id="menu-wrapper">
             <div id="menu" class="topnav">
                 <ul>
-                    <li><a href="../index.php" accesskey="1">Início</a></li>
+                    <li><a href="../index.php" accesskey="1">InÃ­cio</a></li>
                     <li><a href="../menu/perfil.php" accesskey="2">Perfil</a></li>
                     <li class="dropdown">
                         <a class="active" accesskey="3">Guia de Candidatura</a>
                         <div class="dropdown-content">
                             <ul>
                                 <li class="side-dropdown">
-                                    <a href="#">Índice de Cursos</a>
+                                    <a href="#">Ãndice de Cursos</a>
                                     <div class="side-hide-dropdown">
                                         <ul>
-                                            <li><a href="#">Área</a></li>
+                                            <li><a href="#">Ãrea</a></li>
                                             <li><a href="listar_cursos.php">Curso</a></li>
                                             <li><a href="listar_distrito.php">Distrito</a></li>
-                                            <li><a href="listar_ies.php">Instituição</a></li>
+                                            <li><a href="listar_ies.php">InstituiÃ§Ã£o</a></li>
                                         </ul>
                                     </div>
                                 </li>
@@ -45,7 +45,7 @@
 
                     <?php
                     if (isset($_SESSION['user']) and $_SESSION['user'] != '') {
-                        echo '<li><a href="listar_ies.php"><span>Terminar Sessão</span></a></li>';
+                        echo '<li><a href="listar_ies.php"><span>Terminar SessÃ£o</span></a></li>';
                     } else {
                         echo '<li><a href="../menu/login.php" accesskey="4">Login</a></li>';
                     }
@@ -65,7 +65,7 @@
         $resultado = mysqli_query($ligacao, $sql);
         $linha = $resultado->fetch_assoc();
 
-        $sql2 = "SELECT nome FROM curso WHERE ies_id = '$iesid' ORDER BY nome ASC";
+        $sql2 = "SELECT nome,id FROM curso WHERE ies_id = '$iesid' ORDER BY nome ASC";
         $resultado2 = mysqli_query($ligacao, $sql2);
         ?>
 
@@ -118,11 +118,12 @@
                     while ($linha2 = $resultado2->fetch_assoc()) {
                     ?>
                         <tr>
-                            <!-- Imprime as instituições na tabela -->
+                            <!-- Imprime as instituiÃ§Ãµes na tabela -->
                             <td>
-                                <?php
-                                echo $linha2["nome"];
-                                ?>
+                                <a href="listar_info_curso.php?idcurso=<?php echo $linha2["id"]; ?>">
+                                    <?php
+                                    echo $linha2["nome"];
+                                    ?>
                                 </a>
                             </td>
                         </tr>
@@ -138,7 +139,7 @@
 
 
             <div class="u-clearfix u-sheet u-sheet-1">
-                <h2 class="u-text u-text-1">Contacte a Instituição</h2>
+                <h2 class="u-text u-text-1">Contacte a InstituiÃ§Ã£o</h2>
                 <div class="u-form u-form-1">
                     <form action="#" method="POST" class="u-clearfix u-form-spacing-15 u-form-vertical u-inner-form" style="padding: 15px;" source="custom" name="form">
                         <div class="u-form-group u-form-name">
