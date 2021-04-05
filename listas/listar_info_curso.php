@@ -112,6 +112,8 @@
                                                 <br><br>
                                                 <strong>Ãrea: </strong><?php echo $linha["Área"]; ?>
                                             </p>
+                                            <input type="button" class="botao-adicionar" value="Simular Candidatura" 
+                                            onclick="location='../simulacao/algoritmo_simular.php?idcurso=<?php echo $linha["id"]; ?>'" />
                                         </div>
                                     </div>
                                 </div>
