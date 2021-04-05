@@ -21,20 +21,20 @@
         <div id="menu-wrapper">
             <div id="menu" class="topnav">
                 <ul>
-                    <li><a href="../index.php" accesskey="1">InÃ­cio</a></li>
+                    <li><a href="../index.php" accesskey="1">Ini­cio</a></li>
                     <li><a href="../menu/perfil.php" accesskey="2">Perfil</a></li>
                     <li class="dropdown">
                         <a class="active" accesskey="3">Guia de Candidatura</a>
                         <div class="dropdown-content">
                             <ul>
                                 <li class="side-dropdown">
-                                    <a href="#">Ãndice de Cursos</a>
+                                    <a href="#">Índice de Cursos</a>
                                     <div class="side-hide-dropdown">
                                         <ul>
-                                            <li><a href="#">Ãrea</a></li>
+                                            <li><a href="#">Área</a></li>
                                             <li><a href="listar_cursos.php">Curso</a></li>
                                             <li><a href="listar_distrito.php">Distrito</a></li>
-                                            <li><a href="listar_ies.php">InstituiÃ§Ã£o</a></li>
+                                            <li><a href="listar_ies.php">Instituições</a></li>
                                         </ul>
                                     </div>
                                 </li>
