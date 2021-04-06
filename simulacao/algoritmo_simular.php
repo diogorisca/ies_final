@@ -109,7 +109,7 @@ $resultado3 = mysqli_query($ligacao, $sql3);
 
 $sql4 = "SELECT notaFinal from simulacao WHERE curso_id = '$curso_id' ORDER BY notaFinal DESC";
 $resultado4 = mysqli_query($ligacao, $sql4);
-$linha4 = $resultado4->fetch_assoc();
+$linha4 = $resultado4->fetch_assoc(); asd
 
 */
 
