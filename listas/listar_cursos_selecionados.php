@@ -93,7 +93,7 @@
                                     <tr>
                                         <!-- Imprime as instituiÃ§Ãµes na tabela -->
                                         <td>
-                                            <a href="listar_info_curso.php?idcurso=<?php echo $linha['id']; ?>&amp;faculdade=<?php echo $linha['faculdade']; ?>">
+                                            <a href="listar_info_curso.php?idcurso=<?php echo $linha['id']; ?>?>">
                                                 <?php
                                                     echo $linha["faculdade"];
                                                 ?>

@@ -45,7 +45,7 @@
 
                     <?php
                     if (isset($_SESSION['user']) and $_SESSION['user'] != '') {
-                        echo '<li><a href="listar_ies.php"><span>Terminar SessÃ£o</span></a></li>';
+                        echo '<li><a href="listar_ies.php"><span>Terminar Sessão</span></a></li>';
                     } else {
                         echo '<li><a href="../menu/login.php" accesskey="4">Login</a></li>';
                     }
@@ -113,7 +113,7 @@
                                                 <strong>Área: </strong><?php echo $linha["Área"]; ?>
                                             </p>
                                             <br>
-                                            <a href="../simulacao/algoritmo_simular.php?idcurso=<?php echo $linha['id']; ?>&amp;
+                                            <a href="../simulacao/algoritmo_simular.php?idcurso=<?php echo $idcurso ?>&amp;
                                             idutilizador=<?php /*echo da variavel do id utilizador */ ?>" class="botao-adicionar">Simular Candidatura</a>
                                         </div>
                                     </div>
