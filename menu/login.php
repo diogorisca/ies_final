@@ -20,7 +20,13 @@
             <div id="menu" class="topnav">
                 <ul>
                     <li><a href="../index.php" accesskey="1">Início</a></li>
-                    <li><a href="perfil.php" accesskey="2">Perfil</a></li>
+                    <?php
+                    if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
+                        echo '<li><a href="perfil.php" accesskey="2">Perfil</a></li>';
+                    } else {
+                        echo '<li><a href="login.php?log=naoauth" accesskey="2">Perfil</a></li>';
+                    }
+                    ?>
                     <li class="dropdown">
                         <a accesskey="3">Guia de Candidatura</a>
                         <div class="dropdown-content">
@@ -49,6 +55,11 @@
         <?php
         if (isset($_GET["msg"]) && $_GET["msg"] == 'failed') {
             echo "<h4 class='msg-erro'>Dados de acesso inválidos. Por favor, tente novamente.</h4>";
+        }
+        ?>
+        <?php
+        if (isset($_GET["log"]) && $_GET["log"] == 'naoauth') {
+            echo "<h4 class='msg-erro'>Precisa de estar autenticado para aceder ao perfil!</h4><p><h4 class='msg-erro'>Por favor, faça a autenticação!</h4>";
         }
         ?>
 

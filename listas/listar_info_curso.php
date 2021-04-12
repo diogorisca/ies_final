@@ -24,7 +24,13 @@
             <div id="menu" class="topnav">
                 <ul>
                     <li><a href="../index.php" accesskey="1">Iní­cio</a></li>
-                    <li><a href="../menu/perfil.php" accesskey="2">Perfil</a></li>
+                    <?php
+                    if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
+                        echo '<li><a href="../menu/perfil.php" accesskey="2">Perfil</a></li>';
+                    } else {
+                        echo '<li><a href="../menu/login.php?log=naoauth" accesskey="2">Perfil</a></li>';
+                    }
+                    ?>
                     <li class="dropdown">
                         <a class="active" accesskey="3">Guia de Candidatura</a>
                         <div class="dropdown-content">
