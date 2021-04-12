@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <!DOCTYPE html>
 
 <html lang="en" dir="ltr">
@@ -43,8 +45,8 @@
                     </li>
 
                     <?php
-                    if (isset($_SESSION['user']) and $_SESSION['user'] != '') {
-                        echo '<li><a href="listar_curso.php"><span>Terminar Sessão</span></a></li>';
+                    if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
+                        echo '<li><a href="../login/logout_process.php" accesskey="4">Terminar Sessão</a></li>';
                     } else {
                         echo '<li><a href="../menu/login.php" accesskey="4">Login</a></li>';
                     }

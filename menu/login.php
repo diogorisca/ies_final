@@ -52,9 +52,11 @@
         <form action="../login/log_process.php" method="post">
 
             <div class="container">
-                
-                <input type="text" placeholder="Email" name="user" required><p></p>
-                <input type="password" placeholder="Palavra-passe" name="pass" required><p></p>
+
+                <input type="text" placeholder="Email" name="user" required>
+                <p></p>
+                <input type="password" placeholder="Palavra-passe" name="pass" required>
+                <p></p>
                 <button type="submit">Login</button>
                 <button type="recover">Recuperar palavra-passe</button>
                 <h5>Ainda não tem conta? <a href="registo.php">Clique aqui!</a></h5>
@@ -62,7 +64,6 @@
 
         </form>
 
-    
     </body>
 
 </main>

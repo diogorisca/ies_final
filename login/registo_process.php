@@ -19,10 +19,8 @@
         $notaE = $_POST['notaE'];
 
 
-        $sql = "INSERT INTO utilizador (nome, cartao_cidadao, data_nascimento, email, contacto, media_acesso, 
-                                        notaBIO, notaFQ, notaMAT, notaPT, notaGeoM, morada, pass, tipo)
-                VALUES ('$user', '$cc', '$date', '$email', '$contacto', '$media', '$notaA', '$notaB', 
-                        '$notaC', '$notaD', '$notaE',  '$morada', '$pass', '$tipo')";
+        $sql = "INSERT INTO utilizador (nome, cartao_cidadao, data_nascimento, email, contacto, media_acesso, notaBIO, notaFQ, notaMAT, notaPT, notaGeoM, morada, pass, tipo)
+                VALUES ('$user', '$cc', '$date', '$email', '$contacto', '$media', '$notaA', '$notaB', '$notaC', '$notaD', '$notaE',  '$morada', '$pass', '$tipo')";
         $resultado = mysqli_query($ligacao, $sql);
 
         header("location: ../menu/login.php");

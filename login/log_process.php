@@ -5,21 +5,21 @@
     $username = $_POST['user'];
     $password = $_POST['pass'];
 
+    $username = stripslashes($username);
+    $password = stripslashes($password);
+
     $sql = "SELECT * FROM utilizador WHERE email='$username' AND pass='$password'";
     $resultado = mysqli_query($ligacao, $sql);
     $resultadocheck = mysqli_num_rows($resultado);
     $linha = $resultado->fetch_assoc();
     
-    if ($resultado > 0) {
+    $count = mysqli_num_rows($resultado);
 
-        if ($linha['email'] == $username && $linha['pass'] == $password) {
-            if ($linha['tipo'] == 1) {
-                header("location: ../index.php");
-            }
-            if ($linha['tipo'] == 2) {
-                header("location: ../index.php");
-            }
-        }
-    } 
-
+    if($count == 1){
+        session_start();
+        $_SESSION['loggedin'] = true;
+        $_SESSION['username'] = $username;
+    }
+    header("location: ../index.php");
+    
 ?>
