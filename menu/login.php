@@ -56,8 +56,6 @@
         if (isset($_GET["msg"]) && $_GET["msg"] == 'failed') {
             echo "<h4 class='msg-erro'>Dados de acesso inválidos. Por favor, tente novamente.</h4>";
         }
-        ?>
-        <?php
         if (isset($_GET["log"]) && $_GET["log"] == 'naoauth') {
             echo "<h4 class='msg-erro'>Precisa de estar autenticado para aceder ao perfil!</h4><p><h4 class='msg-erro'>Por favor, faça a autenticação!</h4>";
         }
