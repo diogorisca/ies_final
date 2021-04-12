@@ -46,13 +46,17 @@
         </div>
 
         <!-- Fim do menu -->
+        <?php
+        if (isset($_GET["msg"]) && $_GET["msg"] == 'failed') {
+            echo "<h4 class='msg-erro'>Dados de acesso inválidos. Por favor, tente novamente.</h4>";
+        }
+        ?>
 
         <h2 class="titulo">Login</h2>
 
         <form action="../login/log_process.php" method="post">
 
             <div class="container">
-
                 <input type="text" placeholder="Email" name="user" required>
                 <p></p>
                 <input type="password" placeholder="Palavra-passe" name="pass" required>

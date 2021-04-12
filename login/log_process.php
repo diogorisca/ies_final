@@ -19,7 +19,8 @@
         session_start();
         $_SESSION['loggedin'] = true;
         $_SESSION['username'] = $username;
+        header("location: ../index.php");
     }
-    header("location: ../index.php");
-    
-?>
+    else {
+        header("location:../menu/login.php?msg=failed");
+    }

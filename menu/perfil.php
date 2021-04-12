@@ -56,6 +56,30 @@
 
         <!-- Fim do menu -->
 
+        <?php
+
+        include '../database/dbconnection.php';
+
+        $id = $_POST['id'];
+
+        $sql = "SELECT * FROM utilizador WHERE id='$id'";
+        $resultado = mysqli_query($ligacao, $sql);
+        $linha = $resultado->fetch_assoc();
+
+        echo $linha["nome"];
+        echo $linha["cartao_cidadao"];
+        echo $linha["data_nascimento"];
+        echo $linha["email"];
+        echo $linha["contacto"];
+        echo $linha["media_acesso"];
+        echo $linha["notaBIO"];
+        echo $linha["notaFQ"];
+        echo $linha["notaMAT"];
+        echo $linha["notaPT"];
+        echo $linha["notaGeoM"];
+        echo $linha["morada"];
+        ?>
+
     </body>
 
 </main>

@@ -51,3 +51,8 @@ button {
 button:hover {
     color: #3cdbc0;
 }
+
+.msg-erro {
+    text-align: center;
+    color: #721c24;
+}
