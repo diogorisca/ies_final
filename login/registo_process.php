@@ -1,6 +1,12 @@
 <?php
-
         include '../database/dbconnection.php';
+
+        $chave = md5('projetodois'); // key de encriptação da pass
+
+        function hashpassword($string, $chave) {
+                $string = crypt($string, '$1$' . $chave . '$');
+                return $string;
+        }
 
         $tipo = 1;
         $user = $_POST['user'];
@@ -9,7 +15,7 @@
         $contacto = $_POST['contacto'];
         $morada = $_POST['morada'];
         $email = $_POST['email'];
-        $pass = $_POST['pass'];
+        $pass = hashpassword($_POST['pass'], $chave);
         $media = $_POST['media'];
 
         $notaA = $_POST['notaA'];
