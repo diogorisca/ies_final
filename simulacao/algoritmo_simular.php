@@ -61,7 +61,7 @@ if (strcmp($provas, $a3) == 0) {
 
     $sql2 = "SELECT media_acesso, notaMAT, FROM utilizador WHERE id = '$utilizador_id'";
     $resultado2 = mysqli_query($ligacao, $sql2);
-    $linha2 = $resultado->fetch_assoc();
+    $linha2 = $resultado2->fetch_assoc();
 
     $media_acesso = $linha2["media_acesso"];
     $notaMAT = $linha2["notaMAT"];
