@@ -71,7 +71,6 @@
         $resultado = mysqli_query($ligacao, $sql);
         $linhax = $resultadox->fetch_assoc()
 
-
         ?>
 
         <!-- Fim do menu -->
@@ -101,7 +100,7 @@
                                     <tr>
                                         <!-- Imprime as instituiÃ§Ãµes na tabela -->
                                         <td>
-                                            <a href="listar_info_curso.php?idcurso=<?php echo $linha['id']; ?>?>">
+                                            <a href="listar_info_curso.php?idcurso=<?php echo $linha['id']; ?>">
                                                 <?php
                                                 echo $linha["faculdade"];
                                                 ?>
