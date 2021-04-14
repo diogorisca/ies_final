@@ -60,9 +60,9 @@
 
         include '../database/dbconnection.php';
 
-        $id = $_POST['id'];
+        $utilizador = $_SESSION['username'];
 
-        $sql = "SELECT * FROM utilizador WHERE id='$id'";
+        $sql = "SELECT * FROM utilizador WHERE email='$utilizador'";
         $resultado = mysqli_query($ligacao, $sql);
         $linha = $resultado->fetch_assoc();
 
