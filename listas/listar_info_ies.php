@@ -74,6 +74,8 @@
 
         $sql2 = "SELECT nome, id FROM curso WHERE ies_id = '$iesid' ORDER BY nome ASC";
         $resultado2 = mysqli_query($ligacao, $sql2);
+
+
         ?>
 
         <section class="u-clearfix u-section-1" id="carousel_2636">
@@ -85,6 +87,9 @@
                             <div class="u-size-30">
                                 <div class="u-layout-col">
                                     <div class="u-align-center u-container-style u-image u-layout-cell u-left-cell u-size-30 u-image-1">
+                                        <?php
+                                        echo '<img class="resize" src="data:image/jpeg;base64,' . base64_encode($linha['imagem']) . '" />';
+                                        ?>
                                         <div class="u-container-layout"></div>
                                     </div>
                                     <div class="u-container-style u-layout-cell u-left-cell u-size-30 u-layout-cell-2">
