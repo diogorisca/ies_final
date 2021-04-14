@@ -62,9 +62,13 @@
 
         $utilizador = $_SESSION['username'];
 
-        $sql = "SELECT * FROM utilizador WHERE email='$utilizador'";
+        $sql = "SELECT id FROM utilizador WHERE email='$utilizador'";
         $resultado = mysqli_query($ligacao, $sql);
-        $linha = $resultado->fetch_assoc();
+        $linha2 = $resultado->fetch_assoc();
+
+        $sql2 = "SELECT * FROM utilizador WHERE id = $linha2[id]";
+        $resultado2 = mysqli_query($ligacao, $sql2);
+        $linha = $resultado2->fetch_assoc();
 
         echo $linha["nome"];
         echo $linha["cartao_cidadao"];

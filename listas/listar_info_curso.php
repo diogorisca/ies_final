@@ -18,7 +18,7 @@
 
     <body>
 
-        <!-- Ãnicio do menu -->
+        <!-- Ínicio do menu -->
 
         <div id="menu-wrapper">
             <div id="menu" class="topnav">
@@ -121,8 +121,16 @@
                                                 <strong>Área: </strong><?php echo $linha["Área"]; ?>
                                             </p>
                                             <br>
-                                            <a href="../simulacao/algoritmo_simular.php?idcurso=<?php echo $idcurso ?>&amp;
-                                            idutilizador=<?php /*echo da variavel do id utilizador */ ?>" class="botao-adicionar">Simular Candidatura</a>
+                                            <?php
+                                            if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
+                                                $utilizador = $_SESSION['username'];
+                                                $sqlid = "SELECT id FROM utilizador WHERE email='$utilizador'";
+                                                $resultadoid = mysqli_query($ligacao, $sqlid);
+                                                $linhaid = $resultadoid->fetch_assoc();
+                                                echo "<a href='../simulacao/algoritmo_simular.php?idcurso=$idcurso &amp;
+                                                idutilizador=$linhaid[id]' class='botao-adicionar'>Simular Candidatura</a>";
+                                            }
+                                            ?>
                                         </div>
                                     </div>
                                 </div>

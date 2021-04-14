@@ -2,7 +2,7 @@
 include '../database/dbconnection.php';
 
 $curso_id = $_GET['idcurso'];
-$utilizador_id = 15248537;
+$utilizador_id = $_GET['idutilizador'];
 
 
 $sql1 = "SELECT prova_ingresso, notaCandidatura, provaIngresso FROM curso WHERE id='$curso_id'";
