@@ -74,9 +74,12 @@
 
         <div class="perfil">
             <div class="esquerda">
-            <img src="../assets/ulp.jpg" width="100">
                 <?php
-                //echo '<img src="data:image/jpeg;base64,' . base64_encode($linha['img_perfil']) . '" />';
+                if (empty($linha['img_perfil'])) {
+                    echo '<img src="../assets/profile_pic.jpg" width="100">';
+                } else {
+                    echo '<img src="data:image/jpeg;base64,' . base64_encode($linha['img_perfil']) . '" width="100">';
+                }
                 ?>
                 <h4>
                     <?php
@@ -237,3 +240,28 @@
         </div>
     </body>
 </main>
+
+<!--
+Editar perfil
+
+$id = $_POST['id']
+$contacto = $_POST['contacto'];
+$morada = $_POST['morada'];
+$email = $_POST['email'];
+$pass = $_POST['pass'];
+$media = $_POST['media'];
+
+$notaA = $_POST['notaA'];
+$notaB = $_POST['notaB'];
+$notaC = $_POST['notaC'];
+$notaD = $_POST['notaD'];
+$notaE = $_POST['notaE'];
+
+
+$sql = UPDATE utilizador SET email ='$email', contacto ='$contacto', media_acesso ='$media', notaBIO ='$notaA', 
+        notaFQ ='$notaB', notaMAT='$notaC', notaPT='$notaD', notaGeoM ='$notaE', morada ='$morada', pass ='$pass'
+        WHERE id = '$id'
+
+$resultado = mysqli_query($ligacao, $sql);
+
+-->
