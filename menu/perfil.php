@@ -105,7 +105,7 @@
                         </div>
                         <div class="dados">
                             <h4>
-                                Telemóvel:
+                                Contacto:
                             </h4>
                             <p>
                                 <?php
