@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+.perfil {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 450px;
+    display: flex;
+    box-shadow: 0 1px 50px 0 rgb(100 15 200 / 10%);
+}
+
+.perfil .esquerda {
+    width: 35%;
+    padding: 30px 25px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    text-align: center;
+}
+
+.perfil .esquerda img {
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.perfil .esquerda h4 {
+    margin-bottom: 10px;
+}
+
+.perfil .direita {
+    width: 65%;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 30px 25px;
+}
+
+.perfil .direita .informacao-pessoal,
+.perfil .direita .informacao-academica {
+    margin-bottom: 25px;
+}
+
+.perfil .direita .informacao-pessoal h3,
+.perfil .direita .informacao-academica h3 {
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    color: #001a72;
+    border-bottom: 1px solid #3cdbc0;
+    text-transform: uppercase;
+    letter-spacing: 1.6px;
+}

@@ -11,6 +11,7 @@
         <title>IES</title>
         <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet" />
         <link href="../styles/indexstyles.css" rel="stylesheet" />
+        <link href="../styles/perfil.css" rel="stylesheet" />
     </head>
 
     <body>
@@ -69,20 +70,170 @@
         $resultado2 = mysqli_query($ligacao, $sql2);
         $linha = $resultado2->fetch_assoc();
 
-        echo $linha["nome"];
-        echo $linha["cartao_cidadao"];
-        echo $linha["data_nascimento"];
-        echo $linha["email"];
-        echo $linha["contacto"];
-        echo $linha["media_acesso"];
-        echo $linha["notaBIO"];
-        echo $linha["notaFQ"];
-        echo $linha["notaMAT"];
-        echo $linha["notaPT"];
-        echo $linha["notaGeoM"];
-        echo $linha["morada"];
         ?>
 
+        <div class="perfil">
+            <div class="esquerda">
+            <img src="../assets/ulp.jpg" width="100">
+                <?php
+                //echo '<img src="data:image/jpeg;base64,' . base64_encode($linha['img_perfil']) . '" />';
+                ?>
+                <h4>
+                    <?php
+                    echo $linha["nome"];
+                    ?>
+                </h4>
+            </div>
+            <div class="direita">
+                <div class="informacao-pessoal">
+                    <h3>
+                        Informação Pessoal
+                    </h3>
+                    <div class="dados-pessoais">
+                        <div class="dados">
+                            <h4>
+                                Email:
+                            </h4>
+                            <p>
+                                <?php
+                                echo $linha["email"];
+                                ?>
+                            </p>
+                        </div>
+                        <div class="dados">
+                            <h4>
+                                Telemóvel:
+                            </h4>
+                            <p>
+                                <?php
+                                echo $linha["contacto"];
+                                ?>
+                            </p>
+                        </div>
+                        <div class="dados">
+                            <h4>
+                                Morada:
+                            </h4>
+                            <p>
+                                <?php
+                                echo $linha["morada"];
+                                ?>
+                            </p>
+                        </div>
+                        <div class="dados">
+                            <h4>
+                                Data de Nascimento:
+                            </h4>
+                            <p>
+                                <?php
+                                $oldDate = $linha["data_nascimento"];
+                                $newDate = date("d-m-Y", strtotime($oldDate));
+                                echo $newDate;
+                                ?>
+                            </p>
+                        </div>
+                        <div class="dados">
+                            <h4>
+                                Cartão de Cidadão:
+                            </h4>
+                            <p>
+                                <?php
+                                echo $linha["cartao_cidadao"];
+                                ?>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="informacao-academica">
+                    <h3>
+                        Informação Académica
+                    </h3>
+                    <div class="dados-academicos">
+                        <div class="dados">
+                            <h4>
+                                Média de Acesso:
+                            </h4>
+                            <p>
+                                <?php
+                                echo $linha["media_acesso"];
+                                ?>
+                            </p>
+                        </div>
+                        <?php
+                        if ($linha["notaBIO"] > 0) {
+                        ?>
+                            <div class="dados">
+                                <h4>
+                                    Nota de Biologia:
+                                </h4>
+                                <p>
+                                    <?php
+                                    echo $linha["notaBIO"];
+                                    ?>
+                                </p>
+                            </div>
+                        <?php
+                        }
+                        if ($linha["notaFQ"] > 0) {
+                        ?>
+                            <div class="dados">
+                                <h4>
+                                    Nota de Física e Química:
+                                </h4>
+                                <p>
+                                    <?php
+                                    echo $linha["notaFQ"];
+                                    ?>
+                                </p>
+                            </div>
+                        <?php
+                        }
+                        if ($linha["notaMAT"] > 0) {
+                        ?>
+                            <div class="dados">
+                                <h4>
+                                    Nota de Matemática:
+                                </h4>
+                                <p>
+                                    <?php
+                                    echo $linha["notaMAT"];
+                                    ?>
+                                </p>
+                            </div>
+                        <?php
+                        }
+                        if ($linha["notaPT"] > 0) {
+                        ?>
+                            <div class="dados">
+                                <h4>
+                                    Nota de Português:
+                                </h4>
+                                <p>
+                                    <?php
+                                    echo $linha["notaPT"];
+                                    ?>
+                                </p>
+                            </div>
+                        <?php
+                        }
+                        if ($linha["notaGeoM"] > 0) {
+                        ?>
+                            <div class="dados">
+                                <h4>
+                                    Nota de Geometria:
+                                </h4>
+                                <p>
+                                    <?php
+                                    echo $linha["notaGeoM"];
+                                    ?>
+                                </p>
+                            </div>
+                        <?php
+                        }
+                        ?>
+                    </div>
+                </div>
+            </div>
+        </div>
     </body>
-
 </main>
