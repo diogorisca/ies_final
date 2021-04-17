@@ -82,25 +82,19 @@
                 <label>
                     <h3>Nome:</h3>
                 </label>
-                <p> <?php echo $linha['nome']; ?></p>
+                <input type="text" placeholder="Nome Completo" name="user" value="<?php echo $linha['nome']; ?>" required>
                 <p></p>
 
                 <label>
                     <h3>Número Cartão de Cidadão:</h3>
                 </label>
-                <p><?php echo $linha['cartao_cidadao']; ?></p>
+                <input type="number" class="number-block" pattern="[0-9]{8}" placeholder="Número Cartão de Cidadão" name="cc" value="<?php echo $linha['cartao_cidadao']; ?>" required>
                 <p></p>
 
                 <label>
                     <h3>Data de Nascimento:</h3>
                 </label>
-                <p>
-                    <?php
-                    $oldDate = $linha['data_nascimento'];
-                    $newDate = date("d-m-Y", strtotime($oldDate));
-                    echo $newDate;
-                    ?>
-                </p>
+                <input type="date" placeholder="Data Nascimento" name="date" value="<?php echo $linha['data_nascimento']; ?>" required>
                 <p></p>
 
                 <label>
