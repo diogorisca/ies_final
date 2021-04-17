@@ -79,9 +79,11 @@
                 <input type="password" placeholder="Palavra-passe" name="pass" required>
                 <p></p>
 
+
+
                 <h2 class="titulo2">Dados Académicos</h2>
 
-                <input type="number" class="number-block" placeholder="Média de Acesso" name="media" required>
+                <input type="number" class="number-block" placeholder="Média de Acesso" name="media" min="0" max="20" required>
                 <p></p>
 
                 <div class="multiselect">
@@ -135,26 +137,26 @@
                     </div>
                 </div>
 
-                <input type="number" class="notas" id="text1" placeholder="Nota de Biologia e Geologia" name="notaA">
-                <input type="number" class="notas" id="text2" placeholder="Nota de Física e Química A" name="notaB">
-                <input type="number" class="notas" id="text3" placeholder="Nota de Matemática A" name="notaC">
-                <input type="number" class="notas" id="text4" placeholder="Nota de Português" name="notaD">
-                <input type="number" class="notas" id="text12" placeholder="Nota de Geometria Descritiva A" name="notaE">
-                <!-- <input type="number" class="notas" id="text5" placeholder="Nota de Alemão">
-                <input type="number" class="notas" id="text6" placeholder="Nota de Desenho A">
-                <input type="number" class="notas" id="text7" placeholder="Nota de Economia A">
-                <input type="number" class="notas" id="text8" placeholder="Nota de Espanhol">
-                <input type="number" class="notas" id="text9" placeholder="Nota de Filosofia">
-                <input type="number" class="notas" id="text10" placeholder="Nota de Francês">
-                <input type="number" class="notas" id="text11" placeholder="Nota de Geografia A">
-                <input type="number" class="notas" id="text13" placeholder="Nota de História">
-                <input type="number" class="notas" id="text14" placeholder="Nota de História da Cultura e das Artes">
-                <input type="number" class="notas" id="text15" placeholder="Nota de Inglês">
-                <input type="number" class="notas" id="text16" placeholder="Nota de Latim A">
-                <input type="number" class="notas" id="text17" placeholder="Nota de Literatura Portuguesa">
-                <input type="number" class="notas" id="text18" placeholder=FNota de Matemática B">
-                <input type="number" class="notas" id="text19" placeholder="Nota de Matemática Aplicada às Ciências Sociais">
-                <input type="number" class="notas" id="text20" placeholder="Nota de Mandarim"> -->
+                <input type="number" class="notas" id="text1" placeholder="Nota de Biologia e Geologia" name="notaA" min="0" max="20">
+                <input type="number" class="notas" id="text2" placeholder="Nota de Física e Química A" name="notaB" min="0" max="20">
+                <input type="number" class="notas" id="text3" placeholder="Nota de Matemática A" name="notaC" min="0" max="20">
+                <input type="number" class="notas" id="text4" placeholder="Nota de Português" name="notaD" min="0" max="20">
+                <input type="number" class="notas" id="text12" placeholder="Nota de Geometria Descritiva A" name="notaE" min="0" max="20">
+                <!-- <input type="number" class="notas" id="text5" placeholder="Nota de Alemão" min="0" max="20">
+                <input type="number" class="notas" id="text6" placeholder="Nota de Desenho A" min="0" max="20">
+                <input type="number" class="notas" id="text7" placeholder="Nota de Economia A" min="0" max="20">
+                <input type="number" class="notas" id="text8" placeholder="Nota de Espanhol" min="0" max="20">
+                <input type="number" class="notas" id="text9" placeholder="Nota de Filosofia" min="0" max="20">
+                <input type="number" class="notas" id="text10" placeholder="Nota de Francês" min="0" max="20">
+                <input type="number" class="notas" id="text11" placeholder="Nota de Geografia A" min="0" max="20"> 
+                <input type="number" class="notas" id="text13" placeholder="Nota de História" min="0" max="20">
+                <input type="number" class="notas" id="text14" placeholder="Nota de História da Cultura e das Artes" min="0" max="20">
+                <input type="number" class="notas" id="text15" placeholder="Nota de Inglês" min="0" max="20">
+                <input type="number" class="notas" id="text16" placeholder="Nota de Latim A" min="0" max="20">
+                <input type="number" class="notas" id="text17" placeholder="Nota de Literatura Portuguesa" min="0" max="20">
+                <input type="number" class="notas" id="text18" placeholder=FNota de Matemática B" min="0" max="20">
+                <input type="number" class="notas" id="text19" placeholder="Nota de Matemática Aplicada às Ciências Sociais" min="0" max="20">
+                <input type="number" class="notas" id="text20" placeholder="Nota de Mandarim" min="0" max="20"> -->
 
                 <p></p>
 

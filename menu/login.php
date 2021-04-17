@@ -56,7 +56,7 @@
             echo "<h4 class='msg-erro'>Dados de acesso inválidos. Por favor, tente novamente.</h4>";
         }
         if (isset($_GET["log"]) && $_GET["log"] == 'naoauth') {
-            echo "<h4 class='msg-erro'>Precisa de estar autenticado para aceder ao perfil!</h4><p><h4 class='msg-erro'>Por favor, faça a autenticação!</h4>";
+            echo "<h4 class='msg-erro'>Precisa de estar autenticado para aceder ao perfil!<p>Por favor, faça a autenticação!</h4>";
         }
         ?>
 
@@ -70,7 +70,6 @@
                 <input type="password" placeholder="Palavra-passe" name="pass" required>
                 <p></p>
                 <button type="submit">Login</button>
-                <button type="recover">Recuperar palavra-passe</button>
                 <h5>Ainda não tem conta? <a href="registo.php">Clique aqui!</a></h5>
             </div>
 
