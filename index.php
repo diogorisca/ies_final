@@ -51,7 +51,7 @@
 
                     <?php
                     if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
-                        echo '<li><a href="login/logout_process.php" accesskey="4">Terminar Sessão</a></li>';
+                        echo '<li><a href="process/logout_process.php" accesskey="4">Terminar Sessão</a></li>';
                     } else {
                         echo '<li><a href="menu/login.php" accesskey="4">Login</a></li>';
                     }

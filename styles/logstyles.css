@@ -21,6 +21,15 @@ input[type=tel],
     box-sizing: border-box;
 }
 
+h1 {
+    text-align: center!important;
+    padding-top: 30px;
+}
+
+.tituloedit {
+    padding-top: 40px;
+}
+
 h2 {
     text-align: center;
     padding-bottom: 40px;

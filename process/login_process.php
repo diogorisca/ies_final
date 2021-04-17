@@ -20,12 +20,14 @@ $resultado = mysqli_query($ligacao, $sql);
 $resultadocheck = mysqli_num_rows($resultado);
 $linha = $resultado->fetch_assoc();
 
+$id_username = $linha['id'];
+
 $count = mysqli_num_rows($resultado);
 
 if ($count == 1) {
     session_start();
     $_SESSION['loggedin'] = true;
-    $_SESSION['username'] = $username;
+    $_SESSION['id_username'] = $id_username;
     header("location: ../index.php");
 } else {
     header("location:../menu/login.php?msg=failed");

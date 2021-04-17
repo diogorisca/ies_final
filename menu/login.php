@@ -62,7 +62,7 @@
 
         <h2 class="titulo">Login</h2>
 
-        <form action="../login/log_process.php" method="post">
+        <form action="../process/login_process.php" method="post">
 
             <div class="container">
                 <input type="text" placeholder="Email" name="user" required>

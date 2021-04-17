@@ -55,7 +55,7 @@
         <!-- Fim do menu -->
 
         <h2 class="titulo">Dados Principais</h2>
-        <form action="../login/registo_process.php" method="post">
+        <form action="../process/registo_process.php" method="post">
             <div class="container">
 
                 <input type="text" placeholder="Nome Completo" name="user" required>

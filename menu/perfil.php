@@ -44,7 +44,7 @@
 
                     <?php
                     if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
-                        echo '<li><a href="../login/logout_process.php" accesskey="4">Terminar Sessão</a></li>';
+                        echo '<li><a href="../process/logout_process.php" accesskey="4">Terminar Sessão</a></li>';
                     } else {
                         echo '<li><a href="login.php" accesskey="4">Login</a></li>';
                     }
@@ -60,19 +60,16 @@
 
         include '../database/dbconnection.php';
 
-        $utilizador = $_SESSION['username'];
+        $id_utilizador = $_SESSION['id_username'];
 
-        $sql = "SELECT id FROM utilizador WHERE email='$utilizador'";
+        $sql = "SELECT * FROM utilizador WHERE id = $id_utilizador";
         $resultado = mysqli_query($ligacao, $sql);
-        $linha2 = $resultado->fetch_assoc();
-
-        $sql2 = "SELECT * FROM utilizador WHERE id = $linha2[id]";
-        $resultado2 = mysqli_query($ligacao, $sql2);
-        $linha = $resultado2->fetch_assoc();
+        $linha = $resultado->fetch_assoc();
 
         ?>
 
         <div class="perfil">
+
             <div class="esquerda">
                 <?php
                 if (empty($linha['img_perfil'])) {
@@ -86,8 +83,12 @@
                     echo $linha["nome"];
                     ?>
                 </h4>
+                <a href="editar_perfil.php?id_utilizador=<?php echo $linha["id"] ?>">
+                    <img src="../assets/edit.png" width="25" height="25" title="Editar perfil">
+                </a>
             </div>
             <div class="direita">
+
                 <div class="informacao-pessoal">
                     <h3>
                         Informação Pessoal
@@ -240,28 +241,3 @@
         </div>
     </body>
 </main>
-
-<!--
-Editar perfil
-
-$id = $_POST['id']
-$contacto = $_POST['contacto'];
-$morada = $_POST['morada'];
-$email = $_POST['email'];
-$pass = $_POST['pass'];
-$media = $_POST['media'];
-
-$notaA = $_POST['notaA'];
-$notaB = $_POST['notaB'];
-$notaC = $_POST['notaC'];
-$notaD = $_POST['notaD'];
-$notaE = $_POST['notaE'];
-
-
-$sql = UPDATE utilizador SET email ='$email', contacto ='$contacto', media_acesso ='$media', notaBIO ='$notaA', 
-        notaFQ ='$notaB', notaMAT='$notaC', notaPT='$notaD', notaGeoM ='$notaE', morada ='$morada', pass ='$pass'
-        WHERE id = '$id'
-
-$resultado = mysqli_query($ligacao, $sql);
-
--->
