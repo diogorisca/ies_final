@@ -69,6 +69,12 @@
 
         <!-- Formulario para editar perfil -->
 
+        <?php
+        if (isset($_GET["emailexiste"]) && $_GET["emailexiste"] == 'verdade') {
+            echo "<h4 class='msg-erro'>Email inserido já se encontra registado.<p>Por favor, tente novamente.</h4>";
+        }
+        ?>
+
         <h1 class="titulo-edit">Editar Perfil</h1>
         <h2 class="tituloedit">Dados Principais</h2>
         <form action="../process/editar_perfil_process.php" method="POST">

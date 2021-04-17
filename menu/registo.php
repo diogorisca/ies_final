@@ -54,6 +54,12 @@
 
         <!-- Fim do menu -->
 
+        <?php
+        if (isset($_GET["emailexiste"]) && $_GET["emailexiste"] == 'verdade') {
+            echo "<h4 class='msg-erro'>Email inserido já se encontra registado.<p>Por favor, tente novamente.</h4>";
+        }
+        ?>
+
         <h2 class="titulo">Dados Principais</h2>
         <form action="../process/registo_process.php" method="post">
             <div class="container">
