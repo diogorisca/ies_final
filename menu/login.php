@@ -10,6 +10,7 @@
         <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet" />
         <link href="../styles/indexstyles.css" rel="stylesheet" />
         <link href="../styles/logstyles.css" rel="stylesheet" />
+        <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     </head>
 
     <body>
@@ -65,8 +66,10 @@
         <form action="../process/login_process.php" method="post">
 
             <div class="container">
+                <span><i class="fas fa-at"></i></span>
                 <input type="text" placeholder="Email" name="user" required>
                 <p></p>
+                <span><i class="fas fa-key"></i></span>
                 <input type="password" placeholder="Palavra-passe" name="pass" required>
                 <p></p>
                 <button type="submit">Login</button>

@@ -12,6 +12,8 @@
         <link href="../styles/logstyles.css" rel="stylesheet" />
         <link href="../styles/checkbox_provas.css" rel="stylesheet" />
         <script src="../scripts/checkbox_provas.js"></script>
+        <script src="../scripts/palavra_pass.js"></script>
+        <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     </head>
 
     <body>
@@ -58,33 +60,46 @@
         if (isset($_GET["emailexiste"]) && $_GET["emailexiste"] == 'verdade') {
             echo "<h4 class='msg-erro'>Email inserido já se encontra registado.<p>Por favor, tente novamente.</h4>";
         }
+        if (isset($_GET["passnaocoincide"]) && $_GET["passnaocoincide"] == 'verdade') {
+            echo "<h4 class='msg-erro'>Palavra-Passe não coincide.<p>Por favor, tente novamente.</h4>";
+        }
         ?>
 
         <h2 class="titulo">Dados Principais</h2>
         <form action="../process/registo_process.php" method="post">
             <div class="container">
 
+                <span><i class="fas fa-user"></i></span>
                 <input type="text" placeholder="Nome Completo" name="user" required>
                 <p></p>
 
+                <span><i class="fa fa-address-card"></i></span>
                 <input type="number" class="number-block" pattern="[0-9]{8}" placeholder="Número Cartão de Cidadão" name="cc" required>
                 <p></p>
 
+                <span><i class="fas fa-calendar-day"></i></span>
                 <input type="date" placeholder="Data Nascimento" name="date" required>
                 <p></p>
 
+                <span><i class="fa fa-phone"></i></span>
                 <input type="tel" pattern="[0-9]{9}" placeholder="Contacto" name="contacto" required>
                 <p></p>
 
+                <span><i class="fas fa-map-marker-alt"></i></span>
                 <input type="text" placeholder="Morada" name="morada" required>
                 <p></p>
 
+                <span><i class="fas fa-at"></i></span>
                 <input type="email" placeholder="Email" name="email" required>
                 <p></p>
 
-                <input type="password" placeholder="Palavra-passe" name="pass" required>
+                <span><i class="fas fa-key"></i></span>
+                <input type="password" placeholder="Palavra-Passe" name="pass" required>
                 <p></p>
 
+                <span><i class="fas fa-key"></i></span>
+                <input type="password" placeholder="Repita a Palavra-Passe" name="repetirpass" required>
+                <p></p>
 
 
                 <h2 class="titulo2">Dados Académicos</h2>
