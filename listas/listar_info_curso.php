@@ -122,12 +122,10 @@
                                             <br>
                                             <?php
                                             if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
-                                                $utilizador = $_SESSION['username'];
-                                                $sqlid = "SELECT id FROM utilizador WHERE email='$utilizador'";
-                                                $resultadoid = mysqli_query($ligacao, $sqlid);
-                                                $linhaid = $resultadoid->fetch_assoc();
-                                                echo "<a href='../simulacao/algoritmo_simular.php?idcurso=$idcurso &amp;
-                                                idutilizador=$linhaid[id]' class='botao-adicionar'>Simular Candidatura</a>";
+                                                $id_utilizador = $_SESSION['id_username'];
+                                                
+                                                echo "<a href='../process/simular_candidatura_process.php?idcurso=$idcurso&amp;idutilizador=$id_utilizador'
+                                                class='botao-adicionar'>Simular Candidatura</a>";
                                             }
                                             ?>
                                         </div>

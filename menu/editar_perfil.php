@@ -14,6 +14,7 @@
         <link href="../styles/logstyles.css" rel="stylesheet" />
         <link href="../styles/checkbox_provas.css" rel="stylesheet" />
         <script src="../scripts/checkbox_provas.js"></script>
+        <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     </head>
 
     <body>
@@ -79,39 +80,27 @@
         <h2 class="tituloedit">Dados Principais</h2>
         <form action="../process/editar_perfil_process.php" method="POST">
             <div class="container">
-                <label>
-                    <h3>Nome:</h3>
-                </label>
+                <span><i class="fas fa-user"></i></span>
                 <input type="text" placeholder="Nome Completo" name="user" value="<?php echo $linha['nome']; ?>" required>
                 <p></p>
 
-                <label>
-                    <h3>Número Cartão de Cidadão:</h3>
-                </label>
+                <span><i class="fa fa-address-card"></i></span>
                 <input type="number" class="number-block" pattern="[0-9]{8}" placeholder="Número Cartão de Cidadão" name="cc" value="<?php echo $linha['cartao_cidadao']; ?>" required>
                 <p></p>
 
-                <label>
-                    <h3>Data de Nascimento:</h3>
-                </label>
+                <span><i class="fas fa-calendar-day"></i></span>
                 <input type="date" placeholder="Data Nascimento" name="date" value="<?php echo $linha['data_nascimento']; ?>" required>
                 <p></p>
 
-                <label>
-                    <h3>Contacto:</h3>
-                </label>
+                <span><i class="fa fa-phone"></i></span>
                 <input id="contacto" type="tel" pattern="[0-9]{9}" placeholder="Contacto" name="contacto" value="<?php echo $linha['contacto']; ?>" required>
                 <p></p>
 
-                <label>
-                    <h3>Morada:</h3>
-                </label>
+                <span><i class="fas fa-map-marker-alt"></i></span>
                 <input id="morada" type="text" placeholder="Morada" name="morada" value="<?php echo $linha['morada']; ?>" required>
                 <p></p>
 
-                <label>
-                    <h3>Email:</h3>
-                </label>
+                <span><i class="fas fa-at"></i></span>
                 <input id="email" type="email" placeholder="Email" name="email" value="<?php echo $linha['email']; ?>" required>
                 <p></p>
 
