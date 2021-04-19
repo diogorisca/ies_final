@@ -23,11 +23,11 @@ $sql_email = "SELECT * FROM utilizador WHERE email='$novo_email' LIMIT 1";
 $resultado_email = mysqli_query($ligacao, $sql_email);
 $linha = mysqli_fetch_assoc($resultado_email);
 
-if ($linha['email'] === $novo_email) {
+if ($linha['email'] === $novo_email) { //Se houver um email identico na BD ao novo email colocado
         $sql_verificar_email = "SELECT email FROM utilizador WHERE id='$id_utilizador'";
         $resultado_verificar_email = mysqli_query($ligacao, $sql_verificar_email);
         $linha_verificar_email = $resultado_verificar_email->fetch_assoc();
-        if ($linha_verificar_email['email'] == $novo_email) {
+        if ($linha_verificar_email['email'] == $novo_email) { //Se o novo email colocado for o mesmo email do utilizador autenticado
                 //UPDATE (editar) dados do perfil na BD
                 $sql = "UPDATE utilizador SET nome='$novo_nome', data_nascimento='$nova_data', cartao_cidadao='$novo_cc', email='$novo_email', contacto='$novo_contacto', morada='$nova_morada', 
                 media_acesso='$nova_media', notaBIO='$nova_notaA', notaFQ='$nova_notaB', notaMat='$nova_notaC', notaPT='$nova_notaD', notaGeoM='$nova_notaE' WHERE id = '$id_utilizador'";
@@ -35,10 +35,10 @@ if ($linha['email'] === $novo_email) {
                 $preparar = $ligacao->prepare($sql);
                 $preparar->execute();
                 header("location: ../menu/perfil.php");
-        } else {
+        } else { //Se o novo email for diferente do email da pessoa autenticada e esse email existir na BD
                 header("location:../menu/editar_perfil.php?id_utilizador=$id_utilizador&emailexiste=verdade");
         }
-} else {
+} else { //Se nao houver nenhum email identico na BD
         //UPDATE (editar) dados do perfil na BD
         $sql = "UPDATE utilizador SET nome='$novo_nome', data_nascimento='$nova_data', cartao_cidadao='$novo_cc', email='$novo_email', contacto='$novo_contacto', morada='$nova_morada', 
         media_acesso='$nova_media', notaBIO='$nova_notaA', notaFQ='$nova_notaB', notaMat='$nova_notaC', notaPT='$nova_notaD', notaGeoM='$nova_notaE' WHERE id = '$id_utilizador'";
