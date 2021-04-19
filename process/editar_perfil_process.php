@@ -34,7 +34,7 @@ if ($linha['email'] === $novo_email) { //Se houver um email identico na BD ao no
 
                 $preparar = $ligacao->prepare($sql);
                 $preparar->execute();
-                header("location: ../menu/perfil.php");
+                header("location: ../menu/perfil.php?editar=sucesso");
         } else { //Se o novo email for diferente do email da pessoa autenticada e esse email existir na BD
                 header("location:../menu/editar_perfil.php?id_utilizador=$id_utilizador&emailexiste=verdade");
         }
@@ -45,5 +45,5 @@ if ($linha['email'] === $novo_email) { //Se houver um email identico na BD ao no
 
         $preparar = $ligacao->prepare($sql);
         $preparar->execute();
-        header("location: ../menu/perfil.php");
+        header("location: ../menu/perfil.php?editar=sucesso");
 }

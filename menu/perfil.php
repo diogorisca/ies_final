@@ -66,6 +66,11 @@
         $resultado = mysqli_query($ligacao, $sql);
         $linha = $resultado->fetch_assoc();
 
+
+        if (isset($_GET["editar"]) && $_GET["editar"] == 'sucesso') {
+            echo "<h4 class='msg-sucesso'>Perfil atualizado com sucesso.</h4>";
+        }
+        
         ?>
 
         <div class="perfil">

@@ -59,6 +59,9 @@
         if (isset($_GET["log"]) && $_GET["log"] == 'naoauth') {
             echo "<h4 class='msg-erro'>Precisa de estar autenticado para aceder ao perfil!<p>Por favor, faça a autenticação!</h4>";
         }
+        if (isset($_GET["criar"]) && $_GET["criar"] == 'sucesso') {
+            echo "<h4 class='msg-sucesso'>Conta criada com sucesso.</h4>";
+        }
         ?>
 
         <h2 class="titulo">Login</h2>

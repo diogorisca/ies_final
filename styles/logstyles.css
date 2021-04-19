@@ -65,3 +65,8 @@ button:hover {
     text-align: center;
     color: #721c24;
 }
+
+.msg-sucesso {
+    text-align: center!important;
+    color: #4BB543!important;
+}

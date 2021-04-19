@@ -45,5 +45,5 @@ if ($linha['email'] === $email) {
         $sql = "INSERT INTO utilizador (nome, cartao_cidadao, data_nascimento, email, contacto, media_acesso, notaBIO, notaFQ, notaMAT, notaPT, notaGeoM, morada, pass)
         VALUES ('$user', '$cc', '$date', '$email', '$contacto', '$media', '$notaA', '$notaB', '$notaC', '$notaD', '$notaE',  '$morada', '$pass')";
         $resultado = mysqli_query($ligacao, $sql);
-        header("location: ../menu/login.php");
+        header("location: ../menu/login.php?criar=sucesso");
 }

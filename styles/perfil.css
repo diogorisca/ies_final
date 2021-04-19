@@ -53,3 +53,9 @@
     text-transform: uppercase;
     letter-spacing: 1.6px;
 }
+
+.msg-sucesso {
+    padding-top: 25px;
+    text-align: center!important;
+    color: #4BB543!important;
+}
