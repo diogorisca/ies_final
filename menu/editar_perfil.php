@@ -138,10 +138,7 @@
                 <input type="number" class="notas" id="text3" placeholder="Nota de Matemática A" name="notaC" min="0" max="20" value="<?php echo $linha['notaMAT']; ?>">
                 <input type="number" class="notas" id="text4" placeholder="Nota de Português" name="notaD" min="0" max="20" value="<?php echo $linha['notaPT']; ?>">
                 <input type="number" class="notas" id="text12" placeholder="Nota de Geometria Descritiva A" name="notaE" min="0" max="20" value="<?php echo $linha['notaGeoM']; ?>">
-
                 <p></p>
-
-                <input type="hidden" id="id_utilizador" name="id_utilizador" value="<?php echo $id_utilizador; ?>">
 
                 <button type="submit">Atualizar Perfil</button>
                 <p></p>

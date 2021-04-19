@@ -5,7 +5,7 @@ include "../database/dbconnection.php";
 
 //Receber informação do formulario
 
-$id_utilizador = $_POST['id_utilizador'];
+$id_utilizador = $_SESSION['id_username'];
 $novo_nome = $_POST['user'];
 $nova_data = $_POST['date'];
 $novo_cc = $_POST['cc'];
@@ -24,7 +24,20 @@ $resultado_email = mysqli_query($ligacao, $sql_email);
 $linha = mysqli_fetch_assoc($resultado_email);
 
 if ($linha['email'] === $novo_email) {
-        header("location:../menu/editar_perfil.php?id_utilizador=$id_utilizador&emailexiste=verdade");
+        $sql_verificar_email = "SELECT email FROM utilizador WHERE id='$id_utilizador'";
+        $resultado_verificar_email = mysqli_query($ligacao, $sql_verificar_email);
+        $linha_verificar_email = $resultado_verificar_email->fetch_assoc();
+        if ($linha_verificar_email['email'] == $novo_email) {
+                //UPDATE (editar) dados do perfil na BD
+                $sql = "UPDATE utilizador SET nome='$novo_nome', data_nascimento='$nova_data', cartao_cidadao='$novo_cc', email='$novo_email', contacto='$novo_contacto', morada='$nova_morada', 
+                media_acesso='$nova_media', notaBIO='$nova_notaA', notaFQ='$nova_notaB', notaMat='$nova_notaC', notaPT='$nova_notaD', notaGeoM='$nova_notaE' WHERE id = '$id_utilizador'";
+
+                $preparar = $ligacao->prepare($sql);
+                $preparar->execute();
+                header("location: ../menu/perfil.php");
+        } else {
+                header("location:../menu/editar_perfil.php?id_utilizador=$id_utilizador&emailexiste=verdade");
+        }
 } else {
         //UPDATE (editar) dados do perfil na BD
         $sql = "UPDATE utilizador SET nome='$novo_nome', data_nascimento='$nova_data', cartao_cidadao='$novo_cc', email='$novo_email', contacto='$novo_contacto', morada='$nova_morada', 
