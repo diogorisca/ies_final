@@ -11,6 +11,7 @@
         <link href="../styles/indexstyles.css" rel="stylesheet" />
         <link href="../styles/logstyles.css" rel="stylesheet" />
         <link href="../styles/checkbox_provas.css" rel="stylesheet" />
+        <link href="../styles/radio-cargo.css" rel="stylesheet" />
         <script src="../scripts/checkbox_provas.js"></script>
         <script src="../scripts/palavra_pass.js"></script>
         <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
@@ -101,6 +102,19 @@
                 <input type="password" placeholder="Repita a Palavra-Passe" name="repetirpass" required>
                 <p></p>
 
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">
+                            <i class="fas fa-user-tag" style="margin-right: 5px;"></i>Selecione o cargo:
+                        </h4>
+                        <div>
+                            <input type="radio" name="cargo" id="radio1" value="basic" checked="true" />
+                            <label class="radio" for="radio1"><strong>Utilizador</strong></label>
+                            <input type="radio" name="cargo" id="radio2" value="admin" />
+                            <label for="radio2"><strong>Administrador</strong></label>
+                        </div>
+                    </div>
+                </div>
 
                 <h2 class="titulo2">Dados Académicos</h2>
 
