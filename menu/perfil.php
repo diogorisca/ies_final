@@ -70,7 +70,7 @@
         if (isset($_GET["editar"]) && $_GET["editar"] == 'sucesso') {
             echo "<h4 class='msg-sucesso'>Perfil atualizado com sucesso.</h4>";
         }
-        
+
         ?>
 
         <div class="perfil">
@@ -88,8 +88,17 @@
                     echo $linha["nome"];
                     ?>
                 </h4>
+                <h5>
+                    <?php
+                    if ($linha['cargo'] == 'admin') {
+                        echo "Administrador";
+                    } else {
+                        echo "Utilizador";
+                    }
+                    ?>
+                </h5>
                 <a href="editar_perfil.php?id_utilizador=<?php echo $linha["id"] ?>">
-                    <img src="../assets/edit.png" width="25" height="25" title="Editar perfil">
+                    <img src="../assets/edit.png" width="25" height="25" style="margin-top: 10px;" title="Editar perfil">
                 </a>
             </div>
             <div class="direita">
