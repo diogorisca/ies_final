@@ -68,7 +68,12 @@
         $sql = "SELECT id, nome, faculdade FROM curso WHERE nome = '$nome' ORDER BY faculdade ASC";
         $resultadox = mysqli_query($ligacao, $sql);
         $resultado = mysqli_query($ligacao, $sql);
-        $linhax = $resultadox->fetch_assoc()
+        $linhax = $resultadox->fetch_assoc();
+
+        $id_utilizador = $_SESSION['id_username'];
+        $sql_cargo = "SELECT cargo FROM utilizador WHERE id = $id_utilizador";
+        $resultado_cargo = mysqli_query($ligacao, $sql_cargo);
+        $linha_cargo = $resultado_cargo->fetch_assoc();
 
         ?>
 
@@ -78,9 +83,15 @@
                 <div class="tabela">
                     <h1 class="titulo">Instituições com o curso de <?php echo $linhax["nome"]; ?></h1>
                     <input type="text" id="ies_input" onkeyup="filtrar()" placeholder="Procurar...">
-                    <input type="button" class="botao-adicionar" value="Adicionar curso" onclick="location='#'" />
 
                     <?php
+
+                    if ($linha_cargo['cargo'] == "admin") {
+                    ?>
+                        <input type="button" class="botao-adicionar" value="Adicionar instituição" onclick="location='#'" />
+                    <?php
+                    }
+
                     if ($resultado->num_rows > 0) { //verificar se existem linhas
                     ?>
 

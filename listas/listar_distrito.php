@@ -63,6 +63,15 @@
 
         <!-- Fim do menu -->
 
+        <?php
+        include '../database/dbconnection.php';
+
+        $id_utilizador = $_SESSION['id_username'];
+        $sql_cargo = "SELECT cargo FROM utilizador WHERE id = $id_utilizador";
+        $resultado_cargo = mysqli_query($ligacao, $sql_cargo);
+        $linha_cargo = $resultado_cargo->fetch_assoc();
+        ?>
+
         <section class="container-lista">
             <div class="grid-item">
                 <div class="tabela">
@@ -70,15 +79,16 @@
                     <input type="text" id="ies_input" onkeyup="filtrar()" placeholder="Procurar...">
 
                     <?php
-                        include '../database/dbconnection.php';
-                        $sql = "SELECT DISTINCT distrito FROM ies ORDER BY distrito ASC";
-                        $resultado = $ligacao->query($sql);
+
+                    if ($linha_cargo['cargo'] == "admin") {
                     ?>
-
-                    <input type="button" class="botao-adicionar" value="Adicionar distrito" onclick="location='#'" />
-
+                        <input type="button" class="botao-adicionar" value="Adicionar distrito" onclick="location='#'" />
                     <?php
-                        if ($resultado->num_rows > 0) { //verificar se existem linhas
+                    }
+
+                    $sql = "SELECT DISTINCT distrito FROM ies ORDER BY distrito ASC";
+                    $resultado = $ligacao->query($sql);
+                    if ($resultado->num_rows > 0) { //verificar se existem linhas
                     ?>
 
                         <table id="table" class="table">
@@ -89,7 +99,7 @@
                             </thead>
 
                             <?php
-                                while ($linha = $resultado->fetch_assoc()) { //Enquanto houver linhas na pesquisa...
+                            while ($linha = $resultado->fetch_assoc()) { //Enquanto houver linhas na pesquisa...
                             ?>
 
                                 <tbody id="tabela">
@@ -97,20 +107,20 @@
                                         <!-- Imprime as instituições na tabela -->
                                         <td>
                                             <?php
-                                                $distrito = $linha["distrito"];
-                                                echo $distrito;
+                                            $distrito = $linha["distrito"];
+                                            echo $distrito;
                                             ?>
                                         </td>
                                     </tr>
                                 </tbody>
 
                             <?php
-                                }
+                            }
                             ?>
                         </table>
 
                     <?php
-                        }
+                    }
                     ?>
 
                 </div>
