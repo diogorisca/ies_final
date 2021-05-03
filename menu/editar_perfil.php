@@ -133,11 +133,26 @@
                     </div>
                 </div>
 
-                <input type="number" class="notas" id="text1" placeholder="Nota de Biologia e Geologia" name="notaA" min="0" max="20" value="<?php echo $linha['notaBIO']; ?>">
-                <input type="number" class="notas" id="text2" placeholder="Nota de Física e Química A" name="notaB" min="0" max="20" value="<?php echo $linha['notaFQ']; ?>">
-                <input type="number" class="notas" id="text3" placeholder="Nota de Matemática A" name="notaC" min="0" max="20" value="<?php echo $linha['notaMAT']; ?>">
-                <input type="number" class="notas" id="text4" placeholder="Nota de Português" name="notaD" min="0" max="20" value="<?php echo $linha['notaPT']; ?>">
-                <input type="number" class="notas" id="text12" placeholder="Nota de Geometria Descritiva A" name="notaE" min="0" max="20" value="<?php echo $linha['notaGeoM']; ?>">
+                <input type="number" class="notas" id="text1" placeholder="Nota de Biologia e Geologia" name="notaA" min="0" max="20" value="<?php
+                                                                                                                                                if ($linha['notaBIO'] > 0) {
+                                                                                                                                                    echo $linha['notaBIO'];
+                                                                                                                                                } ?>">
+                <input type="number" class="notas" id="text2" placeholder="Nota de Física e Química A" name="notaB" min="0" max="20" value="<?php
+                                                                                                                                            if ($linha['notaFQ'] > 0) {
+                                                                                                                                                echo $linha['notaFQ'];
+                                                                                                                                            } ?>">
+                <input type="number" class="notas" id="text3" placeholder="Nota de Matemática A" name="notaC" min="0" max="20" value="<?php
+                                                                                                                                        if ($linha['notaMAT'] > 0) {
+                                                                                                                                            echo $linha['notaMAT'];
+                                                                                                                                        } ?>">
+                <input type="number" class="notas" id="text4" placeholder="Nota de Português" name="notaD" min="0" max="20" value="<?php
+                                                                                                                                    if ($linha['notaPT'] > 0) {
+                                                                                                                                        echo $linha['notaPT'];
+                                                                                                                                    } ?>">
+                <input type="number" class="notas" id="text12" placeholder="Nota de Geometria Descritiva A" name="notaE" min="0" max="20" value="<?php
+                                                                                                                                                    if ($linha['notaGeoM'] > 0) {
+                                                                                                                                                        echo $linha['notaGeoM'];
+                                                                                                                                                    } ?>">
                 <p></p>
 
                 <button type="submit">Atualizar Perfil</button>
