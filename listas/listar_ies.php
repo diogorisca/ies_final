@@ -70,6 +70,11 @@
         $sql_cargo = "SELECT cargo FROM utilizador WHERE id = $id_utilizador";
         $resultado_cargo = mysqli_query($ligacao, $sql_cargo);
         $linha_cargo = $resultado_cargo->fetch_assoc();
+        
+        if (isset($_GET["add"]) && $_GET["add"] == 'verdade') {
+            echo "<h4 class='msg-sucesso'>IES adicionada com sucesso!</h4>";
+        }
+        
         ?>
 
         <section class="container-lista">
@@ -82,7 +87,7 @@
 
                     if ($linha_cargo['cargo'] == "admin") {
                     ?>
-                        <input type="button" class="botao-adicionar" value="Adicionar instituição" onclick="location='#'" />
+                        <input type="button" class="botao-adicionar" value="Adicionar instituição" onclick="location='../admin/adicionar_ies.php'" />
                     <?php
                     }
                     $sql = "SELECT id, nome FROM ies ORDER BY nome ASC";
