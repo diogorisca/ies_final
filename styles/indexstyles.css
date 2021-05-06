@@ -33,6 +33,12 @@ body {
     font-weight: bold!important;
 }
 
+.titulo {
+    font-size: 40px!important;
+    color: #001a72!important;
+    padding-bottom: 40px!important;
+}
+
 .inform {
     text-align: left;
     font-size: 25px;

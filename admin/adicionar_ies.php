@@ -78,7 +78,7 @@
                 <input type="tel" pattern="[0-9]{9}" placeholder="Contacto" name="contacto" required>
                 <p></p>
 
-                <input type="text" placeholder="Descrição" name="descricao" required>
+                <textarea class="textarea" placeholder="Descrição" name="descricao" required></textarea>
                 <p></p>
 
                 <input type="text" placeholder="Website Oficial" name="website" required>

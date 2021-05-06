@@ -3,13 +3,19 @@ input[type=password],
 input[type=date],
 input[type=email],
 input[type=tel],
-.number-block {
+.number-block,
+.textarea {
     width: 50%;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
     border: 1px solid #ccc;
     box-sizing: border-box;
+}
+
+.textarea {
+    font-family: sans-serif;
+    height: 135px;
 }
 
 .notas {
