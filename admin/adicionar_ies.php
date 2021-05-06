@@ -87,7 +87,7 @@
                 <input type="text" placeholder="Distrito" name="distrito" required>
                 <p></p>
 
-                <strong>Imagem (Tamanho máximo até 40MB)</strong>
+                <strong>Imagem (Tamanho máximo: 40MB)</strong>
                 <input type="file" name="imagem">
                 <p></p>
 

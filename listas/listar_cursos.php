@@ -63,15 +63,6 @@
 
         <!-- Fim do menu -->
 
-        <?php
-        include '../database/dbconnection.php';
-
-        $id_utilizador = $_SESSION['id_username'];
-        $sql_cargo = "SELECT cargo FROM utilizador WHERE id = $id_utilizador";
-        $resultado_cargo = mysqli_query($ligacao, $sql_cargo);
-        $linha_cargo = $resultado_cargo->fetch_assoc();
-        ?>
-
         <section class="container-lista">
             <div class="grid-item">
                 <div class="tabela">
@@ -79,17 +70,25 @@
                     <input type="text" id="ies_input" onkeyup="filtrar()" placeholder="Procurar...">
 
                     <?php
+                    include '../database/dbconnection.php';
 
-                    if ($linha_cargo['cargo'] == "admin") {
+                    if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
+                        $id_utilizador = $_SESSION['id_username'];
+                        $sql_cargo = "SELECT cargo FROM utilizador WHERE id = $id_utilizador";
+                        $resultado_cargo = mysqli_query($ligacao, $sql_cargo);
+                        $linha_cargo = $resultado_cargo->fetch_assoc();
+
+                        if ($linha_cargo['cargo'] == "admin") {
                     ?>
-                        <input type="button" class="botao-adicionar" value="Adicionar curso" onclick="location='#'" />
-                    <?php
+                            <input type="button" class="botao-adicionar" value="Adicionar curso" onclick="location='#'" />
+                        <?php
+                        }
                     }
 
                     $sql = "SELECT DISTINCT nome FROM curso ORDER BY nome ASC";
                     $resultado = $ligacao->query($sql);
                     if ($resultado->num_rows > 0) { //verificar se existem linhas
-                    ?>
+                        ?>
 
                         <table id="table" class="table">
                             <thead>
