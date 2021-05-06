@@ -12,6 +12,7 @@
 .selectBox select {
     width: 100%;
     font-weight: bold;
+    padding: 12px 20px;
 }
 
 .overSelect {
