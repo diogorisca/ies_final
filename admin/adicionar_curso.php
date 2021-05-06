@@ -12,6 +12,7 @@
         <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet" />
         <link href="../styles/indexstyles.css" rel="stylesheet" />
         <link href="../styles/logstyles.css" rel="stylesheet" />
+        <link href="../styles/radio-cargo.css" rel="stylesheet" />
     </head>
 
     <body>
@@ -62,38 +63,77 @@
 
         <!-- Fim do menu -->
 
-        <h2 class="titulo">Adicionar IES</h2>
+        <h2 class="titulo">Adicionar Curso</h2>
 
-        <form action="../process/adicionar_ies_process.php" method="POST">
+        <form action="../process/adicionar_curso_process.php" method="POST">
             <div class="container">
+
                 <input type="text" placeholder="Nome" name="nome" required>
                 <p></p>
 
-                <input type="text" placeholder="Morada" name="morada" required>
+                <select class="ies_drop_options" name="faculdade" required>
+                    <option value="" selected hidden>Selecione a IES do Curso</option>
+                    <?php
+                    include "../database/dbconnection.php";
+
+                    $sql = "SELECT DISTINCT nome FROM ies ORDER BY nome ASC";
+                    $resultado = $ligacao->query($sql);
+
+                    if ($resultado->num_rows > 0) { //verificar se existem linhas
+                        while ($linha = $resultado->fetch_assoc()) { //Enquanto houver linhas na pesquisa...
+                    ?>
+                            <option value="<?php $linha['nome']; ?>"><?php echo $linha['nome']; ?></option>
+                    <?php
+                        }
+                    }
+                    ?>
+                </select>
                 <p></p>
 
-                <input type="email" placeholder="Email" name="email" required>
+                <input type="text" placeholder="Provas de Ingresso" name="provas_ingresso" required>
                 <p></p>
 
-                <input type="tel" pattern="[0-9]{9}" placeholder="Contacto" name="contacto" required>
+                <input type="number" placeholder="Percentagem da Nota de Candidatura (Sem %)" name="notaCandidatura" min=0 max=100 required>
                 <p></p>
 
-                <textarea class="textarea" placeholder="Descrição" name="descricao" required></textarea>
+                <input type="number" placeholder="Percentagem da Prova de Ingresso (Sem %)" name="provaIngresso" min=0 max=100 required>
                 <p></p>
 
-                <input type="url" placeholder="Website Oficial" name="website" required>
+                <input type="number" placeholder="Média de Candidatura (0-200)" name="media" min=0 max=200 required>
                 <p></p>
 
-                <input type="text" placeholder="Distrito" name="distrito" required>
+                <input type="number" placeholder="Número de Vagas" name="vagas" required>
                 <p></p>
 
-                <strong>Imagem (Tamanho máximo: 40MB)</strong>
-                <input type="file" name="imagem">
+                <div class="card" style="margin-left: 22px; margin-bottom:22px;">
+                    <div class="card-body">
+                        <h4 class="card-title">
+                            Selecione o Grau:
+                        </h4>
+                        <div>
+                            <input type="radio" name="grau" id="radio1" value="Licenciatura - 1º ciclo" />
+                            <label class="radio" for="radio1"><strong>Licenciatura - 1º ciclo</strong></label>
+                            <input type="radio" name="grau" id="radio2" value="Mestrado Integrado" />
+                            <label for="radio2"><strong>Mestrado Integrado</strong></label>
+                        </div>
+                    </div>
+                </div>
                 <p></p>
 
-                <button type="submit">Adicionar IES</button>
+                <input type="text" placeholder="Área" name="area" required>
+                <p></p>
+
+                <strong>Plano de Estudos (Tamanho máximo: 40MB)</strong>
+                <input type="file" name="plano_estudos">
+                <p></p>
+
+                <textarea class="textarea" placeholder="Observações" name="obervacoes" required></textarea>
+                <p></p>
+
+                <button type="submit">Adicionar Curso</button>
                 <p></p>
             </div>
         </form>
+
     </body>
 </main>

@@ -63,6 +63,12 @@
 
         <!-- Fim do menu -->
 
+        <?php
+        if (isset($_GET["add"]) && $_GET["add"] == 'verdade') {
+            echo "<h4 class='msg-sucesso'>Curso adicionado com sucesso!</h4>";
+        }
+        ?>
+
         <section class="container-lista">
             <div class="grid-item">
                 <div class="tabela">
@@ -80,7 +86,7 @@
 
                         if ($linha_cargo['cargo'] == "admin") {
                     ?>
-                            <input type="button" class="botao-adicionar" value="Adicionar curso" onclick="location='#'" />
+                            <input type="button" class="botao-adicionar" value="Adicionar curso" onclick="location='../admin/adicionar_curso.php'" />
                         <?php
                         }
                     }

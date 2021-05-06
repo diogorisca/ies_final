@@ -72,8 +72,7 @@
         $resultado = mysqli_query($ligacao, $sql);
         $linha = $resultado->fetch_assoc();
 
-        /* echo $linha["Observações"];
-        echo $linha["plano_estudos"]; */
+        // echo $linha["plano_estudos"];
 
         ?>
 
@@ -90,7 +89,7 @@
                                     </div>
                                     <div class="u-container-style u-layout-cell u-left-cell u-size-30 u-layout-cell-2">
                                         <div class="u-container-layout u-valign-top u-container-layout-2">
-                                            <p class="u-text u-text-1"><b>Lugar onde vai estar o echo das observações</b></p>
+                                            <p class="u-text u-text-1"><b><?php echo $linha["Observações"]; ?></b></p>
                                         </div>
                                     </div>
                                 </div>
