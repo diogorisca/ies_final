@@ -47,3 +47,4 @@ if ($linha['email'] === $novo_email) { //Se houver um email identico na BD ao no
         $preparar->execute();
         header("location: ../menu/perfil.php?editar=sucesso");
 }
+?>

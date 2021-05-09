@@ -45,3 +45,4 @@ if ($linha['email'] === $email) {
         $resultado = mysqli_query($ligacao, $sql);
         header("location: ../menu/login.php?criar=sucesso");
 }
+?>

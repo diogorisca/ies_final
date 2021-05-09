@@ -106,3 +106,5 @@ $resultado4 = mysqli_query($ligacao, $sql4);
 $linha4 = $resultado4->fetch_assoc(); asd
 
 */
+
+?>

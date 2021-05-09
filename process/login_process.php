@@ -32,3 +32,4 @@ if ($count == 1) {
 } else {
     header("location:../menu/login.php?msg=failed");
 }
+?>
