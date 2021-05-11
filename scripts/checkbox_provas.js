@@ -14,7 +14,7 @@ function showCheckboxes() {
 
 function notaBG() {
     var checkBox = document.getElementById("checkBG");
-    var text = document.getElementById("notaBG");
+    var text = document.getElementById("scoreBG");
 
     if (checkBox.checked == true) {
         text.style.display = "inline-block";
@@ -25,7 +25,7 @@ function notaBG() {
 
 function notaFQ() {
     var checkBox = document.getElementById("checkFQ");
-    var text = document.getElementById("notaFQ");
+    var text = document.getElementById("scoreFQ");
 
     if (checkBox.checked == true) {
         text.style.display = "inline-block";
@@ -36,7 +36,7 @@ function notaFQ() {
 
 function notaMatA() {
     var checkBox = document.getElementById("checkMatA");
-    var text = document.getElementById("notaMatA");
+    var text = document.getElementById("scoreMatA");
 
     if (checkBox.checked == true) {
         text.style.display = "inline-block";
@@ -47,7 +47,7 @@ function notaMatA() {
 
 function notaPT() {
     var checkBox = document.getElementById("checkPT");
-    var text = document.getElementById("notaPT");
+    var text = document.getElementById("scorePT");
 
     if (checkBox.checked == true) {
         text.style.display = "inline-block";
@@ -58,7 +58,7 @@ function notaPT() {
 
 function notaGeometria() {
     var checkBox = document.getElementById("checkGeo");
-    var text = document.getElementById("notaGeo");
+    var text = document.getElementById("scoreGeo");
 
     if (checkBox.checked == true) {
         text.style.display = "inline-block";

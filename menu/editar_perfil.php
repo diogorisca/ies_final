@@ -121,35 +121,35 @@
                     </div>
                     <div id="checkboxes">
                         <label for="um">
-                            <input type="checkbox" id="myCheck1" onclick="notaBG()" />Biologia e Geologia</label>
+                            <input type="checkbox" id="checkBG" onclick="notaBG()" />Biologia e Geologia</label>
                         <label for="dois">
-                            <input type="checkbox" id="myCheck2" onclick="notaFQ()" />Física e Química A</label>
+                            <input type="checkbox" id="checkFQ" onclick="notaFQ()" />Física e Química A</label>
                         <label for="tres">
-                            <input type="checkbox" id="myCheck3" onclick="notaMatA()" />Matemática A</label>
+                            <input type="checkbox" id="checkMatA" onclick="notaMatA()" />Matemática A</label>
                         <label for="quatro">
-                            <input type="checkbox" id="myCheck4" onclick="notaPT()" />Português</label>
+                            <input type="checkbox" id="checkPT" onclick="notaPT()" />Português</label>
                         <label for="doze">
-                            <input type="checkbox" id="myCheck12" onclick="notaGeometria()" />Geometria Descritiva A</label>
+                            <input type="checkbox" id="checkGeo" onclick="notaGeometria()" />Geometria Descritiva A</label>
                     </div>
                 </div>
 
-                <input type="number" class="notas" id="text1" placeholder="Nota de Biologia e Geologia" name="notaA" min="0" max="20" value="<?php
+                <input type="number" class="notas" id="scoreBG" placeholder="Nota de Biologia e Geologia" name="notaA" min="0" max="20" value="<?php
                                                                                                                                                 if ($linha['notaBIO'] > 0) {
                                                                                                                                                     echo $linha['notaBIO'];
                                                                                                                                                 } ?>">
-                <input type="number" class="notas" id="text2" placeholder="Nota de Física e Química A" name="notaB" min="0" max="20" value="<?php
+                <input type="number" class="notas" id="scoreFQ" placeholder="Nota de Física e Química A" name="notaB" min="0" max="20" value="<?php
                                                                                                                                             if ($linha['notaFQ'] > 0) {
                                                                                                                                                 echo $linha['notaFQ'];
                                                                                                                                             } ?>">
-                <input type="number" class="notas" id="text3" placeholder="Nota de Matemática A" name="notaC" min="0" max="20" value="<?php
+                <input type="number" class="notas" id="scoreMatA" placeholder="Nota de Matemática A" name="notaC" min="0" max="20" value="<?php
                                                                                                                                         if ($linha['notaMAT'] > 0) {
                                                                                                                                             echo $linha['notaMAT'];
                                                                                                                                         } ?>">
-                <input type="number" class="notas" id="text4" placeholder="Nota de Português" name="notaD" min="0" max="20" value="<?php
+                <input type="number" class="notas" id="scorePT" placeholder="Nota de Português" name="notaD" min="0" max="20" value="<?php
                                                                                                                                     if ($linha['notaPT'] > 0) {
                                                                                                                                         echo $linha['notaPT'];
                                                                                                                                     } ?>">
-                <input type="number" class="notas" id="text12" placeholder="Nota de Geometria Descritiva A" name="notaE" min="0" max="20" value="<?php
+                <input type="number" class="notas" id="scoreGeo" placeholder="Nota de Geometria Descritiva A" name="notaE" min="0" max="20" value="<?php
                                                                                                                                                     if ($linha['notaGeoM'] > 0) {
                                                                                                                                                         echo $linha['notaGeoM'];
                                                                                                                                                     } ?>">

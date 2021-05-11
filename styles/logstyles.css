@@ -10,9 +10,13 @@ input[type=number],
     width: 50%!important;
     padding: 12px 20px!important;
     margin: 8px 0!important;
-    display: inline-block!important;
+    display: inline-block;
     border: 1px solid #ccc!important;
     box-sizing: border-box!important;
+}
+
+input[type=number].notas {
+    display: none;
 }
 
 .ies_drop_options {

@@ -141,11 +141,11 @@
                     </div>
                 </div>
 
-                <input type="number" class="notas" id="notaBG" placeholder="Nota de Biologia e Geologia" name="notaA" min="0" max="20">
-                <input type="number" class="notas" id="notaFQ" placeholder="Nota de Física e Química A" name="notaB" min="0" max="20">
-                <input type="number" class="notas" id="notaMatA" placeholder="Nota de Matemática A" name="notaC" min="0" max="20">
-                <input type="number" class="notas" id="notaPT" placeholder="Nota de Português" name="notaD" min="0" max="20">
-                <input type="number" class="notas" id="notaGeo" placeholder="Nota de Geometria Descritiva A" name="notaE" min="0" max="20">
+                <input type="number" class="notas" id="scoreBG" placeholder="Nota de Biologia e Geologia" name="notaA" min="0" max="20">
+                <input type="number" class="notas" id="scoreFQ" placeholder="Nota de Física e Química A" name="notaB" min="0" max="20">
+                <input type="number" class="notas" id="scoreMatA" placeholder="Nota de Matemática A" name="notaC" min="0" max="20">
+                <input type="number" class="notas" id="scorePT" placeholder="Nota de Português" name="notaD" min="0" max="20">
+                <input type="number" class="notas" id="scoreGeo" placeholder="Nota de Geometria Descritiva A" name="notaE" min="0" max="20">
 
                 <p></p>
 
