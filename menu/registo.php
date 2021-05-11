@@ -129,68 +129,23 @@
                     </div>
                     <div id="checkboxes">
                         <label for="um">
-                            <input type="checkbox" id="myCheck1" onclick="notaBG()" />Biologia e Geologia</label>
+                            <input type="checkbox" id="checkBG" onclick="notaBG()" />Biologia e Geologia</label>
                         <label for="dois">
-                            <input type="checkbox" id="myCheck2" onclick="notaFQ()" />Física e Química A</label>
+                            <input type="checkbox" id="checkFQ" onclick="notaFQ()" />Física e Química A</label>
                         <label for="tres">
-                            <input type="checkbox" id="myCheck3" onclick="notaMatA()" />Matemática A</label>
+                            <input type="checkbox" id="checkMatA" onclick="notaMatA()" />Matemática A</label>
                         <label for="quatro">
-                            <input type="checkbox" id="myCheck4" onclick="notaPT()" />Português</label>
+                            <input type="checkbox" id="checkPT" onclick="notaPT()" />Português</label>
                         <label for="doze">
-                            <input type="checkbox" id="myCheck12" onclick="notaGeometria()" />Geometria Descritiva A</label>
-                        <!-- <label for="cinco">
-                            <input type="checkbox" id="myCheck5" onclick="return false;" />Alemão</label>
-                        <label for="seis">
-                            <input type="checkbox" id="myCheck6" onclick="return false;" />Desenho A</label>
-                        <label for="sete">
-                            <input type="checkbox" id="myCheck7" onclick="return false;" />Economia A</label>
-                        <label for="oito">
-                            <input type="checkbox" id="myCheck8" onclick="return false;" />Espanhol</label>
-                        <label for="nove">
-                            <input type="checkbox" id="myCheck9" onclick="return false;" />Filosofia</label>
-                        <label for="dez">
-                            <input type="checkbox" id="myCheck10" onclick="return false;" />Francês</label>
-                        <label for="onze">
-                            <input type="checkbox" id="myCheck11" onclick="return false;" />Geografia A</label>
-                        <label for="treze">
-                            <input type="checkbox" id="myCheck13" onclick="return false;" />História</label>
-                        <label for="catorze">
-                            <input type="checkbox" id="myCheck14" onclick="return false;" />História da Cultura e das Artes</label>
-                        <label for="quinze">
-                            <input type="checkbox" id="myCheck15" onclick="return false;" />Inglês</label>
-                        <label for="dezasseis">
-                            <input type="checkbox" id="myCheck16" onclick="return false;" />Latim A</label>
-                        <label for="dezassete">
-                            <input type="checkbox" id="myCheck17" onclick="return false;" />Literatura Portuguesa</label>
-                        <label for="dezoito">
-                            <input type="checkbox" id="myCheck18" onclick="return false;" />Matemática B</label>
-                        <label for="dezanove">
-                            <input type="checkbox" id="myCheck19" onclick="return false;" />Matemática Aplicada às Ciências Sociais</label>
-                        <label for="vinte">
-                            <input type="checkbox" id="myCheck20" onclick="return false;" />Mandarim</label> -->
+                            <input type="checkbox" id="checkGeo" onclick="notaGeometria()" />Geometria Descritiva A</label>
                     </div>
                 </div>
 
-                <input type="number" class="notas" id="text1" placeholder="Nota de Biologia e Geologia" name="notaA" min="0" max="20">
-                <input type="number" class="notas" id="text2" placeholder="Nota de Física e Química A" name="notaB" min="0" max="20">
-                <input type="number" class="notas" id="text3" placeholder="Nota de Matemática A" name="notaC" min="0" max="20">
-                <input type="number" class="notas" id="text4" placeholder="Nota de Português" name="notaD" min="0" max="20">
-                <input type="number" class="notas" id="text12" placeholder="Nota de Geometria Descritiva A" name="notaE" min="0" max="20">
-                <!-- <input type="number" class="notas" id="text5" placeholder="Nota de Alemão" min="0" max="20">
-                <input type="number" class="notas" id="text6" placeholder="Nota de Desenho A" min="0" max="20">
-                <input type="number" class="notas" id="text7" placeholder="Nota de Economia A" min="0" max="20">
-                <input type="number" class="notas" id="text8" placeholder="Nota de Espanhol" min="0" max="20">
-                <input type="number" class="notas" id="text9" placeholder="Nota de Filosofia" min="0" max="20">
-                <input type="number" class="notas" id="text10" placeholder="Nota de Francês" min="0" max="20">
-                <input type="number" class="notas" id="text11" placeholder="Nota de Geografia A" min="0" max="20"> 
-                <input type="number" class="notas" id="text13" placeholder="Nota de História" min="0" max="20">
-                <input type="number" class="notas" id="text14" placeholder="Nota de História da Cultura e das Artes" min="0" max="20">
-                <input type="number" class="notas" id="text15" placeholder="Nota de Inglês" min="0" max="20">
-                <input type="number" class="notas" id="text16" placeholder="Nota de Latim A" min="0" max="20">
-                <input type="number" class="notas" id="text17" placeholder="Nota de Literatura Portuguesa" min="0" max="20">
-                <input type="number" class="notas" id="text18" placeholder=FNota de Matemática B" min="0" max="20">
-                <input type="number" class="notas" id="text19" placeholder="Nota de Matemática Aplicada às Ciências Sociais" min="0" max="20">
-                <input type="number" class="notas" id="text20" placeholder="Nota de Mandarim" min="0" max="20"> -->
+                <input type="number" class="notas" id="notaBG" placeholder="Nota de Biologia e Geologia" name="notaA" min="0" max="20">
+                <input type="number" class="notas" id="notaFQ" placeholder="Nota de Física e Química A" name="notaB" min="0" max="20">
+                <input type="number" class="notas" id="notaMatA" placeholder="Nota de Matemática A" name="notaC" min="0" max="20">
+                <input type="number" class="notas" id="notaPT" placeholder="Nota de Português" name="notaD" min="0" max="20">
+                <input type="number" class="notas" id="notaGeo" placeholder="Nota de Geometria Descritiva A" name="notaE" min="0" max="20">
 
                 <p></p>
 
