@@ -63,17 +63,11 @@
 
         <?php
         include '../database/dbconnection.php';
-
         $nome = $_GET['nome'];
         $sql = "SELECT id, nome, faculdade FROM curso WHERE nome = '$nome' ORDER BY faculdade ASC";
         $resultadox = mysqli_query($ligacao, $sql);
         $resultado = mysqli_query($ligacao, $sql);
         $linhax = $resultadox->fetch_assoc();
-
-        $id_utilizador = $_SESSION['id_username'];
-        $sql_cargo = "SELECT cargo FROM utilizador WHERE id = $id_utilizador";
-        $resultado_cargo = mysqli_query($ligacao, $sql_cargo);
-        $linha_cargo = $resultado_cargo->fetch_assoc();
 
         ?>
 
@@ -85,15 +79,30 @@
                     <input type="text" id="ies_input" onkeyup="filtrar()" placeholder="Procurar...">
 
                     <?php
+                    if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
+                        $id_utilizador = $_SESSION['id_username'];
+                        $sql_cargo = "SELECT cargo FROM utilizador WHERE id = $id_utilizador";
+                        $resultado_cargo = mysqli_query($ligacao, $sql_cargo);
+                        $linha_cargo = $resultado_cargo->fetch_assoc();
 
-                    if ($linha_cargo['cargo'] == "admin") {
+                        if ($linha_cargo['cargo'] == "admin") {
+
+                            $id_utilizador = $_SESSION['id_username'];
+                            $sql_cargo = "SELECT cargo FROM utilizador WHERE id = $id_utilizador";
+                            $resultado_cargo = mysqli_query($ligacao, $sql_cargo);
+                            $linha_cargo = $resultado_cargo->fetch_assoc();
+
+
+                            if ($linha_cargo['cargo'] == "admin") {
                     ?>
-                        <input type="button" class="botao-adicionar" value="Adicionar instituição" onclick="location='#'" />
-                    <?php
+                                <input type="button" class="botao-adicionar" value="Adicionar instituição" onclick="location='#'" />
+                        <?php
+                            }
+                        }
                     }
 
                     if ($resultado->num_rows > 0) { //verificar se existem linhas
-                    ?>
+                        ?>
 
                         <table id="table" class="table">
                             <thead>
