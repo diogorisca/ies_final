@@ -13,7 +13,6 @@
         <link href="../styles/checkbox_provas.css" rel="stylesheet" />
         <link href="../styles/radio-cargo.css" rel="stylesheet" />
         <script src="../scripts/checkbox_provas.js"></script>
-        <script src="../scripts/palavra_pass.js"></script>
         <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     </head>
 

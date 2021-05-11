@@ -18,7 +18,7 @@ function notaBG() {
 
     if (checkBox.checked == true) {
         text.style.display = "inline-block";
-    } else {
+    } else { // if (checkBox.checked == false) {
         text.style.display = "none";
     }
 }
