@@ -61,6 +61,8 @@
             </div>
         </div>
 
+        <!-- Fim do menu -->
+
         <?php
         include '../database/dbconnection.php';
         $nome = $_GET['nome'];
@@ -68,10 +70,8 @@
         $resultadox = mysqli_query($ligacao, $sql);
         $resultado = mysqli_query($ligacao, $sql);
         $linhax = $resultadox->fetch_assoc();
-
         ?>
-
-        <!-- Fim do menu -->
+        
         <section class="container-lista">
             <div class="grid-item">
                 <div class="tabela">

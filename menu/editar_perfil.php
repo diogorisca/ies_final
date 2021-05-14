@@ -66,15 +66,13 @@
         $sql = "SELECT * FROM utilizador WHERE id ='$id_utilizador'";
         $resultado = mysqli_query($ligacao, $sql);
         $linha = $resultado->fetch_assoc();
-        ?>
-
-        <!-- Formulario para editar perfil -->
-
-        <?php
+       
         if (isset($_GET["emailexiste"]) && $_GET["emailexiste"] == 'verdade') {
             echo "<h4 class='msg-erro'>Email inserido já se encontra registado.<p>Por favor, tente novamente.</h4>";
         }
         ?>
+
+        <!-- Formulario para editar perfil -->
 
         <h1 class="titulo-edit">Editar Perfil</h1>
         <h2 class="tituloedit">Dados Principais</h2>
