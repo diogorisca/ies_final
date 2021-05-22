@@ -23,8 +23,8 @@ if ($grau == "Mestrado Integrado") {
 
 $area = $_POST['area'];
 
-$sql = "INSERT INTO curso (nome, faculdade, prova_ingresso, notaCandidatura, provaIngresso, media, vagas, Observações, Grau, Duração, ECTS, Área, plano_estudos)
-        VALUES ('$nome', '$faculdade', '$provas_ingresso', '$notaCandidatura', '$provaIngresso', '$media', '$vagas', '$observacoes', '$grau', '$duracao', '$ects', '$area', '$planoEstudos')";
+$sql = "INSERT INTO curso (nome, faculdade, prova_ingresso, notaCandidatura, provaIngresso, media, vagas, Grau, Duração, ECTS, Área)
+        VALUES ('$nome', '$faculdade', '$provas_ingresso', '$notaCandidatura', '$provaIngresso', '$media', '$vagas', '$grau', '$duracao', '$ects', '$area')";
 
 $resultado = mysqli_query($ligacao, $sql);
 
