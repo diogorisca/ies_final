@@ -11,7 +11,6 @@ $notaCandidatura = $_POST['notaCandidatura'];
 $provaIngresso = $_POST['provaIngresso'];
 $media = $_POST['media'];
 $vagas = $_POST['vagas'];
-$observacoes = $_POST['observacoes'];
 $grau = $_POST['grau'];
 
 if ($grau == "Mestrado Integrado") {
@@ -23,7 +22,6 @@ if ($grau == "Mestrado Integrado") {
 }
 
 $area = $_POST['area'];
-$planoEstudos = $_FILES['plano_estudos'];
 
 $sql = "INSERT INTO curso (nome, faculdade, prova_ingresso, notaCandidatura, provaIngresso, media, vagas, Observações, Grau, Duração, ECTS, Área, plano_estudos)
         VALUES ('$nome', '$faculdade', '$provas_ingresso', '$notaCandidatura', '$provaIngresso', '$media', '$vagas', '$observacoes', '$grau', '$duracao', '$ects', '$area', '$planoEstudos')";
