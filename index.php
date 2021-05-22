@@ -44,7 +44,7 @@
                                         </ul>
                                     </div>
                                 </li>
-                                <li><a href="">Simular Candidatura</a></li>
+                                <li><a href="menu/simular_candidatura.php">Simular Candidatura</a></li>
                             </ul>
                         </div>
                     </li>

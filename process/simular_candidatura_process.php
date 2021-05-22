@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 include '../database/dbconnection.php';
 
 $curso_id = $_GET['idcurso'];

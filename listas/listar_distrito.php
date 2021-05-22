@@ -35,11 +35,11 @@
                         <div class="dropdown-content">
                             <ul>
                                 <li class="side-dropdown">
-                                    <a href="#">Índice de Cursos</a>
+                                    <a class="active" href="#">Índice de Cursos</a>
                                     <div class="side-hide-dropdown">
                                         <ul>
                                             <li><a href="listar_cursos.php">Curso</a></li>
-                                            <li><a href="listar_distrito.php">Distrito</a></li>
+                                            <li><a class="active" href="listar_distrito.php">Distrito</a></li>
                                             <li><a href="listar_ies.php">Instituição</a></li>
                                         </ul>
                                     </div>
