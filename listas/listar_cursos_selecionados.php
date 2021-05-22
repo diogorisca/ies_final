@@ -119,7 +119,7 @@
 
                                 <tbody id="tabela">
                                     <tr>
-                                        <!-- Imprime as instituiÃ§Ãµes na tabela -->
+                                        <!-- Imprime as instituições na tabela -->
                                         <td>
                                             <a href="listar_info_curso.php?idcurso=<?php echo $linha['id']; ?>">
                                                 <?php

@@ -68,3 +68,9 @@
 .u-section-2 .u-text-5 {
     margin: 20px 0 0;
 }
+
+.msg-sucesso {
+    padding-top: 25px;
+    text-align: center!important;
+    color: #4BB543!important;
+}

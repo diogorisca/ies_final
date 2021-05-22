@@ -123,13 +123,6 @@
                 <input type="text" placeholder="Área" name="area" required>
                 <p></p>
 
-                <strong>Plano de Estudos (Tamanho máximo: 40MB)</strong>
-                <input type="file" name="plano_estudos">
-                <p></p>
-
-                <textarea class="textarea" placeholder="Observações" name="obervacoes"></textarea>
-                <p></p>
-
                 <button type="submit">Adicionar Curso</button>
                 <p></p>
             </div>

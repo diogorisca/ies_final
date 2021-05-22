@@ -72,8 +72,6 @@
         $resultado = mysqli_query($ligacao, $sql);
         $linha = $resultado->fetch_assoc();
 
-        // echo $linha["plano_estudos"];
-
         ?>
 
         <section class="u-clearfix u-section-1" id="carousel_2636">
@@ -85,11 +83,61 @@
                             <div class="u-size-30">
                                 <div class="u-layout-col">
                                     <div class="u-align-center u-container-style u-image u-layout-cell u-left-cell u-size-30 u-image-1">
-                                        <div class="u-container-layout"></div>
-                                    </div>
-                                    <div class="u-container-style u-layout-cell u-left-cell u-size-30 u-layout-cell-2">
-                                        <div class="u-container-layout u-valign-top u-container-layout-2">
-                                            <p class="u-text u-text-1"><b><?php echo $linha["Observações"]; ?></b></p>
+                                        <div class="u-container-layout">
+
+                                            <!-- Tabela de simulação -->
+                                            <h1 class="titulo"><strong>Simulações</strong></h1>
+
+                                            <?php
+                                            $sql4 = "SELECT DISTINCT utilizador_id, notaFinal FROM simulacao WHERE curso_id = '$idcurso' ORDER BY notaFinal DESC";
+                                            $resultado4 = mysqli_query($ligacao, $sql4);
+
+                                            if (isset($_GET["simu"]) && $_GET["simu"] == 'sucesso_simu') {
+                                                echo "<h4 class='msg-sucesso'><strong>Simulação efetuada com sucesso!</strong></h4><br>";
+                                            }
+
+                                            if ($resultado4->num_rows > 0) { //verificar se existem linhas
+                                            ?>
+
+                                                <table id="table" class="table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th class="texto-simu-esq">Nome</th>
+                                                            <th class="texto-simu-dir">Nota Final</th>
+                                                        </tr>
+                                                    </thead>
+
+                                                    <?php
+                                                    while ($linha4 = $resultado4->fetch_assoc()) { //Enquanto houver linhas na pesquisa...
+                                                    ?>
+                                                        <tbody id="tabela">
+                                                            <!-- Imprime as simulações na tabela -->
+                                                            
+                                                            <td class="simu">
+                                                                <?php
+                                                                $utilizador_id = $linha4["utilizador_id"];
+                                                                $sql_nome = "SELECT DISTINCT nome FROM utilizador WHERE id = $utilizador_id";
+                                                                $resultado_nome = mysqli_query($ligacao, $sql_nome);
+                                                                $linha_nome = $resultado_nome->fetch_assoc();
+                                                                echo $linha_nome["nome"];
+                                                                ?>
+                                                            </td>
+                                                            <td class="simu">
+                                                                <?php
+                                                                echo $linha4["notaFinal"];
+                                                                ?>
+                                                            </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    <?php
+                                                    }
+                                                    ?>
+                                                </table>
+                                            <?php
+                                            } else {
+                                                echo "<h3 class='text-simu'>Ainda não foram registadas simulações neste curso!</h3>";
+                                            }
+                                            ?>
                                         </div>
                                     </div>
                                 </div>
@@ -122,7 +170,7 @@
                                             <?php
                                             if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
                                                 $id_utilizador = $_SESSION['id_username'];
-                                                
+
                                                 echo "<a href='../process/simular_candidatura_process.php?idcurso=$idcurso&amp;idutilizador=$id_utilizador'
                                                 class='botao-adicionar'>Simular Candidatura</a>";
                                             }
@@ -138,12 +186,3 @@
         </section>
     </body>
 </main>
-
-<!--            
-
-Varios campos especificos vao precisar de queries especificas, para criar simulaÃ§Ã£o podemos dar display de tudo
-
-Nesta pagina devera existir um botao que diga simular candidatura, assim que o utilizador o prima, chama a funÃ§Ã£o
-simulaÃ§ao e da display de uma tabela com a ordem de suposta entrada para o curso.
-
--->
