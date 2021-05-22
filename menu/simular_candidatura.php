@@ -19,9 +19,6 @@ O nome do utilizador dever� estar evidenciado.
         <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet" />
         <link href="../styles/indexstyles.css" rel="stylesheet" />
         <link href="../styles/logstyles.css" rel="stylesheet" />
-        <link href="../styles/checkbox_provas.css" rel="stylesheet" />
-        <link href="../styles/radio-cargo.css" rel="stylesheet" />
-        <script src="../scripts/checkbox_provas.js"></script>
         <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     </head>
 
