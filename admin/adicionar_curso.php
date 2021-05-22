@@ -127,7 +127,7 @@
                 <input type="file" name="plano_estudos">
                 <p></p>
 
-                <textarea class="textarea" placeholder="Observações" name="obervacoes" required></textarea>
+                <textarea class="textarea" placeholder="Observações" name="obervacoes"></textarea>
                 <p></p>
 
                 <button type="submit">Adicionar Curso</button>

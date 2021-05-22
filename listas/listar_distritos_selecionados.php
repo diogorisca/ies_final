@@ -22,7 +22,7 @@
         <div id="menu-wrapper">
             <div id="menu" class="topnav">
                 <ul>
-                    <li><a href="../index.php" accesskey="1">Início</a></li>
+                    <li><a href="../index.php" accesskey="1">Iní­cio</a></li>
                     <?php
                     if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
                         echo '<li><a href="../menu/perfil.php" accesskey="2">Perfil</a></li>';
@@ -63,34 +63,53 @@
 
         <!-- Fim do menu -->
 
+        <?php
+        include '../database/dbconnection.php';
+        $distrito = $_GET['distrito'];
+        $sql = "SELECT id, nome, distrito FROM ies WHERE distrito = '$distrito' ORDER BY distrito ASC";
+        $resultadox = mysqli_query($ligacao, $sql);
+        $resultado = mysqli_query($ligacao, $sql);
+        $linhax = $resultadox->fetch_assoc();
+        ?>
+        
         <section class="container-lista">
             <div class="grid-item">
                 <div class="tabela">
-                    <h1 class="titulo">Distritos</h1>
+                    <h1 class="titulo">Instituições no distrito de <?php echo $linhax["distrito"]; ?></h1>
                     <input type="text" id="ies_input" onkeyup="filtrar()" placeholder="Procurar...">
 
                     <?php
-
-                    include '../database/dbconnection.php';
-
                     if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
                         $id_utilizador = $_SESSION['id_username'];
                         $sql_cargo = "SELECT cargo FROM utilizador WHERE id = $id_utilizador";
                         $resultado_cargo = mysqli_query($ligacao, $sql_cargo);
                         $linha_cargo = $resultado_cargo->fetch_assoc();
 
-                        echo "<br><br>";
+                        if ($linha_cargo['cargo'] == "admin") {
+
+                            $id_utilizador = $_SESSION['id_username'];
+                            $sql_cargo = "SELECT cargo FROM utilizador WHERE id = $id_utilizador";
+                            $resultado_cargo = mysqli_query($ligacao, $sql_cargo);
+                            $linha_cargo = $resultado_cargo->fetch_assoc();
+
+
+                            if ($linha_cargo['cargo'] == "admin") {
+                    ?>
+                                <input type="button" class="botao-adicionar" value="Adicionar instituição" onclick="location='#'" />
+                        <?php
+                            } 
+                        } else {
+                            echo "<br><br>";
+                        }
                     }
 
-                    $sql = "SELECT DISTINCT distrito FROM ies ORDER BY distrito ASC";
-                    $resultado = $ligacao->query($sql);
                     if ($resultado->num_rows > 0) { //verificar se existem linhas
-                    ?>
+                        ?>
 
                         <table id="table" class="table">
                             <thead>
                                 <tr>
-                                    <th class="texto">Distrito</th>
+                                    <th class="texto">Instituição</th>
                                 </tr>
                             </thead>
 
@@ -100,11 +119,11 @@
 
                                 <tbody id="tabela">
                                     <tr>
-                                        <!-- Imprime as instituições na tabela -->
+                                        <!-- Imprime as instituiÃ§Ãµes na tabela -->
                                         <td>
-                                            <a href="listar_distritos_selecionados.php?distrito=<?php echo $linha["distrito"]; ?>">
+                                            <a href="listar_info_ies.php?iesid=<?php echo $linha['id']; ?>">
                                                 <?php
-                                                echo $linha["distrito"];
+                                                echo $linha["nome"];
                                                 ?>
                                             </a>
                                         </td>
@@ -114,6 +133,7 @@
                             <?php
                             }
                             ?>
+
                         </table>
 
                     <?php
