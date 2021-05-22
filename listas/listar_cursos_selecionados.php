@@ -97,7 +97,9 @@
                     ?>
                                 <input type="button" class="botao-adicionar" value="Adicionar instituição" onclick="location='#'" />
                         <?php
-                            }
+                            } 
+                        } else {
+                            echo "<br><br>";
                         }
                     }
 

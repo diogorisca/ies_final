@@ -83,6 +83,8 @@
                     ?>
                             <input type="button" class="botao-adicionar" value="Adicionar distrito" onclick="location='#'" />
                         <?php
+                        } else {
+                            echo "<br><br>";
                         }
                     }
 

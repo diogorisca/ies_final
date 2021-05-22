@@ -88,6 +88,8 @@
                     ?>
                             <input type="button" class="botao-adicionar" value="Adicionar curso" onclick="location='../admin/adicionar_curso.php'" />
                         <?php
+                        } else {
+                            echo "<br><br>";
                         }
                     }
 

@@ -14,6 +14,7 @@
         <link href="../styles/informacao.css" rel="stylesheet" media="screen">
         <link href="../styles/info.css" rel="stylesheet" media="screen">
         <link href="../styles/listas.css" rel="stylesheet" />
+        <script src="../scripts/procurar.js"></script>
     </head>
 
     <body>
@@ -72,8 +73,7 @@
         $resultado = mysqli_query($ligacao, $sql);
         $linha = $resultado->fetch_assoc();
 
-        $sql2 = "SELECT nome, id FROM curso WHERE ies_id = '$iesid' ORDER BY nome ASC";
-        $resultado2 = mysqli_query($ligacao, $sql2);
+        
 
 
         ?>
@@ -115,17 +115,26 @@
                 </div>
             </div>
         </section>
+
         <section class="u-align-center u-clearfix u-grey-5 u-section-2" id="sec-ac6a">
+            <br>
+            <input type="text" id="ies_input" onkeyup="filtrar()" placeholder="Procurar...">
             <br><br>
+
             <?php
+            $sql2 = "SELECT id, nome FROM curso WHERE ies_id = '$iesid' ORDER BY nome ASC";
+            $resultado2 = $ligacao->query($sql2);
+
             if ($resultado2->num_rows > 0) {
             ?>
+
                 <table class="tabela-cursos">
                     <thead>
                         <tr>
                             <th class="texto">Cursos</th>
                         </tr>
                     </thead>
+                    
                     <?php
                     while ($linha2 = $resultado2->fetch_assoc()) {
                     ?>

@@ -89,6 +89,8 @@
                     ?>
                             <input type="button" class="botao-adicionar" value="Adicionar instituição" onclick="location='../admin/adicionar_ies.php'" />
                         <?php
+                        } else {
+                            echo "<br><br>";
                         }
                     }
 

@@ -1,8 +1,8 @@
 <!--
 
-Esta pagina devera dar display das tabelas de simula�oes em que o utilizador logado se encontra.
+Esta pagina devera dar display das tabelas de simulações em que o utilizador logado se encontra.
 
-O nome do utilizador dever� estar evidenciado.
+O nome do utilizador deverá estar evidenciado.
 
 -->
 <?php session_start(); ?>
@@ -18,8 +18,8 @@ O nome do utilizador dever� estar evidenciado.
         <title>IES</title>
         <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet" />
         <link href="../styles/indexstyles.css" rel="stylesheet" />
-        <link href="../styles/logstyles.css" rel="stylesheet" />
-        <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+        <link href="../styles/listas.css" rel="stylesheet" />
+        <script src="../scripts/procurar.js"></script>
     </head>
 
     <body>
@@ -67,6 +67,66 @@ O nome do utilizador dever� estar evidenciado.
         </div>
 
         <!-- Fim do menu -->
+
+        <section class="container-lista">
+            <div class="grid-item">
+                <div class="tabela">
+                    <h1 class="titulo">placeholder</h1>
+                    <input type="text" id="ies_input" onkeyup="filtrar()" placeholder="Procurar...">
+                    <br><br>
+                    <?php
+
+                    include '../database/dbconnection.php';
+
+                    if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
+                        $id_utilizador = $_SESSION['id_username'];
+                        $sql_cargo = "SELECT cargo FROM utilizador WHERE id = $id_utilizador";
+                        $resultado_cargo = mysqli_query($ligacao, $sql_cargo);
+                        $linha_cargo = $resultado_cargo->fetch_assoc();
+                    }
+
+                    $sql = "SELECT DISTINCT distrito FROM ies ORDER BY distrito ASC";
+                    $resultado = $ligacao->query($sql);
+                    if ($resultado->num_rows > 0) { //verificar se existem linhas
+                    ?>
+
+                        <table id="table" class="table">
+                            <thead>
+                                <tr>
+                                    <th class="texto">placeholder</th>
+                                </tr>
+                            </thead>
+
+                            <?php
+                            while ($linha = $resultado->fetch_assoc()) { //Enquanto houver linhas na pesquisa...
+                            ?>
+
+                                <tbody id="tabela">
+                                    <tr>
+                                        <!-- Imprime as info na tabela -->
+                                        <td>
+                                            <?php
+                                            echo $linha["distrito"];
+                                            ?>
+                                        </td>
+                                    </tr>
+                                </tbody>
+
+                            <?php
+                            }
+                            ?>
+                        </table>
+
+                    <?php
+                    }
+                    ?>
+
+                </div>
+            </div>
+        </section>
+
     </body>
+
 </main>
+
 </html>
