@@ -128,7 +128,7 @@
             if ($resultado2->num_rows > 0) {
             ?>
 
-                <table class="tabela-cursos">
+                <table id="table" class="tabela-cursos">
                     <thead>
                         <tr>
                             <th class="texto">Cursos</th>
