@@ -71,9 +71,10 @@
                 <input type="text" placeholder="Nome" name="nome" required>
                 <p></p>
 
-                <select class="ies_drop_options" name="faculdade" required>
-                    <option value="" selected hidden>Selecione a IES do Curso</option>
+                <select class="ies_drop_options" id="faculdade" name="faculdade" required>
+                    <option selected hidden>Selecione a IES do Curso</option>
                     <?php
+
                     include "../database/dbconnection.php";
 
                     $sql = "SELECT DISTINCT nome FROM ies ORDER BY nome ASC";
@@ -82,7 +83,7 @@
                     if ($resultado->num_rows > 0) { //verificar se existem linhas
                         while ($linha = $resultado->fetch_assoc()) { //Enquanto houver linhas na pesquisa...
                     ?>
-                            <option value="<?php $linha['nome']; ?>"><?php echo $linha['nome']; ?></option>
+                            <option value="<?php echo $linha['nome']; ?>"><?php echo $linha['nome']; ?></option>
                     <?php
                         }
                     }

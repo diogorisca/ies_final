@@ -3,9 +3,18 @@ session_start();
 
 include "../database/dbconnection.php"; 
 
-//$ies_id = ;
 $nome = $_POST['nome'];
+
 $faculdade = $_POST['faculdade'];
+
+echo $nome;
+echo $faculdade;
+
+$sql_id_ies = "SELECT id FROM ies WHERE nome = '$faculdade'";
+$resultado_id_ies = mysqli_query($ligacao, $sql_id_ies);
+$linha_id_ies = $resultado_id_ies->fetch_assoc();
+$ies_id = $linha_id_ies['id'];
+
 $provas_ingresso = $_POST['provas_ingresso'];
 $notaCandidatura = $_POST['notaCandidatura'];
 $provaIngresso = $_POST['provaIngresso'];
@@ -23,10 +32,10 @@ if ($grau == "Mestrado Integrado") {
 
 $area = $_POST['area'];
 
-$sql = "INSERT INTO curso (nome, faculdade, prova_ingresso, notaCandidatura, provaIngresso, media, vagas, Grau, Duração, ECTS, Área)
-        VALUES ('$nome', '$faculdade', '$provas_ingresso', '$notaCandidatura', '$provaIngresso', '$media', '$vagas', '$grau', '$duracao', '$ects', '$area')";
+$sql = "INSERT INTO curso (ies_id, nome, faculdade, prova_ingresso, notaCandidatura, provaIngresso, media, vagas, Grau, Duração, ECTS, Área, plano_estudos)
+        VALUES ('$ies_id', '$nome', '$faculdade', '$provas_ingresso', '$notaCandidatura', '$provaIngresso', '$media', '$vagas', '$grau', '$duracao', '$ects', '$area', ' ')";
 
 $resultado = mysqli_query($ligacao, $sql);
 
-header("location: ../listas/listar_cursos.php?add=verdade");
+//header("location: ../listas/listar_cursos.php?add=verdade");
 ?>
