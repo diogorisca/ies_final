@@ -65,7 +65,7 @@
             <h2 class="titulo">Editar Curso</h2>
 
             <?php
-                $idcurso = $_GET["id_curso"];
+            $idcurso = $_GET["id_curso"];
             ?>
 
             <form action="../process/editar_apagar.php?acao=editar_curso&idcurso=<?php echo $idcurso; ?>" method="POST">
@@ -163,7 +163,44 @@
         ?>
             <h2 class="titulo">Editar IES</h2>
 
+            <?php
+            include "../database/dbconnection.php";
 
+            $id_ies = $_GET["id_ies"];
+
+            $sql_ies_informacao = "SELECT * FROM ies WHERE id='$id_ies'";
+            $resultado_ies_informacao = mysqli_query($ligacao, $sql_ies_informacao);
+            $linha_ies_informacao = $resultado_ies_informacao->fetch_assoc();
+
+            ?>
+
+            <form action="../process/editar_apagar.php?acao=editar_ies&idies=<?php echo $id_ies; ?>" method="POST">
+                <div class="container">
+                    <input type="text" placeholder="Nome" name="nome" value="<?php echo $linha_ies_informacao["nome"]; ?>" required>
+                    <p></p>
+
+                    <input type="text" placeholder="Morada" name="morada" value="<?php echo $linha_ies_informacao["morada"]; ?>" required>
+                    <p></p>
+
+                    <input type="email" placeholder="Email" name="email" value="<?php echo $linha_ies_informacao["contacto_email"]; ?>" required>
+                    <p></p>
+
+                    <input type="tel" pattern="[0-9]{9}" placeholder="Contacto" name="contacto" value="<?php echo $linha_ies_informacao["contacto_telefone"]; ?>" required>
+                    <p></p>
+
+                    <textarea class="textarea" placeholder="Descrição" name="descricao" required><?php echo $linha_ies_informacao["descricao"]; ?></textarea>
+                    <p></p>
+
+                    <input type="url" placeholder="Website Oficial" name="website" value="<?php echo $linha_ies_informacao["pagina_oficial"]; ?>" required>
+                    <p></p>
+
+                    <input type="text" placeholder="Distrito" name="distrito" value="<?php echo $linha_ies_informacao["distrito"]; ?>" required>
+                    <p></p>
+
+                    <button type="submit">Editar IES</button>
+                    <p></p>
+                </div>
+            </form>
         <?php
         }
         ?>

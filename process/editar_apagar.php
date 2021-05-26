@@ -41,14 +41,44 @@ if (isset($_GET["acao"]) && $_GET["acao"] == 'editar_curso') { //editar curso
     $preparar = $ligacao->prepare($sql);
     $preparar->execute();
     header("location: ../listas/listar_info_curso.php?editar=sucesso&idcurso=$id_curso");
-}
+} 
+
 else if (isset($_GET["acao"]) && $_GET["acao"] == 'apagar_curso') { //apagar curso
-    
+
     $id_curso = $_GET["id_curso"];
 
     $sql = "DELETE FROM curso WHERE id='$id_curso'";
     $preparar = $ligacao->prepare($sql);
     $preparar->execute();
     header("location: ../listas/listar_cursos.php?apagar=sucesso");
+} 
 
+else if (isset($_GET["acao"]) && $_GET["acao"] == "editar_ies") { //editar IES
+
+    $id_ies = $_GET ["idies"];
+
+    $novo_nome = $_POST["nome"];
+    $nova_morada = $_POST["morada"];
+    $novo_email = $_POST["email"];
+    $novo_contacto = $_POST["contacto"];
+    $nova_descricao = $_POST["descricao"];
+    $novo_website = $_POST["website"];
+    $novo_distrito = $_POST["distrito"];
+
+    $sql = "UPDATE ies SET nome='$novo_nome', morada='$nova_morada', contacto_email='$novo_email', contacto_telefone='$novo_contacto', descricao='$nova_descricao',
+    pagina_oficial='$novo_website' WHERE id='$id_ies'";
+    $preparar = $ligacao->prepare($sql);
+    $preparar->execute();
+    header("location: ../listas/listar_info_ies.php?editar=sucesso&iesid=$id_ies");
+}
+
+else if (isset($_GET["acao"]) && $_GET["acao"] == "apagar_ies") { //apagar IES
+
+    $id_ies = $_GET["id_ies"];
+    echo $id_ies;
+
+    $sql = "DELETE FROM ies WHERE id='$id_ies'";
+    $preparar = $ligacao->prepare($sql);
+    $preparar->execute();
+    header ("location: ../listas/listar_ies.php?apagar=sucesso");
 }

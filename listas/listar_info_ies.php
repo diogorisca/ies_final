@@ -77,7 +77,13 @@
 
         <section class="u-clearfix u-section-1" id="carousel_2636">
             <div class="u-clearfix u-sheet u-sheet-1">
-                <div class="u-expanded-height u-grey-5 u-shape u-shape-rectangle u-shape-1"></div>
+                <div class="u-expanded-height u-grey-5 u-shape u-shape-rectangle u-shape-1">
+                    <?php
+                    if (isset($_GET["editar"]) && $_GET["editar"] == 'sucesso') {
+                        echo "<h4 class='msg-sucesso'><strong>IES atualizada com sucesso.</strong></h4>";
+                    }
+                    ?>
+                </div>
                 <div class="u-clearfix u-layout-wrap u-layout-wrap-1">
                     <div class="u-gutter-0 u-layout">
                         <div class="u-layout-row">
@@ -101,6 +107,12 @@
                                 <div class="u-layout-row">
                                     <div class="u-align-right u-container-style u-layout-cell u-right-cell u-size-60 u-layout-cell-3">
                                         <div class="u-container-layout u-container-layout-3">
+                                            <a href="../menu/editar_ies_curso.php?id_ies=<?php echo $linha["id"] ?>&acao=editar_ies">
+                                                <img src="../assets/edit.png" width="25" height="25" style="margin-top: 10px;" title="Editar IES">
+                                            </a>
+                                            <a href="../process/editar_apagar.php?id_ies=<?php echo $linha["id"] ?>&acao=apagar_ies">
+                                                <img src="../assets/apagar.png" width="25" height="25" style="margin-top: 10px; margin-left: 10px;" title="Apagar IES">
+                                            </a>
                                             <h2 class="u-text u-text-2"><?php echo $linha["nome"]; ?></h2>
                                             <p class="u-text u-text-3"><?php echo $linha["descricao"]; ?></p>
                                         </div>
@@ -131,7 +143,7 @@
                             <th class="texto">Cursos</th>
                         </tr>
                     </thead>
-                    
+
                     <?php
                     while ($linha2 = $resultado2->fetch_assoc()) {
                     ?>

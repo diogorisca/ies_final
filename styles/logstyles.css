@@ -28,6 +28,7 @@ input[type=number].notas {
 .textarea {
     font-family: sans-serif;
     height: 135px;
+    text-align: justify;
 }
 
 .notas {
