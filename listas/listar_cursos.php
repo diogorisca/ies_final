@@ -72,6 +72,11 @@
         <section class="container-lista">
             <div class="grid-item">
                 <div class="tabela">
+                    <?php
+                    if (isset($_GET["apagar"]) && $_GET["apagar"] == 'sucesso') {
+                        echo "<h4 class='msg-sucesso'><strong>Curso eliminado com sucesso!</strong></h4><br>";
+                    }
+                    ?>
                     <h1 class="titulo">Cursos</h1>
                     <input type="text" id="ies_input" onkeyup="filtrar()" placeholder="Procurar...">
 

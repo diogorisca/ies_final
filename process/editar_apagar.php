@@ -42,3 +42,13 @@ if (isset($_GET["acao"]) && $_GET["acao"] == 'editar_curso') { //editar curso
     $preparar->execute();
     header("location: ../listas/listar_info_curso.php?editar=sucesso&idcurso=$id_curso");
 }
+else if (isset($_GET["acao"]) && $_GET["acao"] == 'apagar_curso') { //apagar curso
+    
+    $id_curso = $_GET["id_curso"];
+
+    $sql = "DELETE FROM curso WHERE id='$id_curso'";
+    $preparar = $ligacao->prepare($sql);
+    $preparar->execute();
+    header("location: ../listas/listar_cursos.php?apagar=sucesso");
+
+}
