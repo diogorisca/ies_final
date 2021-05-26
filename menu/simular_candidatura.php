@@ -93,7 +93,7 @@ O nome do utilizador deverá estar evidenciado.
                         $linha_cargo = $resultado_cargo->fetch_assoc();
                     }
 
-                    $sql = "SELECT DISTINCT curso_id, notaFinal FROM simulacao ORDER BY notaFinal DESC";
+                    $sql = "SELECT DISTINCT curso_id, notaFinal FROM simulacao WHERE utilizador_id = '$id_utilizador' ORDER BY notaFinal DESC";
                     $resultado = $ligacao->query($sql);
                     if ($resultado->num_rows > 0) { //verificar se existem linhas
                     ?>
@@ -147,6 +147,8 @@ O nome do utilizador deverá estar evidenciado.
                         </table>
 
                     <?php
+                    } else {
+                        echo "<h3 class='text-simu'>Ainda não foram efetuadas simulações por este utilizador!</h3>";
                     }
                     ?>
 
