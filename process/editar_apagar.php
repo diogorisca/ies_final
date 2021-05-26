@@ -75,7 +75,6 @@ else if (isset($_GET["acao"]) && $_GET["acao"] == "editar_ies") { //editar IES
 else if (isset($_GET["acao"]) && $_GET["acao"] == "apagar_ies") { //apagar IES
 
     $id_ies = $_GET["id_ies"];
-    echo $id_ies;
 
     $sql = "DELETE FROM ies WHERE id='$id_ies'";
     $preparar = $ligacao->prepare($sql);

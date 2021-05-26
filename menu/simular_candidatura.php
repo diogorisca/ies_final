@@ -130,7 +130,6 @@ O nome do utilizador deverá estar evidenciado.
                                         <td class="simu">
                                             <a href="../listas/listar_cursos_selecionados.php?nome=<?php echo $linha_nome_curso["nome"]; ?>">
                                                 <?php
-                                                
                                                 echo $linha_verificar_curso["nome"];
                                                 ?>
                                             </a>
@@ -138,8 +137,6 @@ O nome do utilizador deverá estar evidenciado.
                                         <td class="simu">
                                             <a href="../listas/listar_info_ies.php?iesid=<?php echo $linha_verificar_curso["ies_id"]; ?>">
                                                 <?php
-                                                
-
                                                 echo $linha_nome_ies["nome"];
                                                 ?>
                                             </a>
