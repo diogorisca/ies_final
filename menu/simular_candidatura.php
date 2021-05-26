@@ -68,15 +68,23 @@ O nome do utilizador deverá estar evidenciado.
 
         <!-- Fim do menu -->
 
+        <?php
+        include '../database/dbconnection.php';
+
+        $id_utilizador = $_SESSION['id_username'];
+
+        $sql_nome_utilizador = "SELECT nome FROM utilizador WHERE id = '$id_utilizador'";
+        $resultado_nome_utilizador = mysqli_query($ligacao, $sql_nome_utilizador);
+        $linha_nome_utilizador = $resultado_nome_utilizador->fetch_assoc();
+        ?>
+
         <section class="container-lista">
             <div class="grid-item">
                 <div class="tabela">
-                    <h1 class="titulo">placeholder</h1>
+                    <h1 class="titulo">Simulações Efetuadas por <?php echo $linha_nome_utilizador["nome"]; ?></h1>
                     <input type="text" id="ies_input" onkeyup="filtrar()" placeholder="Procurar...">
                     <br><br>
                     <?php
-
-                    include '../database/dbconnection.php';
 
                     if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
                         $id_utilizador = $_SESSION['id_username'];
@@ -85,7 +93,7 @@ O nome do utilizador deverá estar evidenciado.
                         $linha_cargo = $resultado_cargo->fetch_assoc();
                     }
 
-                    $sql = "SELECT DISTINCT distrito FROM ies ORDER BY distrito ASC";
+                    $sql = "SELECT DISTINCT curso_id, notaFinal FROM simulacao ORDER BY notaFinal DESC";
                     $resultado = $ligacao->query($sql);
                     if ($resultado->num_rows > 0) { //verificar se existem linhas
                     ?>
@@ -93,7 +101,9 @@ O nome do utilizador deverá estar evidenciado.
                         <table id="table" class="table">
                             <thead>
                                 <tr>
-                                    <th class="texto">placeholder</th>
+                                    <th class="texto-simu-esq">Curso</th>
+                                    <th class="texto-simu-meio">IES</th>
+                                    <th class="texto-simu-dir">Nota Final</th>
                                 </tr>
                             </thead>
 
@@ -104,11 +114,30 @@ O nome do utilizador deverá estar evidenciado.
                                 <tbody id="tabela">
                                     <tr>
                                         <!-- Imprime as info na tabela -->
-                                        <td>
+                                        <td class="simu">
                                             <?php
-                                            echo $linha["distrito"];
+                                            $id_curso = $linha["curso_id"];
+                                            $sql_verificar_curso = "SELECT DISTINCT ies_id, nome FROM curso WHERE id = '$id_curso'";
+                                            $resultado_verificar_curso = mysqli_query($ligacao, $sql_verificar_curso);
+                                            $linha_verificar_curso = $resultado_verificar_curso->fetch_assoc();
+                                            echo $linha_verificar_curso["nome"];
                                             ?>
                                         </td>
+                                        <td class="simu">
+                                            <?php
+                                            $ies_id = $linha_verificar_curso["ies_id"];
+                                            $sql_nome_ies = "SELECT DISTINCT nome FROM ies WHERE id = '$ies_id'";
+                                            $resultado_nome_ies = mysqli_query($ligacao, $sql_nome_ies);
+                                            $linha_nome_ies = $resultado_nome_ies->fetch_assoc();
+                                            echo $linha_nome_ies["nome"];
+                                            ?>
+                                        </td>
+                                        <td class="simu">
+                                            <?php
+                                            echo $linha["notaFinal"];
+                                            ?>
+                                        </td>
+                                        
                                     </tr>
                                 </tbody>
 

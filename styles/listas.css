@@ -90,7 +90,8 @@
     }
     
     .texto-simu-esq,
-    .texto-simu-dir {
+    .texto-simu-dir,
+    .texto-simu-meio {
         color: #3cdbc0;
         padding-left: 30px;
         padding-right: 30px;
