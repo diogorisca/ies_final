@@ -64,7 +64,7 @@
 
         <h2 class="titulo">Adicionar IES</h2>
 
-        <form action="../process/adicionar_ies_process.php" method="POST">
+        <form action="../process/adicionar_ies_process.php" method="POST" enctype="multipart/form-data">
             <div class="container">
                 <input type="text" placeholder="Nome" name="nome" required>
                 <p></p>
@@ -88,12 +88,31 @@
                 <p></p>
 
                 <strong>Imagem (Tamanho máximo: 40MB)</strong>
-                <input type="file" name="imagem">
+                <input type="file" name="image" id="image" />
                 <p></p>
 
-                <button type="submit">Adicionar IES</button>
+                <button type="submit" name="insert" id="insert" value="Insert">Adicionar IES</button>
                 <p></p>
             </div>
         </form>
     </body>
 </main>
+
+<script>
+    $document.ready(function() {
+        $('#insert').click(function() {
+            var image_name = $('#image').val();
+            if (image == '') {
+                alert ("Por favor, insira uma imagem!");
+                return false;
+            } else {
+                var extension = $('#image').val().split('.').pop().toLowerCase();
+                if (jQuery.inArray(extension, ['png', 'jpg', 'jpeg']) == -1) {
+                    alert ("Tipo de imagem inserida inválida!");
+                    $('#image').val('');
+                    return false;
+                }
+            }
+        });
+    });
+</script>
