@@ -73,9 +73,6 @@
         $resultado = mysqli_query($ligacao, $sql);
         $linha = $resultado->fetch_assoc();
 
-        
-
-
         ?>
 
         <section class="u-clearfix u-section-1" id="carousel_2636">

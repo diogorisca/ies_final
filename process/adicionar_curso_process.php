@@ -4,11 +4,7 @@ session_start();
 include "../database/dbconnection.php"; 
 
 $nome = $_POST['nome'];
-
 $faculdade = $_POST['faculdade'];
-
-echo $nome;
-echo $faculdade;
 
 $sql_id_ies = "SELECT id FROM ies WHERE nome = '$faculdade'";
 $resultado_id_ies = mysqli_query($ligacao, $sql_id_ies);
