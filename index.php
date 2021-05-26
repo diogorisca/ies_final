@@ -64,11 +64,6 @@
         <!-- Fim do menu -->
 
         <div id="page" class="container">
-            <div class="tbox1">
-                <h3 class="titulo-inicial">Acesso ao</h3>
-                <h3 class="titulo-inicial">Ensino Superior</h3>
-
-            </div>
 
             <div class="tbox2">
 
@@ -114,7 +109,7 @@
 
             <div class="tbox3">
 
-                <p class="inform">Esta plataforma tem como objetivos principais:</p>
+                <p class="inform">Missão:</p>
                 <p class="texto-inform"> - Facilitar a consulta de informação relativa a cursos e Instituições de Ensino Superior.</p>
                 <p class="texto-inform"> - Permitir ao estudante consultar vagas, médias de acesso.</p>
                 <p class="texto-inform"> - Fazer simulação de candidatura em tempo real.</p>

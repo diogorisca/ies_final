@@ -41,13 +41,14 @@ body {
 
 .inform {
     text-align: left;
-    font-size: 25px;
+    font-size: 50px;
 }
 
 .texto-inform {
-    text-align: left;
+    text-align: justify;
     padding-left: 20px;
-    font-size: 16px;
+    font-size: 27px;
+    text-justify: inter-word;
 }
 
 .tbox1,
@@ -66,7 +67,7 @@ body {
 }
 
 .tbox3 {
-    padding-top: 500px;
+    padding-top: 70px;
     float: inline-end;
 }
 
@@ -185,7 +186,7 @@ a:hover {
 .container {
     overflow: hidden;
     margin: 0em auto;
-    width: 1200px;
+    width: 1500px;
 }
 
 .header {

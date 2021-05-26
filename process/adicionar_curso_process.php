@@ -37,5 +37,5 @@ $sql = "INSERT INTO curso (ies_id, nome, faculdade, prova_ingresso, notaCandidat
 
 $resultado = mysqli_query($ligacao, $sql);
 
-//header("location: ../listas/listar_cursos.php?add=verdade");
+header("location: ../listas/listar_cursos.php?add=verdade");
 ?>
