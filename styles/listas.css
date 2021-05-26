@@ -119,8 +119,13 @@
         text-align: center!important;
     }
     
-    .text-simu {
+    .text-simu,
+    .text-simu-add {
         color: #001a72;
+    }
+
+    .text-simu-add {
+        text-decoration: underline;
     }
     
     table tr td a {

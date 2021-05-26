@@ -109,35 +109,47 @@ O nome do utilizador deverá estar evidenciado.
 
                             <?php
                             while ($linha = $resultado->fetch_assoc()) { //Enquanto houver linhas na pesquisa...
+                                $id_curso = $linha["curso_id"];
+                                $sql_verificar_curso = "SELECT DISTINCT ies_id, nome FROM curso WHERE id = '$id_curso'";
+                                $resultado_verificar_curso = mysqli_query($ligacao, $sql_verificar_curso);
+                                $linha_verificar_curso = $resultado_verificar_curso->fetch_assoc();
+
+                                $ies_id = $linha_verificar_curso["ies_id"];
+                                $sql_nome_ies = "SELECT DISTINCT nome FROM ies WHERE id = '$ies_id'";
+                                $resultado_nome_ies = mysqli_query($ligacao, $sql_nome_ies);
+                                $linha_nome_ies = $resultado_nome_ies->fetch_assoc();
+
+                                $sql_nome_curso = "SELECT DISTINCT nome FROM curso WHERE id = '$id_curso'";
+                                $resultado_nome_curso = mysqli_query($ligacao, $sql_nome_curso);
+                                $linha_nome_curso = $resultado_nome_curso->fetch_assoc();
                             ?>
 
                                 <tbody id="tabela">
                                     <tr>
                                         <!-- Imprime as info na tabela -->
                                         <td class="simu">
-                                            <?php
-                                            $id_curso = $linha["curso_id"];
-                                            $sql_verificar_curso = "SELECT DISTINCT ies_id, nome FROM curso WHERE id = '$id_curso'";
-                                            $resultado_verificar_curso = mysqli_query($ligacao, $sql_verificar_curso);
-                                            $linha_verificar_curso = $resultado_verificar_curso->fetch_assoc();
-                                            echo $linha_verificar_curso["nome"];
-                                            ?>
+                                            <a href="../listas/listar_cursos_selecionados.php?nome=<?php echo $linha_nome_curso["nome"]; ?>">
+                                                <?php
+                                                
+                                                echo $linha_verificar_curso["nome"];
+                                                ?>
+                                            </a>
                                         </td>
                                         <td class="simu">
-                                            <?php
-                                            $ies_id = $linha_verificar_curso["ies_id"];
-                                            $sql_nome_ies = "SELECT DISTINCT nome FROM ies WHERE id = '$ies_id'";
-                                            $resultado_nome_ies = mysqli_query($ligacao, $sql_nome_ies);
-                                            $linha_nome_ies = $resultado_nome_ies->fetch_assoc();
-                                            echo $linha_nome_ies["nome"];
-                                            ?>
+                                            <a href="../listas/listar_info_ies.php?iesid=<?php echo $linha_verificar_curso["ies_id"]; ?>">
+                                                <?php
+                                                
+
+                                                echo $linha_nome_ies["nome"];
+                                                ?>
+                                            </a>
                                         </td>
                                         <td class="simu">
                                             <?php
                                             echo $linha["notaFinal"];
                                             ?>
                                         </td>
-                                        
+
                                     </tr>
                                 </tbody>
 
@@ -149,6 +161,7 @@ O nome do utilizador deverá estar evidenciado.
                     <?php
                     } else {
                         echo "<h3 class='text-simu'>Ainda não foram efetuadas simulações por este utilizador!</h3>";
+                        echo "<h3 class='text-simu-add'><a href='../listas/listar_cursos.php'>Faça já a sua primeira simulação aqui!</a></h3>";
                     }
                     ?>
 
