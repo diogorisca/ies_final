@@ -42,7 +42,13 @@
                                         </ul>
                                     </div>
                                 </li>
-                                <li><a href="simular_candidatura.php">Simular Candidatura</a></li>
+                                <?php
+                                if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
+                                    echo '<li><a href="simular_candidatura.php">Simular Candidatura</a></li>';
+                                } else {
+                                    echo '<li><a href="login.php?log=naoauthsimu">Simular Candidatura</a></li>';
+                                }
+                                ?>
                             </ul>
                         </div>
                     </li>
@@ -61,6 +67,9 @@
         }
         if (isset($_GET["criar"]) && $_GET["criar"] == 'sucesso') {
             echo "<h4 class='msg-sucesso'>Conta criada com sucesso.</h4>";
+        }
+        if (isset($_GET["log"]) && $_GET["log"] == 'naoauthsimu') {
+            echo "<h4 class='msg-erro'>Precisa de estar autenticado para aceder às simulações do utilizador!</h4>";
         }
         ?>
 

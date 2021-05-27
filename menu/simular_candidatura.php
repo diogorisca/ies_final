@@ -51,7 +51,13 @@ O nome do utilizador deverá estar evidenciado.
                                         </ul>
                                     </div>
                                 </li>
-                                <li><a class="active" href="simular_candidatura.php">Simular Candidatura</a></li>
+                                <?php
+                                if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
+                                    echo '<li><a href="simular_candidatura.php">Simular Candidatura</a></li>';
+                                } else {
+                                    echo '<li><a href="login.php?log=naoauthsimu">Simular Candidatura</a></li>';
+                                }
+                                ?>
                             </ul>
                         </div>
                     </li>

@@ -45,7 +45,13 @@
                                         </ul>
                                     </div>
                                 </li>
-                                <li><a href="../menu/simular_candidatura.php">Simular Candidatura</a></li>
+                                <?php
+                                if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
+                                    echo '<li><a href="../menu/simular_candidatura.php">Simular Candidatura</a></li>';
+                                } else {
+                                    echo '<li><a href="../menu/login.php?log=naoauthsimu">Simular Candidatura</a></li>';
+                                }
+                                ?>
                             </ul>
                         </div>
                     </li>
